@@ -1,0 +1,8 @@
+C:\Users\stand\iCloudDrive\Coding iCloud\School\16_hvezdicky\bin\Debug\16_hvezdicky.exe.config
+C:\Users\stand\iCloudDrive\Coding iCloud\School\16_hvezdicky\bin\Debug\16_hvezdicky.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\16_hvezdicky\bin\Debug\16_hvezdicky.pdb
+C:\Users\stand\iCloudDrive\Coding iCloud\School\16_hvezdicky\obj\Debug\16_hvezdicky.csproj.AssemblyReference.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\16_hvezdicky\obj\Debug\16_hvezdicky.csproj.SuggestedBindingRedirects.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\16_hvezdicky\obj\Debug\16_hvezdicky.csproj.CoreCompileInputs.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\16_hvezdicky\obj\Debug\16_hvezdicky.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\16_hvezdicky\obj\Debug\16_hvezdicky.pdb

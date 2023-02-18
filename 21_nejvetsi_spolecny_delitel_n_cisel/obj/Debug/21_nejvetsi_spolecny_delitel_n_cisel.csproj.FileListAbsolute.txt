@@ -1,0 +1,8 @@
+C:\Users\stand\iCloudDrive\Coding iCloud\School\21_nejvetsi_spolecny_delitel_n_cisel\bin\Debug\21_nejvetsi_spolecny_delitel_n_cisel.exe.config
+C:\Users\stand\iCloudDrive\Coding iCloud\School\21_nejvetsi_spolecny_delitel_n_cisel\bin\Debug\21_nejvetsi_spolecny_delitel_n_cisel.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\21_nejvetsi_spolecny_delitel_n_cisel\bin\Debug\21_nejvetsi_spolecny_delitel_n_cisel.pdb
+C:\Users\stand\iCloudDrive\Coding iCloud\School\21_nejvetsi_spolecny_delitel_n_cisel\obj\Debug\21_nejvetsi_spolecny_delitel_n_cisel.csproj.AssemblyReference.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\21_nejvetsi_spolecny_delitel_n_cisel\obj\Debug\21_nejvetsi_spolecny_delitel_n_cisel.csproj.SuggestedBindingRedirects.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\21_nejvetsi_spolecny_delitel_n_cisel\obj\Debug\21_nejvetsi_spolecny_delitel_n_cisel.csproj.CoreCompileInputs.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\21_nejvetsi_spolecny_delitel_n_cisel\obj\Debug\21_nejvetsi_spolecny_delitel_n_cisel.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\21_nejvetsi_spolecny_delitel_n_cisel\obj\Debug\21_nejvetsi_spolecny_delitel_n_cisel.pdb

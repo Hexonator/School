@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "29_cesarova_sifra", "29_cesarova_sifra.csproj", "{A1FB62E6-7718-426F-977D-13A17C76A80A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1FB62E6-7718-426F-977D-13A17C76A80A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1FB62E6-7718-426F-977D-13A17C76A80A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1FB62E6-7718-426F-977D-13A17C76A80A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1FB62E6-7718-426F-977D-13A17C76A80A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F47F1CC9-47C5-43A5-9354-7671449B052C}
+	EndGlobalSection
+EndGlobal

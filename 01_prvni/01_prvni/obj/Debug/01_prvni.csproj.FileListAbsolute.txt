@@ -1,0 +1,8 @@
+H:\Projekty\01_prvni\01_prvni\obj\Debug\01_prvni.csproj.AssemblyReference.cache
+H:\Projekty\01_prvni\01_prvni\obj\Debug\01_prvni.csproj.SuggestedBindingRedirects.cache
+H:\Projekty\01_prvni\01_prvni\obj\Debug\01_prvni.csproj.CoreCompileInputs.cache
+H:\Projekty\01_prvni\01_prvni\bin\Debug\01_prvni.exe.config
+H:\Projekty\01_prvni\01_prvni\bin\Debug\01_prvni.exe
+H:\Projekty\01_prvni\01_prvni\bin\Debug\01_prvni.pdb
+H:\Projekty\01_prvni\01_prvni\obj\Debug\01_prvni.exe
+H:\Projekty\01_prvni\01_prvni\obj\Debug\01_prvni.pdb

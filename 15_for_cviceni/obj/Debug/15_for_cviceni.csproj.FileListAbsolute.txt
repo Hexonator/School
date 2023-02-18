@@ -1,0 +1,8 @@
+C:\Users\stand\iCloudDrive\Coding iCloud\School\15_for_cviceni\bin\Debug\15_for_cviceni.exe.config
+C:\Users\stand\iCloudDrive\Coding iCloud\School\15_for_cviceni\bin\Debug\15_for_cviceni.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\15_for_cviceni\bin\Debug\15_for_cviceni.pdb
+C:\Users\stand\iCloudDrive\Coding iCloud\School\15_for_cviceni\obj\Debug\15_for_cviceni.csproj.AssemblyReference.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\15_for_cviceni\obj\Debug\15_for_cviceni.csproj.SuggestedBindingRedirects.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\15_for_cviceni\obj\Debug\15_for_cviceni.csproj.CoreCompileInputs.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\15_for_cviceni\obj\Debug\15_for_cviceni.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\15_for_cviceni\obj\Debug\15_for_cviceni.pdb

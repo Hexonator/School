@@ -1,0 +1,8 @@
+C:\Users\stand\iCloudDrive\Coding iCloud\School\12_switch\bin\Debug\12_switch.exe.config
+C:\Users\stand\iCloudDrive\Coding iCloud\School\12_switch\bin\Debug\12_switch.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\12_switch\bin\Debug\12_switch.pdb
+C:\Users\stand\iCloudDrive\Coding iCloud\School\12_switch\obj\Debug\12_switch.csproj.AssemblyReference.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\12_switch\obj\Debug\12_switch.csproj.SuggestedBindingRedirects.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\12_switch\obj\Debug\12_switch.csproj.CoreCompileInputs.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\12_switch\obj\Debug\12_switch.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\12_switch\obj\Debug\12_switch.pdb

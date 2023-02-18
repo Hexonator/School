@@ -1,0 +1,8 @@
+C:\Users\stand\iCloudDrive\Coding iCloud\School\18_while\bin\Debug\18_while.exe.config
+C:\Users\stand\iCloudDrive\Coding iCloud\School\18_while\bin\Debug\18_while.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\18_while\bin\Debug\18_while.pdb
+C:\Users\stand\iCloudDrive\Coding iCloud\School\18_while\obj\Debug\18_while.csproj.AssemblyReference.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\18_while\obj\Debug\18_while.csproj.SuggestedBindingRedirects.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\18_while\obj\Debug\18_while.csproj.CoreCompileInputs.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\18_while\obj\Debug\18_while.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\18_while\obj\Debug\18_while.pdb

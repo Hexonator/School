@@ -1,0 +1,8 @@
+C:\Users\stand\iCloudDrive\Coding iCloud\School\20_while_nejvetsi_spolecny_delitel\bin\Debug\20_while_nejvetsi_spolecny_delitel.exe.config
+C:\Users\stand\iCloudDrive\Coding iCloud\School\20_while_nejvetsi_spolecny_delitel\bin\Debug\20_while_nejvetsi_spolecny_delitel.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\20_while_nejvetsi_spolecny_delitel\bin\Debug\20_while_nejvetsi_spolecny_delitel.pdb
+C:\Users\stand\iCloudDrive\Coding iCloud\School\20_while_nejvetsi_spolecny_delitel\obj\Debug\20_while_nejvetsi_spolecny_delitel.csproj.AssemblyReference.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\20_while_nejvetsi_spolecny_delitel\obj\Debug\20_while_nejvetsi_spolecny_delitel.csproj.SuggestedBindingRedirects.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\20_while_nejvetsi_spolecny_delitel\obj\Debug\20_while_nejvetsi_spolecny_delitel.csproj.CoreCompileInputs.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\20_while_nejvetsi_spolecny_delitel\obj\Debug\20_while_nejvetsi_spolecny_delitel.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\20_while_nejvetsi_spolecny_delitel\obj\Debug\20_while_nejvetsi_spolecny_delitel.pdb

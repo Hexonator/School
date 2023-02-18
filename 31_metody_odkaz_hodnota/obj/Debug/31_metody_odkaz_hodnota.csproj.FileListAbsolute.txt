@@ -1,0 +1,8 @@
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\31_metody_odkaz_hodnota\obj\Debug\31_metody_odkaz_hodnota.csproj.AssemblyReference.cache
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\31_metody_odkaz_hodnota\obj\Debug\31_metody_odkaz_hodnota.csproj.SuggestedBindingRedirects.cache
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\31_metody_odkaz_hodnota\obj\Debug\31_metody_odkaz_hodnota.csproj.CoreCompileInputs.cache
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\31_metody_odkaz_hodnota\bin\Debug\31_metody_odkaz_hodnota.exe.config
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\31_metody_odkaz_hodnota\bin\Debug\31_metody_odkaz_hodnota.exe
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\31_metody_odkaz_hodnota\bin\Debug\31_metody_odkaz_hodnota.pdb
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\31_metody_odkaz_hodnota\obj\Debug\31_metody_odkaz_hodnota.exe
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\31_metody_odkaz_hodnota\obj\Debug\31_metody_odkaz_hodnota.pdb

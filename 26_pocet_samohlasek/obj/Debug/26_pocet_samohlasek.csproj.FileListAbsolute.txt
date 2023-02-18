@@ -1,0 +1,8 @@
+H:\Projekty\26_pocet_samohlasek\obj\Debug\26_pocet_samohlasek.csproj.AssemblyReference.cache
+H:\Projekty\26_pocet_samohlasek\obj\Debug\26_pocet_samohlasek.csproj.SuggestedBindingRedirects.cache
+H:\Projekty\26_pocet_samohlasek\obj\Debug\26_pocet_samohlasek.csproj.CoreCompileInputs.cache
+H:\Projekty\26_pocet_samohlasek\bin\Debug\26_pocet_samohlasek.exe.config
+H:\Projekty\26_pocet_samohlasek\bin\Debug\26_pocet_samohlasek.exe
+H:\Projekty\26_pocet_samohlasek\bin\Debug\26_pocet_samohlasek.pdb
+H:\Projekty\26_pocet_samohlasek\obj\Debug\26_pocet_samohlasek.exe
+H:\Projekty\26_pocet_samohlasek\obj\Debug\26_pocet_samohlasek.pdb

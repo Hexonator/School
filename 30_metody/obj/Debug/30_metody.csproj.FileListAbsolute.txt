@@ -1,0 +1,8 @@
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\30_metody\bin\Debug\30_metody.exe.config
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\30_metody\bin\Debug\30_metody.exe
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\30_metody\bin\Debug\30_metody.pdb
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\30_metody\obj\Debug\30_metody.csproj.AssemblyReference.cache
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\30_metody\obj\Debug\30_metody.csproj.SuggestedBindingRedirects.cache
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\30_metody\obj\Debug\30_metody.csproj.CoreCompileInputs.cache
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\30_metody\obj\Debug\30_metody.exe
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\30_metody\obj\Debug\30_metody.pdb

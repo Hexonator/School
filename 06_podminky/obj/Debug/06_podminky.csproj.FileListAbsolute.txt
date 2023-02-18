@@ -1,0 +1,8 @@
+C:\Users\stand\iCloudDrive\Coding iCloud\School\06_podminky\obj\Debug\06_podminky.csproj.AssemblyReference.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\06_podminky\obj\Debug\06_podminky.csproj.SuggestedBindingRedirects.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\06_podminky\obj\Debug\06_podminky.csproj.CoreCompileInputs.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\06_podminky\bin\Debug\06_podminky.exe.config
+C:\Users\stand\iCloudDrive\Coding iCloud\School\06_podminky\bin\Debug\06_podminky.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\06_podminky\bin\Debug\06_podminky.pdb
+C:\Users\stand\iCloudDrive\Coding iCloud\School\06_podminky\obj\Debug\06_podminky.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\06_podminky\obj\Debug\06_podminky.pdb

@@ -1,0 +1,8 @@
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\28_palindromy\obj\Debug\28_palindromy.csproj.AssemblyReference.cache
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\28_palindromy\obj\Debug\28_palindromy.csproj.SuggestedBindingRedirects.cache
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\28_palindromy\obj\Debug\28_palindromy.csproj.CoreCompileInputs.cache
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\28_palindromy\bin\Debug\28_palindromy.exe.config
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\28_palindromy\bin\Debug\28_palindromy.exe
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\28_palindromy\bin\Debug\28_palindromy.pdb
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\28_palindromy\obj\Debug\28_palindromy.exe
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\28_palindromy\obj\Debug\28_palindromy.pdb

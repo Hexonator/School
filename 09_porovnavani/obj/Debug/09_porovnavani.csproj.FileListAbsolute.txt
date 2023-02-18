@@ -1,0 +1,8 @@
+C:\Users\stand\iCloudDrive\Coding iCloud\School\09_porovnavani\obj\Debug\09_porovnavani.csproj.AssemblyReference.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\09_porovnavani\obj\Debug\09_porovnavani.csproj.SuggestedBindingRedirects.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\09_porovnavani\obj\Debug\09_porovnavani.csproj.CoreCompileInputs.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\09_porovnavani\bin\Debug\09_porovnavani.exe.config
+C:\Users\stand\iCloudDrive\Coding iCloud\School\09_porovnavani\bin\Debug\09_porovnavani.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\09_porovnavani\bin\Debug\09_porovnavani.pdb
+C:\Users\stand\iCloudDrive\Coding iCloud\School\09_porovnavani\obj\Debug\09_porovnavani.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\09_porovnavani\obj\Debug\09_porovnavani.pdb

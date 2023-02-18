@@ -1,0 +1,8 @@
+C:\Users\stand\iCloudDrive\Coding iCloud\School\19_pocet_sudych_while\bin\Debug\19_pocet_sudych_while.exe.config
+C:\Users\stand\iCloudDrive\Coding iCloud\School\19_pocet_sudych_while\bin\Debug\19_pocet_sudych_while.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\19_pocet_sudych_while\bin\Debug\19_pocet_sudych_while.pdb
+C:\Users\stand\iCloudDrive\Coding iCloud\School\19_pocet_sudych_while\obj\Debug\19_pocet_sudych_while.csproj.AssemblyReference.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\19_pocet_sudych_while\obj\Debug\19_pocet_sudych_while.csproj.SuggestedBindingRedirects.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\19_pocet_sudych_while\obj\Debug\19_pocet_sudych_while.csproj.CoreCompileInputs.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\19_pocet_sudych_while\obj\Debug\19_pocet_sudych_while.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\19_pocet_sudych_while\obj\Debug\19_pocet_sudych_while.pdb

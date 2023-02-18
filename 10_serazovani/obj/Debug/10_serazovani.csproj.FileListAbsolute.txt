@@ -1,0 +1,8 @@
+C:\Users\stand\iCloudDrive\Coding iCloud\School\10_serazovani\obj\Debug\10_serazovani.csproj.AssemblyReference.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\10_serazovani\obj\Debug\10_serazovani.csproj.SuggestedBindingRedirects.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\10_serazovani\obj\Debug\10_serazovani.csproj.CoreCompileInputs.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\10_serazovani\bin\Debug\10_serazovani.exe.config
+C:\Users\stand\iCloudDrive\Coding iCloud\School\10_serazovani\bin\Debug\10_serazovani.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\10_serazovani\bin\Debug\10_serazovani.pdb
+C:\Users\stand\iCloudDrive\Coding iCloud\School\10_serazovani\obj\Debug\10_serazovani.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\10_serazovani\obj\Debug\10_serazovani.pdb

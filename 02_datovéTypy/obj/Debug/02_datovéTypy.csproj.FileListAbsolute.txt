@@ -1,0 +1,8 @@
+C:\Users\stand\iCloudDrive\Coding iCloud\School\02_datovéTypy\bin\Debug\02_datovéTypy.exe.config
+C:\Users\stand\iCloudDrive\Coding iCloud\School\02_datovéTypy\bin\Debug\02_datovéTypy.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\02_datovéTypy\bin\Debug\02_datovéTypy.pdb
+C:\Users\stand\iCloudDrive\Coding iCloud\School\02_datovéTypy\obj\Debug\02_datovéTypy.csproj.AssemblyReference.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\02_datovéTypy\obj\Debug\02_datovéTypy.csproj.SuggestedBindingRedirects.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\02_datovéTypy\obj\Debug\02_datovéTypy.csproj.CoreCompileInputs.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\02_datovéTypy\obj\Debug\02_datovéTypy.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\02_datovéTypy\obj\Debug\02_datovéTypy.pdb

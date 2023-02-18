@@ -1,0 +1,8 @@
+H:\Projekty\25_znak_retezec\bin\Debug\25_znak_retezec.exe.config
+H:\Projekty\25_znak_retezec\bin\Debug\25_znak_retezec.exe
+H:\Projekty\25_znak_retezec\bin\Debug\25_znak_retezec.pdb
+H:\Projekty\25_znak_retezec\obj\Debug\25_znak_retezec.csproj.AssemblyReference.cache
+H:\Projekty\25_znak_retezec\obj\Debug\25_znak_retezec.csproj.SuggestedBindingRedirects.cache
+H:\Projekty\25_znak_retezec\obj\Debug\25_znak_retezec.csproj.CoreCompileInputs.cache
+H:\Projekty\25_znak_retezec\obj\Debug\25_znak_retezec.exe
+H:\Projekty\25_znak_retezec\obj\Debug\25_znak_retezec.pdb

@@ -1,0 +1,3 @@
+H:\Projekty\07_podminkaZnamka\obj\Debug\07_podminkaZnamka.csproj.AssemblyReference.cache
+H:\Projekty\07_podminkaZnamka\obj\Debug\07_podminkaZnamka.csproj.SuggestedBindingRedirects.cache
+H:\Projekty\07_podminkaZnamka\obj\Debug\07_podminkaZnamka.csproj.CoreCompileInputs.cache

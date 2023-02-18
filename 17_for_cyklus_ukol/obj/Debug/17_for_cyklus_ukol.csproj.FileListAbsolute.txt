@@ -1,0 +1,8 @@
+C:\Users\stand\iCloudDrive\Coding iCloud\School\17_for_cyklus_ukol\obj\Debug\17_for_cyklus_ukol.csproj.AssemblyReference.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\17_for_cyklus_ukol\obj\Debug\17_for_cyklus_ukol.csproj.SuggestedBindingRedirects.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\17_for_cyklus_ukol\obj\Debug\17_for_cyklus_ukol.csproj.CoreCompileInputs.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\17_for_cyklus_ukol\bin\Debug\17_for_cyklus_ukol.exe.config
+C:\Users\stand\iCloudDrive\Coding iCloud\School\17_for_cyklus_ukol\bin\Debug\17_for_cyklus_ukol.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\17_for_cyklus_ukol\bin\Debug\17_for_cyklus_ukol.pdb
+C:\Users\stand\iCloudDrive\Coding iCloud\School\17_for_cyklus_ukol\obj\Debug\17_for_cyklus_ukol.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\17_for_cyklus_ukol\obj\Debug\17_for_cyklus_ukol.pdb

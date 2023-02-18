@@ -1,0 +1,8 @@
+C:\Users\stand\iCloudDrive\Coding iCloud\School\01_prvniProgram\bin\Debug\01_prvniProgram.exe.config
+C:\Users\stand\iCloudDrive\Coding iCloud\School\01_prvniProgram\bin\Debug\01_prvniProgram.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\01_prvniProgram\bin\Debug\01_prvniProgram.pdb
+C:\Users\stand\iCloudDrive\Coding iCloud\School\01_prvniProgram\obj\Debug\01_prvniProgram.csproj.AssemblyReference.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\01_prvniProgram\obj\Debug\01_prvniProgram.csproj.SuggestedBindingRedirects.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\01_prvniProgram\obj\Debug\01_prvniProgram.csproj.CoreCompileInputs.cache
+C:\Users\stand\iCloudDrive\Coding iCloud\School\01_prvniProgram\obj\Debug\01_prvniProgram.exe
+C:\Users\stand\iCloudDrive\Coding iCloud\School\01_prvniProgram\obj\Debug\01_prvniProgram.pdb

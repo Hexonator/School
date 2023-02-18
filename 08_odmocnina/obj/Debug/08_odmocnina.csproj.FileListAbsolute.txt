@@ -1,0 +1,8 @@
+H:\Projekty\08_odmocnina\obj\Debug\08_odmocnina.csproj.AssemblyReference.cache
+H:\Projekty\08_odmocnina\obj\Debug\08_odmocnina.csproj.SuggestedBindingRedirects.cache
+H:\Projekty\08_odmocnina\obj\Debug\08_odmocnina.csproj.CoreCompileInputs.cache
+H:\Projekty\08_odmocnina\bin\Debug\08_odmocnina.exe.config
+H:\Projekty\08_odmocnina\bin\Debug\08_odmocnina.exe
+H:\Projekty\08_odmocnina\bin\Debug\08_odmocnina.pdb
+H:\Projekty\08_odmocnina\obj\Debug\08_odmocnina.exe
+H:\Projekty\08_odmocnina\obj\Debug\08_odmocnina.pdb

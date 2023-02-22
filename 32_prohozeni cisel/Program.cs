@@ -16,7 +16,15 @@ namespace _32_prohozeni_cisel
         }
         static void Main(string[] args)
         {
-            prohozeni();
+            int a = 1;
+            int b = 2;
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            prohozeni(ref a, ref b);
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+
+            Console.ReadKey();
         }
     }
 }

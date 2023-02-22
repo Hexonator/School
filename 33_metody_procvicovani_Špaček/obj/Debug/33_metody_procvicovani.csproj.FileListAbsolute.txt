@@ -1,0 +1,8 @@
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\33_metody_procvicovani\bin\Debug\33_metody_procvicovani.exe.config
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\33_metody_procvicovani\bin\Debug\33_metody_procvicovani.exe
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\33_metody_procvicovani\bin\Debug\33_metody_procvicovani.pdb
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\33_metody_procvicovani\obj\Debug\33_metody_procvicovani.csproj.AssemblyReference.cache
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\33_metody_procvicovani\obj\Debug\33_metody_procvicovani.csproj.SuggestedBindingRedirects.cache
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\33_metody_procvicovani\obj\Debug\33_metody_procvicovani.csproj.CoreCompileInputs.cache
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\33_metody_procvicovani\obj\Debug\33_metody_procvicovani.exe
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\33_metody_procvicovani\obj\Debug\33_metody_procvicovani.pdb

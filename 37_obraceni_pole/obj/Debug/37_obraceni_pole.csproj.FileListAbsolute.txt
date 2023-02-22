@@ -1,0 +1,16 @@
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\37_obraceni_pole\bin\Debug\37_obraceni_pole.exe.config
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\37_obraceni_pole\bin\Debug\37_obraceni_pole.exe
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\37_obraceni_pole\bin\Debug\37_obraceni_pole.pdb
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\37_obraceni_pole\obj\Debug\37_obraceni_pole.csproj.AssemblyReference.cache
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\37_obraceni_pole\obj\Debug\37_obraceni_pole.csproj.SuggestedBindingRedirects.cache
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\37_obraceni_pole\obj\Debug\37_obraceni_pole.csproj.CoreCompileInputs.cache
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\37_obraceni_pole\obj\Debug\37_obraceni_pole.exe
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\37_obraceni_pole\obj\Debug\37_obraceni_pole.pdb
+C:\Repos\School\37_obraceni_pole\bin\Debug\37_obraceni_pole.exe.config
+C:\Repos\School\37_obraceni_pole\bin\Debug\37_obraceni_pole.exe
+C:\Repos\School\37_obraceni_pole\bin\Debug\37_obraceni_pole.pdb
+C:\Repos\School\37_obraceni_pole\obj\Debug\37_obraceni_pole.csproj.AssemblyReference.cache
+C:\Repos\School\37_obraceni_pole\obj\Debug\37_obraceni_pole.csproj.SuggestedBindingRedirects.cache
+C:\Repos\School\37_obraceni_pole\obj\Debug\37_obraceni_pole.csproj.CoreCompileInputs.cache
+C:\Repos\School\37_obraceni_pole\obj\Debug\37_obraceni_pole.exe
+C:\Repos\School\37_obraceni_pole\obj\Debug\37_obraceni_pole.pdb

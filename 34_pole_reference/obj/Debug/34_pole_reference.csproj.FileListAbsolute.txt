@@ -1,0 +1,8 @@
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\34_pole_reference\bin\Debug\34_pole_reference.exe.config
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\34_pole_reference\bin\Debug\34_pole_reference.exe
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\34_pole_reference\bin\Debug\34_pole_reference.pdb
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\34_pole_reference\obj\Debug\34_pole_reference.csproj.AssemblyReference.cache
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\34_pole_reference\obj\Debug\34_pole_reference.csproj.SuggestedBindingRedirects.cache
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\34_pole_reference\obj\Debug\34_pole_reference.csproj.CoreCompileInputs.cache
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\34_pole_reference\obj\Debug\34_pole_reference.exe
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\34_pole_reference\obj\Debug\34_pole_reference.pdb

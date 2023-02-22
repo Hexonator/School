@@ -1,0 +1,8 @@
+C:\Repos\School\36_sude_cisla_z_pole\bin\Debug\36_sude_cisla_z_pole.exe.config
+C:\Repos\School\36_sude_cisla_z_pole\bin\Debug\36_sude_cisla_z_pole.exe
+C:\Repos\School\36_sude_cisla_z_pole\bin\Debug\36_sude_cisla_z_pole.pdb
+C:\Repos\School\36_sude_cisla_z_pole\obj\Debug\36_sude_cisla_z_pole.csproj.AssemblyReference.cache
+C:\Repos\School\36_sude_cisla_z_pole\obj\Debug\36_sude_cisla_z_pole.csproj.SuggestedBindingRedirects.cache
+C:\Repos\School\36_sude_cisla_z_pole\obj\Debug\36_sude_cisla_z_pole.csproj.CoreCompileInputs.cache
+C:\Repos\School\36_sude_cisla_z_pole\obj\Debug\36_sude_cisla_z_pole.exe
+C:\Repos\School\36_sude_cisla_z_pole\obj\Debug\36_sude_cisla_z_pole.pdb

@@ -1,0 +1,8 @@
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\33_jednorozmerne_pole\bin\Debug\33_jednorozmerne_pole.exe.config
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\33_jednorozmerne_pole\bin\Debug\33_jednorozmerne_pole.exe
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\33_jednorozmerne_pole\bin\Debug\33_jednorozmerne_pole.pdb
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\33_jednorozmerne_pole\obj\Debug\33_jednorozmerne_pole.csproj.AssemblyReference.cache
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\33_jednorozmerne_pole\obj\Debug\33_jednorozmerne_pole.csproj.SuggestedBindingRedirects.cache
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\33_jednorozmerne_pole\obj\Debug\33_jednorozmerne_pole.csproj.CoreCompileInputs.cache
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\33_jednorozmerne_pole\obj\Debug\33_jednorozmerne_pole.exe
+C:\Users\Standa\iCloudDrive\Coding iCloud\School\33_jednorozmerne_pole\obj\Debug\33_jednorozmerne_pole.pdb

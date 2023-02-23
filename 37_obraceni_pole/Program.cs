@@ -38,7 +38,7 @@ namespace _37_obraceni_pole
         static void EvenIndex(int[] array)
         {
             int[] even_array = array;
-            for (int i = 1; i <= array.Length - 1; i+2)
+            for (int i = 1; i <= array.Length - 1; i+=2)
             {
                 even_array[i] = 0;
             }

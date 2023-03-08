@@ -1,0 +1,8 @@
+C:\Repos\School\38_e_sito\bin\Debug\38_e_sito.exe.config
+C:\Repos\School\38_e_sito\bin\Debug\38_e_sito.exe
+C:\Repos\School\38_e_sito\bin\Debug\38_e_sito.pdb
+C:\Repos\School\38_e_sito\obj\Debug\38_e_sito.csproj.AssemblyReference.cache
+C:\Repos\School\38_e_sito\obj\Debug\38_e_sito.csproj.SuggestedBindingRedirects.cache
+C:\Repos\School\38_e_sito\obj\Debug\38_e_sito.csproj.CoreCompileInputs.cache
+C:\Repos\School\38_e_sito\obj\Debug\38_e_sito.exe
+C:\Repos\School\38_e_sito\obj\Debug\38_e_sito.pdb

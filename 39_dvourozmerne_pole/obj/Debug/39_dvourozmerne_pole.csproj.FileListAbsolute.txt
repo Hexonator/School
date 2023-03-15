@@ -1,0 +1,8 @@
+C:\Repos\School\39_dvourozmerne_pole\bin\Debug\39_dvourozmerne_pole.exe.config
+C:\Repos\School\39_dvourozmerne_pole\bin\Debug\39_dvourozmerne_pole.exe
+C:\Repos\School\39_dvourozmerne_pole\bin\Debug\39_dvourozmerne_pole.pdb
+C:\Repos\School\39_dvourozmerne_pole\obj\Debug\39_dvourozmerne_pole.csproj.AssemblyReference.cache
+C:\Repos\School\39_dvourozmerne_pole\obj\Debug\39_dvourozmerne_pole.csproj.SuggestedBindingRedirects.cache
+C:\Repos\School\39_dvourozmerne_pole\obj\Debug\39_dvourozmerne_pole.csproj.CoreCompileInputs.cache
+C:\Repos\School\39_dvourozmerne_pole\obj\Debug\39_dvourozmerne_pole.exe
+C:\Repos\School\39_dvourozmerne_pole\obj\Debug\39_dvourozmerne_pole.pdb

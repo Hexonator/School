@@ -46,6 +46,17 @@ namespace _42_list
             days.Remove("Utery");
             Write_list(days);
 
+            // Vlozeni na index
+            days.Insert(0, "Pondeli");
+            days.Insert(1, "Utery");
+            Write_list(days);
+
+            // Zjisteni obsahu konkretniho prvku
+            if (days.Contains("Stredaa"))
+                Console.WriteLine("obsahuje");
+            else
+                Console.WriteLine("neobsahuje");
+            
 
             Console.ReadKey();
         }

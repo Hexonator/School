@@ -1,0 +1,8 @@
+C:\Repos\School\42_list\bin\Debug\42_list.exe.config
+C:\Repos\School\42_list\bin\Debug\42_list.exe
+C:\Repos\School\42_list\bin\Debug\42_list.pdb
+C:\Repos\School\42_list\obj\Debug\42_list.csproj.AssemblyReference.cache
+C:\Repos\School\42_list\obj\Debug\42_list.csproj.SuggestedBindingRedirects.cache
+C:\Repos\School\42_list\obj\Debug\42_list.csproj.CoreCompileInputs.cache
+C:\Repos\School\42_list\obj\Debug\42_list.exe
+C:\Repos\School\42_list\obj\Debug\42_list.pdb

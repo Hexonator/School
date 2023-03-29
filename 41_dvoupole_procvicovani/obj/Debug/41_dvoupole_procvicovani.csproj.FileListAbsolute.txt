@@ -1,0 +1,8 @@
+C:\Repos\School\41_dvoupole_procvicovani\bin\Debug\41_dvoupole_procvicovani.exe.config
+C:\Repos\School\41_dvoupole_procvicovani\bin\Debug\41_dvoupole_procvicovani.exe
+C:\Repos\School\41_dvoupole_procvicovani\bin\Debug\41_dvoupole_procvicovani.pdb
+C:\Repos\School\41_dvoupole_procvicovani\obj\Debug\41_dvoupole_procvicovani.csproj.AssemblyReference.cache
+C:\Repos\School\41_dvoupole_procvicovani\obj\Debug\41_dvoupole_procvicovani.csproj.SuggestedBindingRedirects.cache
+C:\Repos\School\41_dvoupole_procvicovani\obj\Debug\41_dvoupole_procvicovani.csproj.CoreCompileInputs.cache
+C:\Repos\School\41_dvoupole_procvicovani\obj\Debug\41_dvoupole_procvicovani.exe
+C:\Repos\School\41_dvoupole_procvicovani\obj\Debug\41_dvoupole_procvicovani.pdb

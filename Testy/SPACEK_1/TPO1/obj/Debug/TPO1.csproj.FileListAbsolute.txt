@@ -1,0 +1,8 @@
+H:\SPACEK_1\TPO1\bin\Debug\TPO1.exe.config
+H:\SPACEK_1\TPO1\bin\Debug\TPO1.exe
+H:\SPACEK_1\TPO1\bin\Debug\TPO1.pdb
+H:\SPACEK_1\TPO1\obj\Debug\TPO1.csproj.AssemblyReference.cache
+H:\SPACEK_1\TPO1\obj\Debug\TPO1.csproj.SuggestedBindingRedirects.cache
+H:\SPACEK_1\TPO1\obj\Debug\TPO1.csproj.CoreCompileInputs.cache
+H:\SPACEK_1\TPO1\obj\Debug\TPO1.exe
+H:\SPACEK_1\TPO1\obj\Debug\TPO1.pdb

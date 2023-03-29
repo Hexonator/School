@@ -1,0 +1,15 @@
+H:\SPACEK_2\TP05\bin\Debug\net6.0\TP05.exe
+H:\SPACEK_2\TP05\bin\Debug\net6.0\TP05.deps.json
+H:\SPACEK_2\TP05\bin\Debug\net6.0\TP05.runtimeconfig.json
+H:\SPACEK_2\TP05\bin\Debug\net6.0\TP05.dll
+H:\SPACEK_2\TP05\bin\Debug\net6.0\TP05.pdb
+H:\SPACEK_2\TP05\obj\Debug\net6.0\TP05.csproj.AssemblyReference.cache
+H:\SPACEK_2\TP05\obj\Debug\net6.0\TP05.GeneratedMSBuildEditorConfig.editorconfig
+H:\SPACEK_2\TP05\obj\Debug\net6.0\TP05.AssemblyInfoInputs.cache
+H:\SPACEK_2\TP05\obj\Debug\net6.0\TP05.AssemblyInfo.cs
+H:\SPACEK_2\TP05\obj\Debug\net6.0\TP05.csproj.CoreCompileInputs.cache
+H:\SPACEK_2\TP05\obj\Debug\net6.0\TP05.dll
+H:\SPACEK_2\TP05\obj\Debug\net6.0\refint\TP05.dll
+H:\SPACEK_2\TP05\obj\Debug\net6.0\TP05.pdb
+H:\SPACEK_2\TP05\obj\Debug\net6.0\TP05.genruntimeconfig.cache
+H:\SPACEK_2\TP05\obj\Debug\net6.0\ref\TP05.dll

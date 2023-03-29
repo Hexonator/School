@@ -1,0 +1,8 @@
+H:\SPACEK_1\TP03\bin\Debug\TP03.exe.config
+H:\SPACEK_1\TP03\bin\Debug\TP03.exe
+H:\SPACEK_1\TP03\bin\Debug\TP03.pdb
+H:\SPACEK_1\TP03\obj\Debug\TP03.csproj.AssemblyReference.cache
+H:\SPACEK_1\TP03\obj\Debug\TP03.csproj.SuggestedBindingRedirects.cache
+H:\SPACEK_1\TP03\obj\Debug\TP03.csproj.CoreCompileInputs.cache
+H:\SPACEK_1\TP03\obj\Debug\TP03.exe
+H:\SPACEK_1\TP03\obj\Debug\TP03.pdb

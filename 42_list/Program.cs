@@ -52,10 +52,14 @@ namespace _42_list
             Write_list(days);
 
             // Zjisteni obsahu konkretniho prvku
-            if (days.Contains("Stredaa"))
+            if (days.Contains("Streda"))
                 Console.WriteLine("obsahuje");
             else
                 Console.WriteLine("neobsahuje");
+            Divider();
+
+            //Zjisteni poctu prvku v listu
+            Console.WriteLine($"Pocet prvku v listu je {days.Count}");
             
 
             Console.ReadKey();

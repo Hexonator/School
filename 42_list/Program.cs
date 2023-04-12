@@ -16,6 +16,14 @@ namespace _42_list
             }
             Divider();
         }
+        static void Write_list(List<int> list)
+        {
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
+            Divider();
+        }
 
         static void Divider()
         {
@@ -23,7 +31,7 @@ namespace _42_list
         }
         static void Main(string[] args)
         {
-            List<string> days = new List<string>();
+            List<string> days = new List<string>(7); // Je dobre priblizne urcovat jak velky list bude, protoze potom zabira min pameti
             //Pridani polozek po jedne
             days.Add("Pondeli");
             days.Add("Utery");
@@ -60,7 +68,33 @@ namespace _42_list
 
             //Zjisteni poctu prvku v listu
             Console.WriteLine($"Pocet prvku v listu je {days.Count}");
-            
+
+
+            Divider();
+
+            List<int> list2 = new List<int>(10) { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+            for(int i = 0; i < list2.Count; i++)
+            {
+                list2[i] = i*2;
+            }
+            Write_list(list2);
+
+            Divider();
+
+            List<string> colors = new List<string>(10);
+            string line;
+            do
+            {
+                line = Console.ReadLine();
+                if (line == "konec")
+                {
+                    break;
+                }
+                colors.Add(line);
+            } while (true);
+            Console.WriteLine();
+            Write_list(colors);
+           
 
             Console.ReadKey();
         }

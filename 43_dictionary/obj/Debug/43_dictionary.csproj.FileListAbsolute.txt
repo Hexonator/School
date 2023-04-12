@@ -1,0 +1,8 @@
+C:\Repos\School\43_dictionary\bin\Debug\43_dictionary.exe.config
+C:\Repos\School\43_dictionary\bin\Debug\43_dictionary.exe
+C:\Repos\School\43_dictionary\bin\Debug\43_dictionary.pdb
+C:\Repos\School\43_dictionary\obj\Debug\43_dictionary.csproj.AssemblyReference.cache
+C:\Repos\School\43_dictionary\obj\Debug\43_dictionary.csproj.SuggestedBindingRedirects.cache
+C:\Repos\School\43_dictionary\obj\Debug\43_dictionary.csproj.CoreCompileInputs.cache
+C:\Repos\School\43_dictionary\obj\Debug\43_dictionary.exe
+C:\Repos\School\43_dictionary\obj\Debug\43_dictionary.pdb

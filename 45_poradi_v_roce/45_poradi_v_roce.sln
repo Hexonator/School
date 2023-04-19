@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "45_poradi_v_roce", "45_poradi_v_roce.csproj", "{6FAFF4C1-06B2-4B6A-BAF0-5673807F3DE9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FAFF4C1-06B2-4B6A-BAF0-5673807F3DE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FAFF4C1-06B2-4B6A-BAF0-5673807F3DE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FAFF4C1-06B2-4B6A-BAF0-5673807F3DE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FAFF4C1-06B2-4B6A-BAF0-5673807F3DE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {69A4E0CD-514B-42C9-AC77-98C1A4C3AEA0}
+	EndGlobalSection
+EndGlobal

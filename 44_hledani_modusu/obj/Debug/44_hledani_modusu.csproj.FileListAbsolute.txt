@@ -1,0 +1,8 @@
+C:\Repos\School\44_hledani_modusu\bin\Debug\44_hledani_modusu.exe.config
+C:\Repos\School\44_hledani_modusu\bin\Debug\44_hledani_modusu.exe
+C:\Repos\School\44_hledani_modusu\bin\Debug\44_hledani_modusu.pdb
+C:\Repos\School\44_hledani_modusu\obj\Debug\44_hledani_modusu.csproj.AssemblyReference.cache
+C:\Repos\School\44_hledani_modusu\obj\Debug\44_hledani_modusu.csproj.SuggestedBindingRedirects.cache
+C:\Repos\School\44_hledani_modusu\obj\Debug\44_hledani_modusu.csproj.CoreCompileInputs.cache
+C:\Repos\School\44_hledani_modusu\obj\Debug\44_hledani_modusu.exe
+C:\Repos\School\44_hledani_modusu\obj\Debug\44_hledani_modusu.pdb

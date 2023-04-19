@@ -1,0 +1,8 @@
+C:\Repos\School\45_poradi_v_roce\bin\Debug\45_poradi_v_roce.exe.config
+C:\Repos\School\45_poradi_v_roce\bin\Debug\45_poradi_v_roce.exe
+C:\Repos\School\45_poradi_v_roce\bin\Debug\45_poradi_v_roce.pdb
+C:\Repos\School\45_poradi_v_roce\obj\Debug\45_poradi_v_roce.csproj.AssemblyReference.cache
+C:\Repos\School\45_poradi_v_roce\obj\Debug\45_poradi_v_roce.csproj.SuggestedBindingRedirects.cache
+C:\Repos\School\45_poradi_v_roce\obj\Debug\45_poradi_v_roce.csproj.CoreCompileInputs.cache
+C:\Repos\School\45_poradi_v_roce\obj\Debug\45_poradi_v_roce.exe
+C:\Repos\School\45_poradi_v_roce\obj\Debug\45_poradi_v_roce.pdb

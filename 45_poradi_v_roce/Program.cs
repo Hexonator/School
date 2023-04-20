@@ -13,7 +13,16 @@ namespace _45_poradi_v_roce
         {
             int[] month_lengths = new int[12] {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
             Console.WriteLine("napis datum ve formatu X.X.");
+            Console.WriteLine("enter pro ukonceni programu");
             Console.WriteLine();
+
+            //int year_length = 0;
+            //foreach (var month in month_lengths)
+            //{
+            //    year_length += month;
+            //}
+            //Console.WriteLine(year_length);
+
             while (true)
             {
                 Console.Write("Datum: ");
@@ -24,26 +33,30 @@ namespace _45_poradi_v_roce
                     break;
                 }
 
-                int day = 0;
                 int month = 0;
-                bool monthDone = false;
+                int day = 0;
+                bool dayDone = false;
                 foreach (var character in date)
                 {
-                    if (character != '.' && !monthDone)
+                    if (character != '.' && !dayDone)
                     {
-                        month = int.Parse(Convert.ToString(month) + character);
+                        day = int.Parse(Convert.ToString(day) + character);
+                        continue;
                     }
-                    else if (!monthDone)
+                    else if (!dayDone)
                     {
-                        monthDone = true;
+                        dayDone = true;
                         continue;
                     }
 
-                    if (character != '.' && monthDone)
+                    if (character != '.' && dayDone)
                     {
-                        day = int.Parse(Convert.ToString(day) + character);
+                        month = int.Parse(Convert.ToString(month) + character);
                     }
                 }
+
+                //Console.WriteLine(day);
+                //Console.WriteLine(month);
 
                 int day_number = 0;
                 for (int i = 0; i < month-1; i++)

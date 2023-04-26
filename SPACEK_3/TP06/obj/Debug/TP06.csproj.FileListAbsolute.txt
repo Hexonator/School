@@ -1,8 +1,0 @@
-H:\SPACEK_3\TP06\bin\Debug\TP06.exe.config
-H:\SPACEK_3\TP06\bin\Debug\TP06.exe
-H:\SPACEK_3\TP06\bin\Debug\TP06.pdb
-H:\SPACEK_3\TP06\obj\Debug\TP06.csproj.AssemblyReference.cache
-H:\SPACEK_3\TP06\obj\Debug\TP06.csproj.SuggestedBindingRedirects.cache
-H:\SPACEK_3\TP06\obj\Debug\TP06.csproj.CoreCompileInputs.cache
-H:\SPACEK_3\TP06\obj\Debug\TP06.exe
-H:\SPACEK_3\TP06\obj\Debug\TP06.pdb

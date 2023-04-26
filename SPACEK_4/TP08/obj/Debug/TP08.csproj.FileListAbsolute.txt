@@ -1,8 +1,0 @@
-H:\Testy\SPACEK_4\TP08\bin\Debug\TP08.exe.config
-H:\Testy\SPACEK_4\TP08\bin\Debug\TP08.exe
-H:\Testy\SPACEK_4\TP08\bin\Debug\TP08.pdb
-H:\Testy\SPACEK_4\TP08\obj\Debug\TP08.csproj.AssemblyReference.cache
-H:\Testy\SPACEK_4\TP08\obj\Debug\TP08.csproj.SuggestedBindingRedirects.cache
-H:\Testy\SPACEK_4\TP08\obj\Debug\TP08.csproj.CoreCompileInputs.cache
-H:\Testy\SPACEK_4\TP08\obj\Debug\TP08.exe
-H:\Testy\SPACEK_4\TP08\obj\Debug\TP08.pdb

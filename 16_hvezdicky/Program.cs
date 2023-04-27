@@ -10,8 +10,7 @@ namespace _16_hvezdicky
     {
         static void Main(string[] args)
         {
-            int size;
-            size = 10;
+            int size = 10;
             /*
             for (int i = 0; i < size; i++)
             {

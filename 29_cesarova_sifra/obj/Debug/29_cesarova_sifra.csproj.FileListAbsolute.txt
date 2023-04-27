@@ -6,3 +6,11 @@ C:\Users\Standa\iCloudDrive\Coding iCloud\School\29_cesarova_sifra\obj\Debug\29_
 C:\Users\Standa\iCloudDrive\Coding iCloud\School\29_cesarova_sifra\obj\Debug\29_cesarova_sifra.csproj.CoreCompileInputs.cache
 C:\Users\Standa\iCloudDrive\Coding iCloud\School\29_cesarova_sifra\obj\Debug\29_cesarova_sifra.exe
 C:\Users\Standa\iCloudDrive\Coding iCloud\School\29_cesarova_sifra\obj\Debug\29_cesarova_sifra.pdb
+C:\Repos\School\29_cesarova_sifra\bin\Debug\29_cesarova_sifra.exe.config
+C:\Repos\School\29_cesarova_sifra\bin\Debug\29_cesarova_sifra.exe
+C:\Repos\School\29_cesarova_sifra\bin\Debug\29_cesarova_sifra.pdb
+C:\Repos\School\29_cesarova_sifra\obj\Debug\29_cesarova_sifra.csproj.AssemblyReference.cache
+C:\Repos\School\29_cesarova_sifra\obj\Debug\29_cesarova_sifra.csproj.SuggestedBindingRedirects.cache
+C:\Repos\School\29_cesarova_sifra\obj\Debug\29_cesarova_sifra.csproj.CoreCompileInputs.cache
+C:\Repos\School\29_cesarova_sifra\obj\Debug\29_cesarova_sifra.exe
+C:\Repos\School\29_cesarova_sifra\obj\Debug\29_cesarova_sifra.pdb

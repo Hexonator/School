@@ -1,0 +1,8 @@
+C:\Repos\School\46_vyjimky\bin\Debug\46_vyjimky.exe.config
+C:\Repos\School\46_vyjimky\bin\Debug\46_vyjimky.exe
+C:\Repos\School\46_vyjimky\bin\Debug\46_vyjimky.pdb
+C:\Repos\School\46_vyjimky\obj\Debug\46_vyjimky.csproj.AssemblyReference.cache
+C:\Repos\School\46_vyjimky\obj\Debug\46_vyjimky.csproj.SuggestedBindingRedirects.cache
+C:\Repos\School\46_vyjimky\obj\Debug\46_vyjimky.csproj.CoreCompileInputs.cache
+C:\Repos\School\46_vyjimky\obj\Debug\46_vyjimky.exe
+C:\Repos\School\46_vyjimky\obj\Debug\46_vyjimky.pdb

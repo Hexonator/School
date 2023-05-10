@@ -1,0 +1,8 @@
+C:\Repos\School\47_soubory1\bin\Debug\47_soubory1.exe.config
+C:\Repos\School\47_soubory1\bin\Debug\47_soubory1.exe
+C:\Repos\School\47_soubory1\bin\Debug\47_soubory1.pdb
+C:\Repos\School\47_soubory1\obj\Debug\47_soubory1.csproj.AssemblyReference.cache
+C:\Repos\School\47_soubory1\obj\Debug\47_soubory1.csproj.SuggestedBindingRedirects.cache
+C:\Repos\School\47_soubory1\obj\Debug\47_soubory1.csproj.CoreCompileInputs.cache
+C:\Repos\School\47_soubory1\obj\Debug\47_soubory1.exe
+C:\Repos\School\47_soubory1\obj\Debug\47_soubory1.pdb

@@ -18,11 +18,11 @@ namespace _29_cesarova_sifra
             {
                 int char_num = word[i];
                 char_num += codenum;
-                if (char_num > 90)
+                if (char_num > 122)
                 {
                     char_num -= 26;
                 }
-                else if (char_num < 65)
+                else if (char_num < 97)
                 {
                     char_num += 26;
                 }

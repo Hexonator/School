@@ -1,0 +1,8 @@
+C:\Repos\School\48_zapis_do_souboru\bin\Debug\48_zapis_do_souboru.exe.config
+C:\Repos\School\48_zapis_do_souboru\bin\Debug\48_zapis_do_souboru.exe
+C:\Repos\School\48_zapis_do_souboru\bin\Debug\48_zapis_do_souboru.pdb
+C:\Repos\School\48_zapis_do_souboru\obj\Debug\48_zapis_do_souboru.csproj.AssemblyReference.cache
+C:\Repos\School\48_zapis_do_souboru\obj\Debug\48_zapis_do_souboru.csproj.SuggestedBindingRedirects.cache
+C:\Repos\School\48_zapis_do_souboru\obj\Debug\48_zapis_do_souboru.csproj.CoreCompileInputs.cache
+C:\Repos\School\48_zapis_do_souboru\obj\Debug\48_zapis_do_souboru.exe
+C:\Repos\School\48_zapis_do_souboru\obj\Debug\48_zapis_do_souboru.pdb

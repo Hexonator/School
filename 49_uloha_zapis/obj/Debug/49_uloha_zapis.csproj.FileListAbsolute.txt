@@ -1,0 +1,8 @@
+C:\Repos\School\49_uloha_zapis\bin\Debug\49_uloha_zapis.exe.config
+C:\Repos\School\49_uloha_zapis\bin\Debug\49_uloha_zapis.exe
+C:\Repos\School\49_uloha_zapis\bin\Debug\49_uloha_zapis.pdb
+C:\Repos\School\49_uloha_zapis\obj\Debug\49_uloha_zapis.csproj.AssemblyReference.cache
+C:\Repos\School\49_uloha_zapis\obj\Debug\49_uloha_zapis.csproj.SuggestedBindingRedirects.cache
+C:\Repos\School\49_uloha_zapis\obj\Debug\49_uloha_zapis.csproj.CoreCompileInputs.cache
+C:\Repos\School\49_uloha_zapis\obj\Debug\49_uloha_zapis.exe
+C:\Repos\School\49_uloha_zapis\obj\Debug\49_uloha_zapis.pdb

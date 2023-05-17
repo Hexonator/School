@@ -1,0 +1,8 @@
+C:\Repos\School\50_secti\bin\Debug\50_secti.exe.config
+C:\Repos\School\50_secti\bin\Debug\50_secti.exe
+C:\Repos\School\50_secti\bin\Debug\50_secti.pdb
+C:\Repos\School\50_secti\obj\Debug\50_secti.csproj.AssemblyReference.cache
+C:\Repos\School\50_secti\obj\Debug\50_secti.csproj.SuggestedBindingRedirects.cache
+C:\Repos\School\50_secti\obj\Debug\50_secti.csproj.CoreCompileInputs.cache
+C:\Repos\School\50_secti\obj\Debug\50_secti.exe
+C:\Repos\School\50_secti\obj\Debug\50_secti.pdb

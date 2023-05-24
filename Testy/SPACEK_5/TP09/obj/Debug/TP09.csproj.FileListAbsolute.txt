@@ -1,0 +1,8 @@
+C:\Repos\School\Testy\SPACEK_5\TP09\bin\Debug\TP09.exe.config
+C:\Repos\School\Testy\SPACEK_5\TP09\bin\Debug\TP09.exe
+C:\Repos\School\Testy\SPACEK_5\TP09\bin\Debug\TP09.pdb
+C:\Repos\School\Testy\SPACEK_5\TP09\obj\Debug\TP09.csproj.AssemblyReference.cache
+C:\Repos\School\Testy\SPACEK_5\TP09\obj\Debug\TP09.csproj.SuggestedBindingRedirects.cache
+C:\Repos\School\Testy\SPACEK_5\TP09\obj\Debug\TP09.csproj.CoreCompileInputs.cache
+C:\Repos\School\Testy\SPACEK_5\TP09\obj\Debug\TP09.exe
+C:\Repos\School\Testy\SPACEK_5\TP09\obj\Debug\TP09.pdb

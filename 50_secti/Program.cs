@@ -21,7 +21,6 @@ namespace _50_secti
                     int num1, num2;
                     foreach (var digit in numbers_read)
                     {
-                        
                         if (isFirst && digit != ' ')
                         {
                             str1 += digit;

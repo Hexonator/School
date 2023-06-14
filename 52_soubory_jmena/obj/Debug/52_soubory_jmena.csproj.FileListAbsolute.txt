@@ -1,0 +1,8 @@
+C:\Repos\School\52_soubory_jmena\obj\Debug\52_soubory_jmena.csproj.AssemblyReference.cache
+C:\Repos\School\52_soubory_jmena\obj\Debug\52_soubory_jmena.csproj.SuggestedBindingRedirects.cache
+C:\Repos\School\52_soubory_jmena\obj\Debug\52_soubory_jmena.csproj.CoreCompileInputs.cache
+C:\Repos\School\52_soubory_jmena\bin\Debug\52_soubory_jmena.exe.config
+C:\Repos\School\52_soubory_jmena\bin\Debug\52_soubory_jmena.exe
+C:\Repos\School\52_soubory_jmena\bin\Debug\52_soubory_jmena.pdb
+C:\Repos\School\52_soubory_jmena\obj\Debug\52_soubory_jmena.exe
+C:\Repos\School\52_soubory_jmena\obj\Debug\52_soubory_jmena.pdb

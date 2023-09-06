@@ -1,0 +1,8 @@
+C:\Repos\School\53_desetinna_cisla_text\bin\Debug\53_desetinna_cisla_text.exe.config
+C:\Repos\School\53_desetinna_cisla_text\bin\Debug\53_desetinna_cisla_text.exe
+C:\Repos\School\53_desetinna_cisla_text\bin\Debug\53_desetinna_cisla_text.pdb
+C:\Repos\School\53_desetinna_cisla_text\obj\Debug\53_desetinna_cisla_text.csproj.AssemblyReference.cache
+C:\Repos\School\53_desetinna_cisla_text\obj\Debug\53_desetinna_cisla_text.csproj.SuggestedBindingRedirects.cache
+C:\Repos\School\53_desetinna_cisla_text\obj\Debug\53_desetinna_cisla_text.csproj.CoreCompileInputs.cache
+C:\Repos\School\53_desetinna_cisla_text\obj\Debug\53_desetinna_cisla_text.exe
+C:\Repos\School\53_desetinna_cisla_text\obj\Debug\53_desetinna_cisla_text.pdb

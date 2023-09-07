@@ -1,0 +1,7 @@
+C:\Repos\School\2023-24\ST\01_posloupnosti\bin\Debug\01_posloupnosti.exe.config
+C:\Repos\School\2023-24\ST\01_posloupnosti\bin\Debug\01_posloupnosti.exe
+C:\Repos\School\2023-24\ST\01_posloupnosti\bin\Debug\01_posloupnosti.pdb
+C:\Repos\School\2023-24\ST\01_posloupnosti\obj\Debug\01_posloupnosti.csproj.AssemblyReference.cache
+C:\Repos\School\2023-24\ST\01_posloupnosti\obj\Debug\01_posloupnosti.csproj.CoreCompileInputs.cache
+C:\Repos\School\2023-24\ST\01_posloupnosti\obj\Debug\01_posloupnosti.exe
+C:\Repos\School\2023-24\ST\01_posloupnosti\obj\Debug\01_posloupnosti.pdb

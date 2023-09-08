@@ -55,6 +55,8 @@ namespace _01_posloupnosti
                         {
                             Console.WriteLine($"Sequence {sequence_counter} is invalid. Numbers aren't in order");
                             breakHappened = true;
+                            seq = new List<int>(5);
+                            sequence_counter++;
                             break;
                         }
                         lastnum = num;
@@ -80,14 +82,27 @@ namespace _01_posloupnosti
                     {
                         Console.WriteLine($"Sequence {sequence_counter} is equally incremented");
                     }
-
-                    // Check if numbers are in exponential increments
-                    for (int i = 0; i < seq.Count-1; i++)
+                    else
                     {
-                        
+                        // Check if numbers are in exponential increments
+                        bool isExponentiallyIncremented = true;
+                        for (int i = 0; i <= seq.Count - 3 && isExponentiallyIncremented; i++)
+                        {
+                            delta = seq[i + 1] / seq[i];
+                            if (seq[i] * Math.Pow(delta, 2) != seq[i + 2])
+                            {
+                                Console.WriteLine($"Sequence {sequence_counter} is not exponentially incremented");
+                                isExponentiallyIncremented = false;
+                                break;
+                            }
+                        }
+
+                        if (isExponentiallyIncremented)
+                        {
+                            Console.WriteLine($"Sequence {sequence_counter} is exponentially incremented");
+                        }
                     }
-
-
+                    
                     seq = new List<int>(5);
                     sequence_counter++;
                 }

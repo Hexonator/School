@@ -15,42 +15,41 @@ namespace _01_posloupnosti
             {
                 string line;
                 int sequence_counter = 1;
-                List<int> posloupnost = new List<int>(5);
+                List<int> seq = new List<int>(5);
                 while(true)
                 {
+                    // Converting data to lists
                     line = data.ReadLine();
                     if (line == null)
                     {
-                        Console.WriteLine("end");
                         break;
                     }
-                    // for(int i = 0; i < line.Length; i++)
                     string number = "";
-                    int counter = 0;
                     foreach (var character in line)
                     {
                         if (character != ' '){
                             number += character;
                         }
                         else{
-                            posloupnost.Add(int.Parse(number));
+                            seq.Add(int.Parse(number));
                             number = "";
                         }
-                        counter++;
                     }
-                    posloupnost.Add(int.Parse(number));
+                    seq.Add(int.Parse(number));
 
-                    if (posloupnost.Count < 3)
+                    // Check if sequence is long enough
+                    if (seq.Count < 3)
                     {
                         Console.WriteLine($"Sequence {sequence_counter} is not long enough");
-                        posloupnost = new List<int>(5);
+                        seq = new List<int>(5);
                         sequence_counter++;
                         continue;
                     }
 
+                    // Check if nummbers are in order
                     int lastnum = 0;
                     bool breakHappened = false;
-                    foreach (var num in posloupnost)
+                    foreach (var num in seq)
                     {
                         if (num < lastnum)
                         {
@@ -63,17 +62,33 @@ namespace _01_posloupnosti
 
                     if (breakHappened) { continue; }
 
-
-                    for (int i = 0; i <= posloupnost.Count; i++)
+                    // Check if numbers are in equal increments
+                    int delta;
+                    bool isEquallyIncremented = true;
+                    for (int i = 0; i <= seq.Count-3 && isEquallyIncremented; i++)
                     {
-                        if (true)
+                        delta = seq[i+1] - seq[i];
+                        if (seq[i] + 2 * delta != seq[i+2])
                         {
-                                
+                            Console.WriteLine($"Sequence {sequence_counter} is not equally incremented");
+                            isEquallyIncremented = false;
+                            break;
                         }
                     }
 
+                    if (isEquallyIncremented)
+                    {
+                        Console.WriteLine($"Sequence {sequence_counter} is equally incremented");
+                    }
 
-                    posloupnost = new List<int>(5);
+                    // Check if numbers are in exponential increments
+                    for (int i = 0; i < seq.Count-1; i++)
+                    {
+                        
+                    }
+
+
+                    seq = new List<int>(5);
                     sequence_counter++;
                 }
             }

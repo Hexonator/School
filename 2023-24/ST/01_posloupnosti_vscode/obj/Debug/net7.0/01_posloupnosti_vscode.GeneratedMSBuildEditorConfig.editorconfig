@@ -7,5 +7,5 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = test
-build_property.ProjectDir = C:\Repos\School\2023-24\ST\test\
+build_property.RootNamespace = _01_posloupnosti_vscode
+build_property.ProjectDir = C:\Repos\School\2023-24\ST\01_posloupnosti_vscode\

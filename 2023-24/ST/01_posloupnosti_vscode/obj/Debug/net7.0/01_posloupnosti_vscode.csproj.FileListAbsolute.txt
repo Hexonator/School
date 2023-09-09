@@ -1,0 +1,14 @@
+C:\Repos\School\2023-24\ST\01_posloupnosti_vscode\bin\Debug\net7.0\01_posloupnosti_vscode.exe
+C:\Repos\School\2023-24\ST\01_posloupnosti_vscode\bin\Debug\net7.0\01_posloupnosti_vscode.deps.json
+C:\Repos\School\2023-24\ST\01_posloupnosti_vscode\bin\Debug\net7.0\01_posloupnosti_vscode.runtimeconfig.json
+C:\Repos\School\2023-24\ST\01_posloupnosti_vscode\bin\Debug\net7.0\01_posloupnosti_vscode.dll
+C:\Repos\School\2023-24\ST\01_posloupnosti_vscode\bin\Debug\net7.0\01_posloupnosti_vscode.pdb
+C:\Repos\School\2023-24\ST\01_posloupnosti_vscode\obj\Debug\net7.0\01_posloupnosti_vscode.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\School\2023-24\ST\01_posloupnosti_vscode\obj\Debug\net7.0\01_posloupnosti_vscode.AssemblyInfoInputs.cache
+C:\Repos\School\2023-24\ST\01_posloupnosti_vscode\obj\Debug\net7.0\01_posloupnosti_vscode.AssemblyInfo.cs
+C:\Repos\School\2023-24\ST\01_posloupnosti_vscode\obj\Debug\net7.0\01_posloupnosti_vscode.csproj.CoreCompileInputs.cache
+C:\Repos\School\2023-24\ST\01_posloupnosti_vscode\obj\Debug\net7.0\01_posloupnosti_vscode.dll
+C:\Repos\School\2023-24\ST\01_posloupnosti_vscode\obj\Debug\net7.0\refint\01_posloupnosti_vscode.dll
+C:\Repos\School\2023-24\ST\01_posloupnosti_vscode\obj\Debug\net7.0\01_posloupnosti_vscode.pdb
+C:\Repos\School\2023-24\ST\01_posloupnosti_vscode\obj\Debug\net7.0\01_posloupnosti_vscode.genruntimeconfig.cache
+C:\Repos\School\2023-24\ST\01_posloupnosti_vscode\obj\Debug\net7.0\ref\01_posloupnosti_vscode.dll

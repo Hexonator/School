@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "test/1.0.0": {
+      "01_posloupnosti_vscode/1.0.0": {
         "runtime": {
-          "test.dll": {}
+          "01_posloupnosti_vscode.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "test/1.0.0": {
+    "01_posloupnosti_vscode/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

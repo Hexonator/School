@@ -102,4 +102,7 @@ using (StreamReader data = new(@"posloupnosti.txt", Encoding.UTF8))
         seq = new List<int>(5);
         sequence_counter++;
     }
+
 }
+
+Console.ReadKey();

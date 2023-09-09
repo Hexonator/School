@@ -7,11 +7,15 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/01_prvni/01_prvni/01_prvni.csproj",
+                "${workspaceFolder}/01_posloupnosti.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         },
         {
             "label": "publish",
@@ -19,7 +23,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/01_prvni/01_prvni/01_prvni.csproj",
+                "${workspaceFolder}/01_posloupnosti.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +37,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/01_prvni/01_prvni/01_prvni.csproj"
+                "${workspaceFolder}/01_posloupnosti.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Repos\\School\\2023-24\\ST\\01_posloupnosti_vscode\\01_posloupnosti_vscode.csproj",
-      "projectName": "01_posloupnosti_vscode",
-      "projectPath": "C:\\Repos\\School\\2023-24\\ST\\01_posloupnosti_vscode\\01_posloupnosti_vscode.csproj",
+      "projectUniqueName": "C:\\Repos\\School\\2023-24\\PO\\01_ASCII\\01_ASCII.csproj",
+      "projectName": "01_ASCII",
+      "projectPath": "C:\\Repos\\School\\2023-24\\PO\\01_ASCII\\01_ASCII.csproj",
       "packagesPath": "C:\\Users\\Standa\\.nuget\\packages\\",
-      "outputPath": "C:\\Repos\\School\\2023-24\\ST\\01_posloupnosti_vscode\\obj\\",
+      "outputPath": "C:\\Repos\\School\\2023-24\\PO\\01_ASCII\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

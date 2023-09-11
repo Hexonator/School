@@ -1,0 +1,14 @@
+C:\Repos\School\2023-24\PO\01_ASCII\obj\Debug\net7.0\01_ASCII.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\School\2023-24\PO\01_ASCII\obj\Debug\net7.0\01_ASCII.AssemblyInfoInputs.cache
+C:\Repos\School\2023-24\PO\01_ASCII\obj\Debug\net7.0\01_ASCII.AssemblyInfo.cs
+C:\Repos\School\2023-24\PO\01_ASCII\obj\Debug\net7.0\01_ASCII.csproj.CoreCompileInputs.cache
+C:\Repos\School\2023-24\PO\01_ASCII\bin\Debug\net7.0\01_ASCII.exe
+C:\Repos\School\2023-24\PO\01_ASCII\bin\Debug\net7.0\01_ASCII.deps.json
+C:\Repos\School\2023-24\PO\01_ASCII\bin\Debug\net7.0\01_ASCII.runtimeconfig.json
+C:\Repos\School\2023-24\PO\01_ASCII\bin\Debug\net7.0\01_ASCII.dll
+C:\Repos\School\2023-24\PO\01_ASCII\bin\Debug\net7.0\01_ASCII.pdb
+C:\Repos\School\2023-24\PO\01_ASCII\obj\Debug\net7.0\01_ASCII.dll
+C:\Repos\School\2023-24\PO\01_ASCII\obj\Debug\net7.0\refint\01_ASCII.dll
+C:\Repos\School\2023-24\PO\01_ASCII\obj\Debug\net7.0\01_ASCII.pdb
+C:\Repos\School\2023-24\PO\01_ASCII\obj\Debug\net7.0\01_ASCII.genruntimeconfig.cache
+C:\Repos\School\2023-24\PO\01_ASCII\obj\Debug\net7.0\ref\01_ASCII.dll

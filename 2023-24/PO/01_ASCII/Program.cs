@@ -10,7 +10,7 @@ namespace _01_ASCII;
 
 class Program
 {
-    static void CodeASCIIart(string filename){
+    static void CodeASCIIart(string filename, bool doReadkey){
         using (StreamReader text = new(filename, Encoding.UTF8))
             {
                 string line = text.ReadLine();
@@ -30,7 +30,10 @@ class Program
                     line = text.ReadLine();
                 }
             }
-            Console.ReadKey();
+            if (doReadkey)
+            {
+                Console.ReadKey();
+            }
     }
 
     static void DecodeASCIIart(string input_filename, string output_filename)
@@ -38,22 +41,31 @@ class Program
         StreamWriter output = new (output_filename);
         StreamReader input = new(input_filename, Encoding.UTF8);
         string line = input.ReadLine();
-        if (line != null)
+        while (line != null)
         {
             char lastchar = line[0];
             int counter = -1;
-            foreach (var character in line)
+            if (line == "")
             {
-                if (character == lastchar)
+                output.WriteLine();
+            }
+            else
+            {
+                foreach (var character in line)
                 {
-                    counter++;
+                    if (character == lastchar)
+                    {
+                        counter++;
+                    }
+                    else
+                    {
+                        output.WriteLine($"{character}{counter}");
+                        counter = 1;
+                    }
+                    lastchar = character;
                 }
-                else
-                {
-                    output.Write($"{lastchar}{counter}");
-                    counter = 0;
-                }
-                lastchar = character;
+                line = input.ReadLine();
+                output.WriteLine();
             }
         }
         input.Close();
@@ -61,12 +73,14 @@ class Program
     }
     static void Main(string[] args)
     {
-        for (int i = 1; i <= 7; i++)
-        {
-            CodeASCIIart($"ascii-{i}.txt");
-        }
-        Console.ReadKey();
+        // for (int i = 1; i <= 7; i++)
+        // {
+        //     CodeASCIIart($"ascii-{i}.txt", false);
+        // }
+        // Console.ReadKey();
 
         DecodeASCIIart("fullascii-1.txt", "fullascii_output-1.txt");
+
+        CodeASCIIart("fullascii_output-1.txt", true);
     }
 }

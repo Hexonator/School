@@ -1,0 +1,14 @@
+C:\Repos\School\2023-24\PO\2_Morseovka\bin\Debug\net7.0\2_Morseovka.exe
+C:\Repos\School\2023-24\PO\2_Morseovka\bin\Debug\net7.0\2_Morseovka.deps.json
+C:\Repos\School\2023-24\PO\2_Morseovka\bin\Debug\net7.0\2_Morseovka.runtimeconfig.json
+C:\Repos\School\2023-24\PO\2_Morseovka\bin\Debug\net7.0\2_Morseovka.dll
+C:\Repos\School\2023-24\PO\2_Morseovka\bin\Debug\net7.0\2_Morseovka.pdb
+C:\Repos\School\2023-24\PO\2_Morseovka\obj\Debug\net7.0\2_Morseovka.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\School\2023-24\PO\2_Morseovka\obj\Debug\net7.0\2_Morseovka.AssemblyInfoInputs.cache
+C:\Repos\School\2023-24\PO\2_Morseovka\obj\Debug\net7.0\2_Morseovka.AssemblyInfo.cs
+C:\Repos\School\2023-24\PO\2_Morseovka\obj\Debug\net7.0\2_Morseovka.csproj.CoreCompileInputs.cache
+C:\Repos\School\2023-24\PO\2_Morseovka\obj\Debug\net7.0\2_Morseovka.dll
+C:\Repos\School\2023-24\PO\2_Morseovka\obj\Debug\net7.0\refint\2_Morseovka.dll
+C:\Repos\School\2023-24\PO\2_Morseovka\obj\Debug\net7.0\2_Morseovka.pdb
+C:\Repos\School\2023-24\PO\2_Morseovka\obj\Debug\net7.0\2_Morseovka.genruntimeconfig.cache
+C:\Repos\School\2023-24\PO\2_Morseovka\obj\Debug\net7.0\ref\2_Morseovka.dll

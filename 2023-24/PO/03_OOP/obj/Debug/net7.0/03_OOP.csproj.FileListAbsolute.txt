@@ -1,0 +1,14 @@
+C:\Repos\School\2023-24\PO\03_OOP\bin\Debug\net7.0\03_OOP.exe
+C:\Repos\School\2023-24\PO\03_OOP\bin\Debug\net7.0\03_OOP.deps.json
+C:\Repos\School\2023-24\PO\03_OOP\bin\Debug\net7.0\03_OOP.runtimeconfig.json
+C:\Repos\School\2023-24\PO\03_OOP\bin\Debug\net7.0\03_OOP.dll
+C:\Repos\School\2023-24\PO\03_OOP\bin\Debug\net7.0\03_OOP.pdb
+C:\Repos\School\2023-24\PO\03_OOP\obj\Debug\net7.0\03_OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\School\2023-24\PO\03_OOP\obj\Debug\net7.0\03_OOP.AssemblyInfoInputs.cache
+C:\Repos\School\2023-24\PO\03_OOP\obj\Debug\net7.0\03_OOP.AssemblyInfo.cs
+C:\Repos\School\2023-24\PO\03_OOP\obj\Debug\net7.0\03_OOP.csproj.CoreCompileInputs.cache
+C:\Repos\School\2023-24\PO\03_OOP\obj\Debug\net7.0\03_OOP.dll
+C:\Repos\School\2023-24\PO\03_OOP\obj\Debug\net7.0\refint\03_OOP.dll
+C:\Repos\School\2023-24\PO\03_OOP\obj\Debug\net7.0\03_OOP.pdb
+C:\Repos\School\2023-24\PO\03_OOP\obj\Debug\net7.0\03_OOP.genruntimeconfig.cache
+C:\Repos\School\2023-24\PO\03_OOP\obj\Debug\net7.0\ref\03_OOP.dll

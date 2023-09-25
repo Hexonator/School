@@ -1,0 +1,9 @@
+C:\Repos\School\2023-24\ST\04_jednoducha_kalkulacka_vs\bin\Debug\04_jednoducha_kalkulacka_vs.exe.config
+C:\Repos\School\2023-24\ST\04_jednoducha_kalkulacka_vs\bin\Debug\04_jednoducha_kalkulacka_vs.exe
+C:\Repos\School\2023-24\ST\04_jednoducha_kalkulacka_vs\bin\Debug\04_jednoducha_kalkulacka_vs.pdb
+C:\Repos\School\2023-24\ST\04_jednoducha_kalkulacka_vs\obj\Debug\04_jednoducha_kalkulacka_vs.csproj.AssemblyReference.cache
+C:\Repos\School\2023-24\ST\04_jednoducha_kalkulacka_vs\obj\Debug\_04_jednoducha_kalkulacka_vs.Form1.resources
+C:\Repos\School\2023-24\ST\04_jednoducha_kalkulacka_vs\obj\Debug\04_jednoducha_kalkulacka_vs.csproj.GenerateResource.cache
+C:\Repos\School\2023-24\ST\04_jednoducha_kalkulacka_vs\obj\Debug\04_jednoducha_kalkulacka_vs.csproj.CoreCompileInputs.cache
+C:\Repos\School\2023-24\ST\04_jednoducha_kalkulacka_vs\obj\Debug\04_jednoducha_kalkulacka_vs.exe
+C:\Repos\School\2023-24\ST\04_jednoducha_kalkulacka_vs\obj\Debug\04_jednoducha_kalkulacka_vs.pdb

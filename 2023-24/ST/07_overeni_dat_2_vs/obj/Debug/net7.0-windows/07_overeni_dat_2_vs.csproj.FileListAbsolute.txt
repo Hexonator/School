@@ -1,0 +1,16 @@
+C:\Repos\School\2023-24\ST\07_overeni_dat_2_vs\obj\Debug\net7.0-windows\_07_overeni_dat_2_vs.Form1.resources
+C:\Repos\School\2023-24\ST\07_overeni_dat_2_vs\obj\Debug\net7.0-windows\07_overeni_dat_2_vs.csproj.GenerateResource.cache
+C:\Repos\School\2023-24\ST\07_overeni_dat_2_vs\obj\Debug\net7.0-windows\07_overeni_dat_2_vs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\School\2023-24\ST\07_overeni_dat_2_vs\obj\Debug\net7.0-windows\07_overeni_dat_2_vs.AssemblyInfoInputs.cache
+C:\Repos\School\2023-24\ST\07_overeni_dat_2_vs\obj\Debug\net7.0-windows\07_overeni_dat_2_vs.AssemblyInfo.cs
+C:\Repos\School\2023-24\ST\07_overeni_dat_2_vs\obj\Debug\net7.0-windows\07_overeni_dat_2_vs.csproj.CoreCompileInputs.cache
+C:\Repos\School\2023-24\ST\07_overeni_dat_2_vs\bin\Debug\net7.0-windows\07_overeni_dat_2_vs.exe
+C:\Repos\School\2023-24\ST\07_overeni_dat_2_vs\bin\Debug\net7.0-windows\07_overeni_dat_2_vs.deps.json
+C:\Repos\School\2023-24\ST\07_overeni_dat_2_vs\bin\Debug\net7.0-windows\07_overeni_dat_2_vs.runtimeconfig.json
+C:\Repos\School\2023-24\ST\07_overeni_dat_2_vs\bin\Debug\net7.0-windows\07_overeni_dat_2_vs.dll
+C:\Repos\School\2023-24\ST\07_overeni_dat_2_vs\bin\Debug\net7.0-windows\07_overeni_dat_2_vs.pdb
+C:\Repos\School\2023-24\ST\07_overeni_dat_2_vs\obj\Debug\net7.0-windows\07_overeni_dat_2_vs.dll
+C:\Repos\School\2023-24\ST\07_overeni_dat_2_vs\obj\Debug\net7.0-windows\refint\07_overeni_dat_2_vs.dll
+C:\Repos\School\2023-24\ST\07_overeni_dat_2_vs\obj\Debug\net7.0-windows\07_overeni_dat_2_vs.pdb
+C:\Repos\School\2023-24\ST\07_overeni_dat_2_vs\obj\Debug\net7.0-windows\07_overeni_dat_2_vs.genruntimeconfig.cache
+C:\Repos\School\2023-24\ST\07_overeni_dat_2_vs\obj\Debug\net7.0-windows\ref\07_overeni_dat_2_vs.dll

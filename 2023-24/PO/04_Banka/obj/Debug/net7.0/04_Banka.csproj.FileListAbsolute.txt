@@ -1,0 +1,14 @@
+C:\Repos\School\2023-24\PO\04_Banka\obj\Debug\net7.0\04_Banka.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\School\2023-24\PO\04_Banka\obj\Debug\net7.0\04_Banka.AssemblyInfoInputs.cache
+C:\Repos\School\2023-24\PO\04_Banka\obj\Debug\net7.0\04_Banka.AssemblyInfo.cs
+C:\Repos\School\2023-24\PO\04_Banka\obj\Debug\net7.0\04_Banka.csproj.CoreCompileInputs.cache
+C:\Repos\School\2023-24\PO\04_Banka\bin\Debug\net7.0\04_Banka.exe
+C:\Repos\School\2023-24\PO\04_Banka\bin\Debug\net7.0\04_Banka.deps.json
+C:\Repos\School\2023-24\PO\04_Banka\bin\Debug\net7.0\04_Banka.runtimeconfig.json
+C:\Repos\School\2023-24\PO\04_Banka\bin\Debug\net7.0\04_Banka.dll
+C:\Repos\School\2023-24\PO\04_Banka\bin\Debug\net7.0\04_Banka.pdb
+C:\Repos\School\2023-24\PO\04_Banka\obj\Debug\net7.0\04_Banka.dll
+C:\Repos\School\2023-24\PO\04_Banka\obj\Debug\net7.0\refint\04_Banka.dll
+C:\Repos\School\2023-24\PO\04_Banka\obj\Debug\net7.0\04_Banka.pdb
+C:\Repos\School\2023-24\PO\04_Banka\obj\Debug\net7.0\04_Banka.genruntimeconfig.cache
+C:\Repos\School\2023-24\PO\04_Banka\obj\Debug\net7.0\ref\04_Banka.dll

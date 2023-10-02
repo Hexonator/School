@@ -1,0 +1,16 @@
+C:\Repos\School\2023-24\ST\9_Sender\bin\Debug\net7.0-windows\9_Sender.exe
+C:\Repos\School\2023-24\ST\9_Sender\bin\Debug\net7.0-windows\9_Sender.deps.json
+C:\Repos\School\2023-24\ST\9_Sender\bin\Debug\net7.0-windows\9_Sender.runtimeconfig.json
+C:\Repos\School\2023-24\ST\9_Sender\bin\Debug\net7.0-windows\9_Sender.dll
+C:\Repos\School\2023-24\ST\9_Sender\bin\Debug\net7.0-windows\9_Sender.pdb
+C:\Repos\School\2023-24\ST\9_Sender\obj\Debug\net7.0-windows\_9_Sender.Form1.resources
+C:\Repos\School\2023-24\ST\9_Sender\obj\Debug\net7.0-windows\9_Sender.csproj.GenerateResource.cache
+C:\Repos\School\2023-24\ST\9_Sender\obj\Debug\net7.0-windows\9_Sender.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\School\2023-24\ST\9_Sender\obj\Debug\net7.0-windows\9_Sender.AssemblyInfoInputs.cache
+C:\Repos\School\2023-24\ST\9_Sender\obj\Debug\net7.0-windows\9_Sender.AssemblyInfo.cs
+C:\Repos\School\2023-24\ST\9_Sender\obj\Debug\net7.0-windows\9_Sender.csproj.CoreCompileInputs.cache
+C:\Repos\School\2023-24\ST\9_Sender\obj\Debug\net7.0-windows\9_Sender.dll
+C:\Repos\School\2023-24\ST\9_Sender\obj\Debug\net7.0-windows\refint\9_Sender.dll
+C:\Repos\School\2023-24\ST\9_Sender\obj\Debug\net7.0-windows\9_Sender.pdb
+C:\Repos\School\2023-24\ST\9_Sender\obj\Debug\net7.0-windows\9_Sender.genruntimeconfig.cache
+C:\Repos\School\2023-24\ST\9_Sender\obj\Debug\net7.0-windows\ref\9_Sender.dll

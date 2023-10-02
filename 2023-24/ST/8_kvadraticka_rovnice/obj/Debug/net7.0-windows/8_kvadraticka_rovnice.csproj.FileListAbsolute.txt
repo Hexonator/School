@@ -1,0 +1,16 @@
+C:\Repos\School\2023-24\ST\8_kvadraticka_rovnice\bin\Debug\net7.0-windows\8_kvadraticka_rovnice.exe
+C:\Repos\School\2023-24\ST\8_kvadraticka_rovnice\bin\Debug\net7.0-windows\8_kvadraticka_rovnice.deps.json
+C:\Repos\School\2023-24\ST\8_kvadraticka_rovnice\bin\Debug\net7.0-windows\8_kvadraticka_rovnice.runtimeconfig.json
+C:\Repos\School\2023-24\ST\8_kvadraticka_rovnice\bin\Debug\net7.0-windows\8_kvadraticka_rovnice.dll
+C:\Repos\School\2023-24\ST\8_kvadraticka_rovnice\bin\Debug\net7.0-windows\8_kvadraticka_rovnice.pdb
+C:\Repos\School\2023-24\ST\8_kvadraticka_rovnice\obj\Debug\net7.0-windows\_8_kvadraticka_rovnice.Form1.resources
+C:\Repos\School\2023-24\ST\8_kvadraticka_rovnice\obj\Debug\net7.0-windows\8_kvadraticka_rovnice.csproj.GenerateResource.cache
+C:\Repos\School\2023-24\ST\8_kvadraticka_rovnice\obj\Debug\net7.0-windows\8_kvadraticka_rovnice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\School\2023-24\ST\8_kvadraticka_rovnice\obj\Debug\net7.0-windows\8_kvadraticka_rovnice.AssemblyInfoInputs.cache
+C:\Repos\School\2023-24\ST\8_kvadraticka_rovnice\obj\Debug\net7.0-windows\8_kvadraticka_rovnice.AssemblyInfo.cs
+C:\Repos\School\2023-24\ST\8_kvadraticka_rovnice\obj\Debug\net7.0-windows\8_kvadraticka_rovnice.csproj.CoreCompileInputs.cache
+C:\Repos\School\2023-24\ST\8_kvadraticka_rovnice\obj\Debug\net7.0-windows\8_kvadraticka_rovnice.dll
+C:\Repos\School\2023-24\ST\8_kvadraticka_rovnice\obj\Debug\net7.0-windows\refint\8_kvadraticka_rovnice.dll
+C:\Repos\School\2023-24\ST\8_kvadraticka_rovnice\obj\Debug\net7.0-windows\8_kvadraticka_rovnice.pdb
+C:\Repos\School\2023-24\ST\8_kvadraticka_rovnice\obj\Debug\net7.0-windows\8_kvadraticka_rovnice.genruntimeconfig.cache
+C:\Repos\School\2023-24\ST\8_kvadraticka_rovnice\obj\Debug\net7.0-windows\ref\8_kvadraticka_rovnice.dll

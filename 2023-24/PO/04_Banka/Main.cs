@@ -4,6 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Bank my_account = new();
+        ATM local_atm = new(100000);
+        Bank my_account = new(local_atm);
+        my_account.Login();
+        Console.ReadKey();
     }
 }

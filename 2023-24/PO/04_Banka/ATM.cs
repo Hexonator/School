@@ -2,19 +2,33 @@ namespace _04_Banka;
 
 class ATM
 {
-    private double money_in_machine;
-    public ATM(double money_in_new_machine)
+    private int money_in_machine, machine_id;
+    public ATM(int money_in_new_machine)
     {
         money_in_machine = money_in_new_machine;
+        Random r = new();
+        machine_id = r.Next(10000000, 99999999);
     }
 
-    public double GetMoneyInMachine()
+    public int GetMoneyInMachine()
     {
         return money_in_machine;
     }
-    public void Withdrawal(int withdrawal_size)
+    public int GetMachineID()
     {
-        money_in_machine -= withdrawal_size;
+        return machine_id;
+    }
+    public bool Withdrawal(int withdrawal_size)
+    {
+        if (money_in_machine - withdrawal_size > 0)
+        {
+            return false;
+        }
+        else
+        {
+            money_in_machine -= withdrawal_size;
+            return true;
+        }
     }
     public void Deposit(int deposit_size)
     {

@@ -1,0 +1,31 @@
+            _____  _____ _____ _____                 _   
+     /\    / ____|/ ____|_   _|_   _|     /\        | |  
+    /  \  | (___ | |      | |   | |      /  \   _ __| |_ 
+   / /\ \  \___ \| |      | |   | |     / /\ \ | '__| __|
+  / ____ \ ____) | |____ _| |_ _| |_   / ____ \| |  | |_ 
+ /_/    \_\_____/ \_____|_____|_____| /_/    \_\_|   \__|
+
+101 - ASCII Art úloha zadání:
+- Ve vstupním textovém souboru se nachází zakódovaný ASCII Art obrázek
+- Kóduje se na vstupu v jednotlivých řádcích takto:
+  - [znak][počet jeho opakování], např.vstupní řádek "X5" znamená výpis ve výstupu "XXXXX"
+  - prázdný řádek na vstupu znamená odřádkování ve výstupném ASCII Art obrázku
+- Úkolem je načíst vstupní soubor v tomto kódování a vypsat výstupní obrázek do konzole
+- Pro účely testů jsou připraveny vstupní soubory ascii-1.txt až ascii-7.txt
+- Zde jeden příklad vstupu a výstupu:
+  - Vstup:
+X5
+
+X2
+ 1
+X2
+
+X5
+  - Vypíše výstup:
+XXXXX
+XX XX
+XXXXX
+
+Rozšířené zadání - nepovinné:
+- Naprogramujte taky obrácený proces, tj. ze vstupního ASCII Art obrázku vygenerujte jeho zakódovanou verzi
+- Pomůcka - zdroje pro ASCII Art obrázky https://www.asciiart.eu, nebo https://patorjk.com/software/taag

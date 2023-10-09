@@ -131,7 +131,7 @@ class Bank
     {
         while (true)
         {
-            Console.WriteLine("Write the amount you'd like to withdraw:");
+            Console.WriteLine("Write the amount you'd like to withdraw: (enter to quit)");
             if (int.TryParse(Console.ReadLine(), out int withdrawal_amount) && withdrawal_amount > 0)
             {
                 if (money_balance - withdrawal_amount > 0)
@@ -151,6 +151,10 @@ class Bank
                 }
                 break;
             }
+            else if(Console.ReadLine() == "")
+            {
+                break;
+            }
             else
             {
                 Console.WriteLine("You didn't enter a valid amount, please try again.");
@@ -162,12 +166,16 @@ class Bank
     {
         while (true)
         {
-            Console.WriteLine("Enter the amount of money you'd like to deposit:");
+            Console.WriteLine("Enter the amount of money you'd like to deposit: (enter to quit)");
             if (int.TryParse(Console.ReadLine(), out int deposited_amount) && deposited_amount > 0)
             {
                 machine_used.Deposit(deposited_amount);
                 money_balance += deposited_amount;
                 Console.WriteLine($"{deposited_amount}$ was succesfully added to your balance.");
+                break;
+            }
+            else if(Console.ReadLine() == "")
+            {
                 break;
             }
             else
@@ -185,6 +193,7 @@ class Bank
                 Divider(0);
                 while(true)
                 {
+                    Divider(1);
                     Console.WriteLine("Press 1 to witdraw money, 2 to make a deposit, 3 to show your funds or 4 to log out");
                     ConsoleKeyInfo keyInfo = Console.ReadKey(intercept: true);
                     char keyPressed = keyInfo.KeyChar;

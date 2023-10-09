@@ -1,0 +1,10 @@
+
+.---- ----- ..---  / -- --- .-. ... . --- ...- -.- .-  / --.. .- -.. .- -. ..
+102 Morseovka zadání:
+- Napište konzolovou aplikaci, která naète text od uživatele a vypíše jej zakódovaný v Morseovce
+- Definici Morseovy abecedy najdete v souboru "morseovka.txt"
+- Procviète si taky psaní vlastních metod a využití datového typu Dictionary
+
+Rozšíøené zadání - nepovinné:
+- Morseovy znaky taky jednoduše vypípejte
+- Mùžete využít metodu Console.Beep(int frequency, int duration)

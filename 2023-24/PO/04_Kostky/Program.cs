@@ -11,7 +11,7 @@ class Dice
     int[] throw_probabilities = new int[10];
     public Dice()
     {
-        if (!(num_of_sides > 0 && dice_num > 0)) # Makes testing easier, skips user entry if values are assigned
+        if (!(num_of_sides > 0 && dice_num > 0))
         {
             while (true)
             {

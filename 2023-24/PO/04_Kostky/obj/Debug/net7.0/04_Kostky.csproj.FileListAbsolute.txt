@@ -1,0 +1,14 @@
+C:\Repos\School\2023-24\PO\04_Kostky\obj\Debug\net7.0\04_Kostky.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\School\2023-24\PO\04_Kostky\obj\Debug\net7.0\04_Kostky.AssemblyInfoInputs.cache
+C:\Repos\School\2023-24\PO\04_Kostky\obj\Debug\net7.0\04_Kostky.AssemblyInfo.cs
+C:\Repos\School\2023-24\PO\04_Kostky\obj\Debug\net7.0\04_Kostky.csproj.CoreCompileInputs.cache
+C:\Repos\School\2023-24\PO\04_Kostky\bin\Debug\net7.0\04_Kostky.exe
+C:\Repos\School\2023-24\PO\04_Kostky\bin\Debug\net7.0\04_Kostky.deps.json
+C:\Repos\School\2023-24\PO\04_Kostky\bin\Debug\net7.0\04_Kostky.runtimeconfig.json
+C:\Repos\School\2023-24\PO\04_Kostky\bin\Debug\net7.0\04_Kostky.dll
+C:\Repos\School\2023-24\PO\04_Kostky\bin\Debug\net7.0\04_Kostky.pdb
+C:\Repos\School\2023-24\PO\04_Kostky\obj\Debug\net7.0\04_Kostky.dll
+C:\Repos\School\2023-24\PO\04_Kostky\obj\Debug\net7.0\refint\04_Kostky.dll
+C:\Repos\School\2023-24\PO\04_Kostky\obj\Debug\net7.0\04_Kostky.pdb
+C:\Repos\School\2023-24\PO\04_Kostky\obj\Debug\net7.0\04_Kostky.genruntimeconfig.cache
+C:\Repos\School\2023-24\PO\04_Kostky\obj\Debug\net7.0\ref\04_Kostky.dll

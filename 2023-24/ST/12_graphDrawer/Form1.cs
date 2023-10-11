@@ -1,3 +1,5 @@
+using MathNet.Numerics;
+
 namespace _12_graphDrawer
 {
     public partial class Form1 : Form
@@ -7,12 +9,19 @@ namespace _12_graphDrawer
             InitializeComponent();
         }
 
-        public List<int> TextProcessing(string input)
+        public int Evaluate(string input)
         {
             // x=0, sin=1, cos=2, tg=3, cotg=4
             // +=10, -=20, *=30, /=40
-
-            return new List<int> { 0 };
+            try
+            {
+                double result = Math(input);
+            }
+            catch (Exception e)
+            {
+                infoBox.Text = $"Error: {e.Message}";
+                return int.MaxValue;
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -24,14 +33,10 @@ namespace _12_graphDrawer
         {
             if (e.KeyCode == Keys.Enter)
             {
-                List<int> text_result = TextProcessing(EntryBox.Text);
-                if (text_result[0] == 1)
+                int text_result = Evaluate(EntryBox.Text);
+                if (text_result != int.MaxValue)
                 {
-
-                }
-                else
-                {
-                    infoBox.Text = "Function entered is invalid";
+                    
                 }
             }
         }

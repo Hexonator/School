@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "HCnK77E7+HcXx6yGcYGkDdi1p/sUZYeaig0pD8sOYHaRB23ShFxNhRVTo2bXoQ8UcCvapR2H5XN+LGiqwVEYbQ==",
+  "dgSpecHash": "QpFIwu1yzfa2/10zoYYPUSPtzlWYDdCiQ21J0BJOPSZswjNDuhXixDfSbDNYw0LdPruu2W4Un8VdHUj8MDV+ww==",
   "success": true,
   "projectFilePath": "C:\\Repos\\School\\2023-24\\ST\\12_graphDrawer\\12_graphDrawer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\stand\\.nuget\\packages\\mathnet.numerics\\5.0.0\\mathnet.numerics.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

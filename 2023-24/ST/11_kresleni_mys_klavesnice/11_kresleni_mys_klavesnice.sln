@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_kresleni_mys_klavesnice", "11_kresleni_mys_klavesnice.csproj", "{F8493413-63AA-4E3D-84C0-847EFE6B1907}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8493413-63AA-4E3D-84C0-847EFE6B1907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8493413-63AA-4E3D-84C0-847EFE6B1907}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8493413-63AA-4E3D-84C0-847EFE6B1907}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8493413-63AA-4E3D-84C0-847EFE6B1907}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73278D34-C55C-4B0E-8AF8-9DE0A06CF434}
+	EndGlobalSection
+EndGlobal

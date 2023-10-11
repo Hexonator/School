@@ -1,0 +1,16 @@
+C:\Repos\School\2023-24\ST\11_kresleni_mys_klavesnice\bin\Debug\net7.0-windows\11_kresleni_mys_klavesnice.exe
+C:\Repos\School\2023-24\ST\11_kresleni_mys_klavesnice\bin\Debug\net7.0-windows\11_kresleni_mys_klavesnice.deps.json
+C:\Repos\School\2023-24\ST\11_kresleni_mys_klavesnice\bin\Debug\net7.0-windows\11_kresleni_mys_klavesnice.runtimeconfig.json
+C:\Repos\School\2023-24\ST\11_kresleni_mys_klavesnice\bin\Debug\net7.0-windows\11_kresleni_mys_klavesnice.dll
+C:\Repos\School\2023-24\ST\11_kresleni_mys_klavesnice\bin\Debug\net7.0-windows\11_kresleni_mys_klavesnice.pdb
+C:\Repos\School\2023-24\ST\11_kresleni_mys_klavesnice\obj\Debug\net7.0-windows\_11_kresleni_mys_klavesnice.Form1.resources
+C:\Repos\School\2023-24\ST\11_kresleni_mys_klavesnice\obj\Debug\net7.0-windows\11_kresleni_mys_klavesnice.csproj.GenerateResource.cache
+C:\Repos\School\2023-24\ST\11_kresleni_mys_klavesnice\obj\Debug\net7.0-windows\11_kresleni_mys_klavesnice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\School\2023-24\ST\11_kresleni_mys_klavesnice\obj\Debug\net7.0-windows\11_kresleni_mys_klavesnice.AssemblyInfoInputs.cache
+C:\Repos\School\2023-24\ST\11_kresleni_mys_klavesnice\obj\Debug\net7.0-windows\11_kresleni_mys_klavesnice.AssemblyInfo.cs
+C:\Repos\School\2023-24\ST\11_kresleni_mys_klavesnice\obj\Debug\net7.0-windows\11_kresleni_mys_klavesnice.csproj.CoreCompileInputs.cache
+C:\Repos\School\2023-24\ST\11_kresleni_mys_klavesnice\obj\Debug\net7.0-windows\11_kresleni_mys_klavesnice.dll
+C:\Repos\School\2023-24\ST\11_kresleni_mys_klavesnice\obj\Debug\net7.0-windows\refint\11_kresleni_mys_klavesnice.dll
+C:\Repos\School\2023-24\ST\11_kresleni_mys_klavesnice\obj\Debug\net7.0-windows\11_kresleni_mys_klavesnice.pdb
+C:\Repos\School\2023-24\ST\11_kresleni_mys_klavesnice\obj\Debug\net7.0-windows\11_kresleni_mys_klavesnice.genruntimeconfig.cache
+C:\Repos\School\2023-24\ST\11_kresleni_mys_klavesnice\obj\Debug\net7.0-windows\ref\11_kresleni_mys_klavesnice.dll

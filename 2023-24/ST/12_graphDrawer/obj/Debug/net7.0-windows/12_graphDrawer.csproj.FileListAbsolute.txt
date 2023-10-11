@@ -1,0 +1,16 @@
+C:\Repos\School\2023-24\ST\12_graphDrawer\bin\Debug\net7.0-windows\12_graphDrawer.exe
+C:\Repos\School\2023-24\ST\12_graphDrawer\bin\Debug\net7.0-windows\12_graphDrawer.deps.json
+C:\Repos\School\2023-24\ST\12_graphDrawer\bin\Debug\net7.0-windows\12_graphDrawer.runtimeconfig.json
+C:\Repos\School\2023-24\ST\12_graphDrawer\bin\Debug\net7.0-windows\12_graphDrawer.dll
+C:\Repos\School\2023-24\ST\12_graphDrawer\bin\Debug\net7.0-windows\12_graphDrawer.pdb
+C:\Repos\School\2023-24\ST\12_graphDrawer\obj\Debug\net7.0-windows\_12_graphDrawer.Form1.resources
+C:\Repos\School\2023-24\ST\12_graphDrawer\obj\Debug\net7.0-windows\12_graphDrawer.csproj.GenerateResource.cache
+C:\Repos\School\2023-24\ST\12_graphDrawer\obj\Debug\net7.0-windows\12_graphDrawer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\School\2023-24\ST\12_graphDrawer\obj\Debug\net7.0-windows\12_graphDrawer.AssemblyInfoInputs.cache
+C:\Repos\School\2023-24\ST\12_graphDrawer\obj\Debug\net7.0-windows\12_graphDrawer.AssemblyInfo.cs
+C:\Repos\School\2023-24\ST\12_graphDrawer\obj\Debug\net7.0-windows\12_graphDrawer.csproj.CoreCompileInputs.cache
+C:\Repos\School\2023-24\ST\12_graphDrawer\obj\Debug\net7.0-windows\12_graphDrawer.dll
+C:\Repos\School\2023-24\ST\12_graphDrawer\obj\Debug\net7.0-windows\refint\12_graphDrawer.dll
+C:\Repos\School\2023-24\ST\12_graphDrawer\obj\Debug\net7.0-windows\12_graphDrawer.pdb
+C:\Repos\School\2023-24\ST\12_graphDrawer\obj\Debug\net7.0-windows\12_graphDrawer.genruntimeconfig.cache
+C:\Repos\School\2023-24\ST\12_graphDrawer\obj\Debug\net7.0-windows\ref\12_graphDrawer.dll

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "11_kresleni_mys_klavesnice/1.0.0": {
+        "runtime": {
+          "11_kresleni_mys_klavesnice.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "11_kresleni_mys_klavesnice/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

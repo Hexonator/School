@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 using System.Runtime.CompilerServices;
+=======
+using MathNet.Numerics;
+>>>>>>> aa7a2248f11201838eed29c5ba4445b1ae3d5749
 
 namespace _12_graphDrawer
 {
@@ -11,12 +15,19 @@ namespace _12_graphDrawer
             InitializeComponent();
         }
 
-        public List<int> TextProcessing(string input)
+        public int Evaluate(string input)
         {
             // x=0, sin=1, cos=2, tg=3, cotg=4
             // +=10, -=20, *=30, /=40
-
-            return new List<int> { 0 };
+            try
+            {
+                double result = Math(input);
+            }
+            catch (Exception e)
+            {
+                infoBox.Text = $"Error: {e.Message}";
+                return int.MaxValue;
+            }
         }
 
         public void DrawGrid(Graphics g, Pen G_pen, int width, int height, int unitline_len, int div_unitline_len_add)
@@ -89,14 +100,10 @@ namespace _12_graphDrawer
         {
             if (e.KeyCode == Keys.Enter)
             {
-                List<int> text_result = TextProcessing(EntryBox.Text);
-                if (text_result[0] == 1)
+                int text_result = Evaluate(EntryBox.Text);
+                if (text_result != int.MaxValue)
                 {
-
-                }
-                else
-                {
-                    infoBox.Text = "Function entered is invalid";
+                    
                 }
             }
         }

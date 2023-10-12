@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
+            graphField = new Panel();
             EntryBox = new TextBox();
             label1 = new Label();
             infoBox = new Label();
             SuspendLayout();
             // 
-            // panel1
+            // graphField
             // 
-            panel1.Location = new Point(12, 89);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(811, 437);
-            panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
+            graphField.Location = new Point(12, 126);
+            graphField.Name = "graphField";
+            graphField.Size = new Size(811, 400);
+            graphField.TabIndex = 0;
+            graphField.Paint += graphField_Paint;
             // 
             // EntryBox
             // 
@@ -80,16 +80,19 @@
             Controls.Add(infoBox);
             Controls.Add(label1);
             Controls.Add(EntryBox);
-            Controls.Add(panel1);
+            Controls.Add(graphField);
+            MaximumSize = new Size(851, 577);
+            MinimumSize = new Size(851, 577);
             Name = "Form1";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Graph Drawer";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel graphField;
         private TextBox EntryBox;
         private Label label1;
         private Label infoBox;

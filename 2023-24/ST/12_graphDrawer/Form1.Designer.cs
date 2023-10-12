@@ -49,7 +49,7 @@
             EntryBox.Name = "EntryBox";
             EntryBox.Size = new Size(434, 27);
             EntryBox.TabIndex = 1;
-            EntryBox.KeyDown += textBox1_KeyDown;
+            EntryBox.KeyDown += EntryBox_KeyDown;
             // 
             // label1
             // 

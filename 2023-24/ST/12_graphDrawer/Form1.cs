@@ -25,7 +25,7 @@ namespace _12_graphDrawer
             Evaluate(input);
             for (int x = -width / 2; x < width / 2; x += step) // I'm scared that moving by step could cause it to not allign in the middle
             {
-                double y = Math.Sin((double)x / 80) * 140;
+                double y = Math.Sin((double)x / 80) * 100;
                 graph_points.Add(new Point(x, (int)y));
             }
             graph_points_to_draw = G_CoordsToF_Coords(graph_points.ToArray());
@@ -43,7 +43,7 @@ namespace _12_graphDrawer
             bool usedDivider = false;
             for (int i = 0; i <= height / 2 / increment; i++)
             {
-                if (i % 4 == 0)
+                if (i % 5 == 0)
                 {
                     unitline_len += div_unitline_len_add;
                     usedDivider = true;

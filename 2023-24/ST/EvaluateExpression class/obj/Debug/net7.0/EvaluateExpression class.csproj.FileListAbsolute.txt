@@ -1,0 +1,14 @@
+C:\Repos\School\2023-24\ST\EvaluateExpression class\obj\Debug\net7.0\EvaluateExpression class.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\School\2023-24\ST\EvaluateExpression class\obj\Debug\net7.0\EvaluateExpression class.AssemblyInfoInputs.cache
+C:\Repos\School\2023-24\ST\EvaluateExpression class\obj\Debug\net7.0\EvaluateExpression class.AssemblyInfo.cs
+C:\Repos\School\2023-24\ST\EvaluateExpression class\obj\Debug\net7.0\EvaluateExpression class.csproj.CoreCompileInputs.cache
+C:\Repos\School\2023-24\ST\EvaluateExpression class\bin\Debug\net7.0\EvaluateExpression class.exe
+C:\Repos\School\2023-24\ST\EvaluateExpression class\bin\Debug\net7.0\EvaluateExpression class.deps.json
+C:\Repos\School\2023-24\ST\EvaluateExpression class\bin\Debug\net7.0\EvaluateExpression class.runtimeconfig.json
+C:\Repos\School\2023-24\ST\EvaluateExpression class\bin\Debug\net7.0\EvaluateExpression class.dll
+C:\Repos\School\2023-24\ST\EvaluateExpression class\bin\Debug\net7.0\EvaluateExpression class.pdb
+C:\Repos\School\2023-24\ST\EvaluateExpression class\obj\Debug\net7.0\EvaluateExpression class.dll
+C:\Repos\School\2023-24\ST\EvaluateExpression class\obj\Debug\net7.0\refint\EvaluateExpression class.dll
+C:\Repos\School\2023-24\ST\EvaluateExpression class\obj\Debug\net7.0\EvaluateExpression class.pdb
+C:\Repos\School\2023-24\ST\EvaluateExpression class\obj\Debug\net7.0\EvaluateExpression class.genruntimeconfig.cache
+C:\Repos\School\2023-24\ST\EvaluateExpression class\obj\Debug\net7.0\ref\EvaluateExpression class.dll

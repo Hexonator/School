@@ -37,7 +37,6 @@
             label4 = new Label();
             label5 = new Label();
             Button1 = new Button();
-            label6 = new Label();
             errorField = new Label();
             x1_result = new Label();
             x2_result = new Label();
@@ -132,15 +131,6 @@
             Button1.UseVisualStyleBackColor = false;
             Button1.Click += Button1_Click;
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(0, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(38, 15);
-            label6.TabIndex = 11;
-            label6.Text = "label6";
-            // 
             // errorField
             // 
             errorField.AutoSize = true;
@@ -198,7 +188,6 @@
             Controls.Add(x2_result);
             Controls.Add(x1_result);
             Controls.Add(errorField);
-            Controls.Add(label6);
             Controls.Add(Button1);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -225,7 +214,6 @@
         private Label label4;
         private Label label5;
         private Button Button1;
-        private Label label6;
         private Label errorField;
         private Label x1_result;
         private Label x2_result;

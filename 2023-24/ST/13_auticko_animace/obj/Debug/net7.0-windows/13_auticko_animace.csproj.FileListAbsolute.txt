@@ -1,0 +1,16 @@
+C:\Repos\School\2023-24\ST\13_auticko_animace\bin\Debug\net7.0-windows\13_auticko_animace.exe
+C:\Repos\School\2023-24\ST\13_auticko_animace\bin\Debug\net7.0-windows\13_auticko_animace.deps.json
+C:\Repos\School\2023-24\ST\13_auticko_animace\bin\Debug\net7.0-windows\13_auticko_animace.runtimeconfig.json
+C:\Repos\School\2023-24\ST\13_auticko_animace\bin\Debug\net7.0-windows\13_auticko_animace.dll
+C:\Repos\School\2023-24\ST\13_auticko_animace\bin\Debug\net7.0-windows\13_auticko_animace.pdb
+C:\Repos\School\2023-24\ST\13_auticko_animace\obj\Debug\net7.0-windows\_13_auticko_animace.Form1.resources
+C:\Repos\School\2023-24\ST\13_auticko_animace\obj\Debug\net7.0-windows\13_auticko_animace.csproj.GenerateResource.cache
+C:\Repos\School\2023-24\ST\13_auticko_animace\obj\Debug\net7.0-windows\13_auticko_animace.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\School\2023-24\ST\13_auticko_animace\obj\Debug\net7.0-windows\13_auticko_animace.AssemblyInfoInputs.cache
+C:\Repos\School\2023-24\ST\13_auticko_animace\obj\Debug\net7.0-windows\13_auticko_animace.AssemblyInfo.cs
+C:\Repos\School\2023-24\ST\13_auticko_animace\obj\Debug\net7.0-windows\13_auticko_animace.csproj.CoreCompileInputs.cache
+C:\Repos\School\2023-24\ST\13_auticko_animace\obj\Debug\net7.0-windows\13_auticko_animace.dll
+C:\Repos\School\2023-24\ST\13_auticko_animace\obj\Debug\net7.0-windows\refint\13_auticko_animace.dll
+C:\Repos\School\2023-24\ST\13_auticko_animace\obj\Debug\net7.0-windows\13_auticko_animace.pdb
+C:\Repos\School\2023-24\ST\13_auticko_animace\obj\Debug\net7.0-windows\13_auticko_animace.genruntimeconfig.cache
+C:\Repos\School\2023-24\ST\13_auticko_animace\obj\Debug\net7.0-windows\ref\13_auticko_animace.dll

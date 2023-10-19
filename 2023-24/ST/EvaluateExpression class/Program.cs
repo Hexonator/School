@@ -6,11 +6,11 @@ class Program
     {
         public double Evaluate(string expression, double x)
         {
-            double num1 = 0;
-            double num2 = 0;
+            double num1;
+            double num2;
             int index_of_bracket = expression.IndexOf('(');
             int index_of_comma = expression.IndexOf(',');
-            if (expression.Contains(','))
+            if (index_of_comma != -1)
             {
                 string[] split_expression = SeparateExpression(expression);
                 if (expression[0] == '^')
@@ -25,25 +25,25 @@ class Program
                     num2 = Evaluate(split_expression[1], x);
                 }
             }
-            else if (index_of_bracket == -1 && index_of_comma == -1)
+            else //if (index_of_comma == -1)
             {
-                return double.Parse(expression);
+                return double.Parse(expression[^1..^1]);
             }
-            else
-            {
-                if (expression[(index_of_bracket+1)..^1] != "x")
-                {
-                    if (expression[0] == '^')
-                    {
-                        double power = double.Parse(expression[1..index_of_bracket]);
-                        num1 = double.Parse(expression[(index_of_bracket+1)..^1]);
-                    }
-                    else
-                    {
-                        num1= double.Parse(expression[(index_of_bracket+1)..^1]);
-                    }
-                }
-            }
+            // else
+            // {
+            //     if (expression[(index_of_bracket+1)..^1] != "x")
+            //     {
+            //         if (expression[0] == '^')
+            //         {
+            //             double power = double.Parse(expression[1..index_of_bracket]);
+            //             num1 = double.Parse(expression[(index_of_bracket+1)..^1]);
+            //         }
+            //         else
+            //         {
+            //             num1= double.Parse(expression[(index_of_bracket+1)..^1]);
+            //         }
+            //     }
+            // }
 
             switch (expression[0])
             {
@@ -70,10 +70,10 @@ class Program
         private string[] SeparateExpression(string input_expression)
         {
             int index_of_first_bracket = input_expression.IndexOf('(');
-            int index_of_second_to_last_bracket = FindNthCharFromEnd(input_expression, ')', 1);
-            return new string[2] {FullBracket(input_expression, index_of_first_bracket),
-                                  FullBracketFromEnd(input_expression, index_of_second_to_last_bracket)};
-            // TODO: Include occasions where there aren't brackets
+            int index_of_second_to_last_bracket = FindNthCharFromEnd(input_expression, ')', 2);
+            string expr1 = FullBracket(input_expression, FindNthChar(input_expression, '(', 2));
+            string expr2 = FullBracketFromEnd(input_expression, index_of_second_to_last_bracket);
+            return new string[2] {expr1, expr2};
         }
 
         private int FindNthCharFromEnd(string expression, char charToFind, int n)
@@ -86,7 +86,20 @@ class Program
                     all_found_chars.Add(i);
                 }
             }
-            return all_found_chars[n];
+            return all_found_chars[n+1];
+        }
+
+        private int FindNthChar(string expression, char charToFind, int n)
+        {
+            List<int> all_found_chars = new(10);
+            for (int i = 0; i < expression.Length; i++)
+            {
+                if (expression[i] == charToFind)
+                {
+                    all_found_chars.Add(i);
+                }
+            }
+            return all_found_chars[n+1];
         }
 
         private string FullBracket(string expression, int index_of_first_bracket)
@@ -104,7 +117,7 @@ class Program
                 }
                 if (counter == 0)
                 {
-                    return expression[index_of_first_bracket..i];
+                    return expression[(index_of_first_bracket+1)..i];
                 }
             }
             return "";
@@ -134,8 +147,8 @@ class Program
     static void Main(string[] args)
     {
         EvaluateExpression eval = new();
-        Console.WriteLine(eval.Evaluate(".(2, ^2(x))", 10));
-        Console.WriteLine(eval.Evaluate("+(-(.(2, ^2(x)), .(5, x)), 12)", 10)); // 2x^2 - 5x + 12
+        Console.WriteLine(eval.Evaluate(".((2), ^2(x))", 10));
+        Console.WriteLine(eval.Evaluate("+(-(.(2, ^2(x)), .(25, x)), (12))", 10)); // 2x^2 - 5x + 12
         Console.WriteLine(eval.Evaluate("s(c(x))", 10));
     }
 }

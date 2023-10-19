@@ -1,0 +1,16 @@
+C:\Repos\School\2023-24\ST\14_prejezd\obj\Debug\net7.0-windows\_14_prejezd.Form1.resources
+C:\Repos\School\2023-24\ST\14_prejezd\obj\Debug\net7.0-windows\14_prejezd.csproj.GenerateResource.cache
+C:\Repos\School\2023-24\ST\14_prejezd\obj\Debug\net7.0-windows\14_prejezd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\School\2023-24\ST\14_prejezd\obj\Debug\net7.0-windows\14_prejezd.AssemblyInfoInputs.cache
+C:\Repos\School\2023-24\ST\14_prejezd\obj\Debug\net7.0-windows\14_prejezd.AssemblyInfo.cs
+C:\Repos\School\2023-24\ST\14_prejezd\obj\Debug\net7.0-windows\14_prejezd.csproj.CoreCompileInputs.cache
+C:\Repos\School\2023-24\ST\14_prejezd\bin\Debug\net7.0-windows\14_prejezd.exe
+C:\Repos\School\2023-24\ST\14_prejezd\bin\Debug\net7.0-windows\14_prejezd.deps.json
+C:\Repos\School\2023-24\ST\14_prejezd\bin\Debug\net7.0-windows\14_prejezd.runtimeconfig.json
+C:\Repos\School\2023-24\ST\14_prejezd\bin\Debug\net7.0-windows\14_prejezd.dll
+C:\Repos\School\2023-24\ST\14_prejezd\bin\Debug\net7.0-windows\14_prejezd.pdb
+C:\Repos\School\2023-24\ST\14_prejezd\obj\Debug\net7.0-windows\14_prejezd.dll
+C:\Repos\School\2023-24\ST\14_prejezd\obj\Debug\net7.0-windows\refint\14_prejezd.dll
+C:\Repos\School\2023-24\ST\14_prejezd\obj\Debug\net7.0-windows\14_prejezd.pdb
+C:\Repos\School\2023-24\ST\14_prejezd\obj\Debug\net7.0-windows\14_prejezd.genruntimeconfig.cache
+C:\Repos\School\2023-24\ST\14_prejezd\obj\Debug\net7.0-windows\ref\14_prejezd.dll

@@ -1,4 +1,5 @@
 using System.Drawing;
+using System.Reflection;
 
 namespace _12_graphDrawer
 {
@@ -6,29 +7,34 @@ namespace _12_graphDrawer
     {
         static int increment = 10;
         static int step = 1;
-        public List<Point> graph_points = new(400);
+        public List<Point> graph_points = new(810);
         public Point[] graph_points_to_draw;
+        EvaluateExpression evaluate = new();
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        public Point[] Evaluate(string input)
-        {
-            return new Point[10]; // arbitrary wrong value
-        }
         public bool GetGraphPoints(string input)
         {
             int width = graphField.Width;
             int height = graphField.Height;
-            Evaluate(input);
-            for (int x = -width / 2; x < width / 2; x += step) // I'm scared that moving by step could cause it to not allign in the middle
+
+            for (int x = -width / 2; x < width / 2; x += step)
             {
-                double y = Math.Sin((double)x / 80) * 100;
+                double y = evaluate.Evaluate(input, x);
+                if (y > height || y < -height)
+                {
+                    continue;
+                }
                 graph_points.Add(new Point(x, (int)y));
             }
             graph_points_to_draw = G_CoordsToF_Coords(graph_points.ToArray());
+            if (graph_points_to_draw.Length == 0)
+            {
+                infoBox.Text = "Graph is out of the frame";
+            }
             return true;
         }
 
@@ -90,12 +96,31 @@ namespace _12_graphDrawer
             int unitline_len = 10;
             int div_unitline_len_add = 6;
 
+            g.Clear(Color.White);
+
             DrawGrid(g, G_pen, unitline_len, div_unitline_len_add);
 
             if (graph_points_to_draw != null && graph_points_to_draw.Length > 0)
             {
-                g.DrawLines(G_pen, graph_points_to_draw.ToArray());
+                int deltaX, deltaY;
+                Point point1, point2;
+                for (int i = 1; i < graph_points_to_draw.Length; i++)
+                {
+                    point1 = graph_points_to_draw[i-1];
+                    point2 = graph_points_to_draw[i];
+                    deltaX = point1.X - point1.X;
+                    deltaY = point2.Y - point1.Y;
+                    int y1 = point1.Y;
+                    int y2 = point2.Y;
+                    
+                    double distance = Math.Sqrt(deltaX * deltaX + deltaY * deltaY);
+                    if (distance < graphField.Height + 200 && y1<1000 && y1>-1000 && y2<1000 && y2>-1000)
+                    {
+                        g.DrawLine(G_pen, point1, point2);
+                    }
+                }
             }
+            graph_points.Clear();
         }
 
         public Point G_CoordsToF_Coords(int x, int y)
@@ -134,6 +159,7 @@ namespace _12_graphDrawer
                 if (pointSearchSuccess)
                 {
                     graphField.Refresh();
+                    infoBox.Text = "";
                 }
             }
         }

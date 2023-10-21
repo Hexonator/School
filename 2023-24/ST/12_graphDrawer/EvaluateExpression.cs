@@ -16,7 +16,7 @@ namespace _12_graphDrawer
         int multiplier = 100;
         char[] opearators = new char[5] { '+', '-', '*', '/', '^' };
         char[] gonio_operators = new char[4] { 's', 'c', 't', 'g' };
-        public double Evaluate(string expression, double x)
+        public double EvaluatePrefixNotation(string expression, double x)
         {
             //x *= 80;
             double num1, num2;
@@ -27,20 +27,20 @@ namespace _12_graphDrawer
                     switch (expression[0])
                     {
                         case 's':
-                            return Math.Sin(Evaluate(expression[2..], x / 50)) * multiplier;
+                            return Math.Sin(EvaluatePrefixNotation(expression[2..], x / 50)) * multiplier;
                         case 'c':
-                            return Math.Cos(Evaluate(expression[2..], x / 50)) * multiplier;
+                            return Math.Cos(EvaluatePrefixNotation(expression[2..], x / 50)) * multiplier;
                         case 't':
-                            return Math.Tan(Evaluate(expression[2..], x / 50)) * multiplier;
+                            return Math.Tan(EvaluatePrefixNotation(expression[2..], x / 50)) * multiplier;
                         case 'g':
-                            return 1 / Math.Tan(Evaluate(expression[2..], x / 50)) * multiplier;
+                            return 1 / Math.Tan(EvaluatePrefixNotation(expression[2..], x / 50)) * multiplier;
                         default:
                             return double.NaN;
                     }
                 }
                 string[] split_expression = SeparateExpression(expression);
-                num1 = Evaluate(split_expression[0], x);
-                num2 = Evaluate(split_expression[1], x);
+                num1 = EvaluatePrefixNotation(split_expression[0], x);
+                num2 = EvaluatePrefixNotation(split_expression[1], x);
             }
             else
             {

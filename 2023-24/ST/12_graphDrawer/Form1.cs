@@ -23,7 +23,7 @@ namespace _12_graphDrawer
 
             for (int x = -width / 2; x < width / 2; x += step)
             {
-                double y = evaluate.Evaluate(input, x);
+                double y = evaluate.EvaluatePrefixNotation(input, x);
                 if (y > height || y < -height)
                 {
                     continue;
@@ -114,7 +114,7 @@ namespace _12_graphDrawer
                     int y2 = point2.Y;
                     
                     double distance = Math.Sqrt(deltaX * deltaX + deltaY * deltaY);
-                    if (distance < graphField.Height + 200 && y1<1000 && y1>-1000 && y2<1000 && y2>-1000)
+                    if (distance < graphField.Height + 200 && y1<10000 && y1>-10000 && y2<10000 && y2>-10000)
                     {
                         g.DrawLine(G_pen, point1, point2);
                     }

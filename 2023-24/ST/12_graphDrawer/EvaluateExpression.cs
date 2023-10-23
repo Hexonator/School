@@ -13,16 +13,16 @@ namespace _12_graphDrawer
 
         }
 
-        int multiplier = 100;
-        char[] opearators = new char[5] { '+', '-', '*', '/', '^' };
-        char[] gonio_operators = new char[4] { 's', 'c', 't', 'g' };
-        public double EvaluatePrefixNotation(string expression, double x)
+        static int multiplier = 100;
+        static char[] dual_opearators = new char[5] { '+', '-', '*', '/', '^' };
+        static char[] unar_operators = new char[5] { 's', 'c', 't', 'g', '|'};
+
+        public static double EvaluatePrefixNotation(string expression, double x)
         {
-            //x *= 80;
             double num1, num2;
             if (HasOperators(expression))
             {
-                if (gonio_operators.Contains(expression[0]))
+                if (unar_operators.Contains(expression[0]))
                 {
                     switch (expression[0])
                     {
@@ -34,6 +34,8 @@ namespace _12_graphDrawer
                             return Math.Tan(EvaluatePrefixNotation(expression[2..], x / 50)) * multiplier;
                         case 'g':
                             return 1 / Math.Tan(EvaluatePrefixNotation(expression[2..], x / 50)) * multiplier;
+                        case '|':
+                            return Math.Abs(EvaluatePrefixNotation(expression[2..], x));
                         default:
                             return double.NaN;
                     }
@@ -41,6 +43,22 @@ namespace _12_graphDrawer
                 string[] split_expression = SeparateExpression(expression);
                 num1 = EvaluatePrefixNotation(split_expression[0], x);
                 num2 = EvaluatePrefixNotation(split_expression[1], x);
+
+                switch (expression[0])
+                {
+                    case '+':
+                        return num1 + num2;
+                    case '-':
+                        return num1 - num2;
+                    case '*':
+                        return num1 * num2;
+                    case '/':
+                        return num1 / num2;
+                    case '^':
+                        return Math.Pow(num1, num2);
+                    default:
+                        return double.NaN;
+                }
             }
             else
             {
@@ -57,63 +75,47 @@ namespace _12_graphDrawer
                     return x;
                 }
             }
-
-            switch (expression[0])
-            {
-                case '+':
-                    return num1 + num2;
-                case '-':
-                    return num1 - num2;
-                case '*':
-                    return num1 * num2;
-                case '/':
-                    return num1 / num2;
-                case '^':
-                    return Math.Pow(num1, num2);
-                default:
-                    return double.NaN;
-            }
         }
 
-        private string[] SeparateExpression(string expression)
+        private static string[] SeparateExpression(string expression)
         {
             string expr1 = "";
             string expr2 = "";
             int open_expression_counter = 0;
-            for (int i = 0; i < expression.Length; i++)
+            for (int iteration = 0; iteration < expression.Length; iteration++)
             {
-                if (char.IsDigit(expression[i]) || expression[i] == 'x')
+                if (char.IsDigit(expression[iteration]) || expression[iteration] == 'x')
                 {
                     continue;
                 }
-                if (opearators.Contains(expression[i]))
+                if (dual_opearators.Contains(expression[iteration]))
                 {
-                    open_expression_counter += 2;
-                    i++;
+                    open_expression_counter += 1;
+                    iteration++;
                 }
-                else if (gonio_operators.Contains(expression[i]))
+                else if (unar_operators.Contains(expression[iteration]))
                 {
-                    i++;
+                    iteration++;
                 }
-                else if (expression[i] == ' ')
+                else if (expression[iteration] == ' ')
                 {
-                    open_expression_counter -= 2;
+                    open_expression_counter -= 1;
                 }
                 if (open_expression_counter <= 0)
                 {
-                    expr1 = expression[2..i];
-                    expr2 = expression[(i + 1)..];
+                    expr1 = expression[2..iteration];
+                    expr2 = expression[(iteration + 1)..];
                     break;
                 }
             }
             return new string[2] { expr1, expr2 };
         }
 
-        private bool HasOperators(string expression)
+        private static bool HasOperators(string expression)
         {
             foreach (var character in expression)
             {
-                if (opearators.Contains(character) || gonio_operators.Contains(character))
+                if (dual_opearators.Contains(character) || unar_operators.Contains(character))
                 {
                     return true;
                 }

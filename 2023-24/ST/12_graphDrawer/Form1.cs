@@ -9,7 +9,7 @@ namespace _12_graphDrawer
         static int step = 1;
         public List<Point> graph_points = new(810);
         public Point[] graph_points_to_draw;
-        EvaluateExpression evaluate = new();
+        //EvaluateExpression evaluate = new();
 
         public Form1()
         {
@@ -23,7 +23,7 @@ namespace _12_graphDrawer
 
             for (int x = -width / 2; x < width / 2; x += step)
             {
-                double y = evaluate.EvaluatePrefixNotation(input, x);
+                double y = EvaluateExpression.EvaluatePrefixNotation(input, x);
                 if (y > height || y < -height)
                 {
                     continue;

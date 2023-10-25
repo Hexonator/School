@@ -8,8 +8,7 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Standa\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\stand\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -17,15 +16,11 @@
       "projectUniqueName": "c:\\Repos\\School\\2023-24\\ST\\EvaluateExpression class\\EvaluateExpression class.csproj",
       "projectName": "EvaluateExpression class",
       "projectPath": "c:\\Repos\\School\\2023-24\\ST\\EvaluateExpression class\\EvaluateExpression class.csproj",
-      "packagesPath": "C:\\Users\\Standa\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\stand\\.nuget\\packages\\",
       "outputPath": "c:\\Repos\\School\\2023-24\\ST\\EvaluateExpression class\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Standa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\stand\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -66,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

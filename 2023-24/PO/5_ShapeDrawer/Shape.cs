@@ -22,5 +22,10 @@ namespace _5_ShapeDrawer
             SolidBrush drawBrush = new(Color.Black);
             g.DrawString("base", drawFont, drawBrush, posX, posY);
         }
+
+        public virtual bool CheckCoords(int x, int y) 
+        {
+            return false; // implement function and mby add pen for drawing
+        }
     }
 }

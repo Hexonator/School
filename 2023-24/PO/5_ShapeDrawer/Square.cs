@@ -9,14 +9,17 @@ namespace _5_ShapeDrawer
     internal class Square : Shape
     {
         protected int size;
-        public Square(int posX, int posY, int size) : base(posX, posY)
+        protected Color text_color;
+
+        public Square(int posX, int posY, int size, Color text_color) : base(posX, posY)
         {
             this.size = size;
+            this.text_color = text_color;
         }
 
         public override void Draw(Graphics g)
         {
-            g.DrawRectangle(new Pen(Color.Black), posX, posY, size, size);
+            g.DrawRectangle(new Pen(text_color), posX, posY, size, size);
         }
     }
 }

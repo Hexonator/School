@@ -3,6 +3,7 @@ namespace _5_ShapeDrawer
     public partial class Form1 : Form
     {
         private List<Shape> shapes_list = new() { };
+        private int lastSelectedIndex = -1;
         public Form1()
         {
             InitializeComponent();
@@ -10,17 +11,17 @@ namespace _5_ShapeDrawer
 
         //-------- My functions---------
 
-        private bool ObjectIsOnCoords(int x, int y)
+        private int ObjectIsOnCoords(int x, int y)
         {
             for (int i = 0; i < shapes_list.Count; i++)
             {
                 Shape shape = shapes_list[i];
                 if (shape.CheckCoords(x, y)) // TODO: implement returning index of object
                 {
-                    return true;
+                    return i;
                 }
             }
-            return false;
+            return -1;
         }
 
         //-------- My functions end-----
@@ -40,9 +41,19 @@ namespace _5_ShapeDrawer
         {
             if (RadioButtonSelect.Checked)
             {
-                if (ObjectIsOnCoords(e.X, e.Y))
+                int foundObjectIndex = ObjectIsOnCoords(e.X, e.Y);
+                if (foundObjectIndex != -1)
                 {
-                    // TODO implement accepting  of index
+                    shapes_list[foundObjectIndex].IsSelected = true;
+                    if (lastSelectedIndex != foundObjectIndex && lastSelectedIndex != -1)
+                    {
+                        shapes_list[lastSelectedIndex].IsSelected = false;
+                    }
+                    lastSelectedIndex = foundObjectIndex;
+                }
+                else
+                {
+                    shapes_list[lastSelectedIndex].IsSelected = false;
                 }
             }
             else

@@ -9,6 +9,9 @@ namespace _5_ShapeDrawer
     internal class Shape
     {
         protected int posX, posY;
+        private bool isSelected;
+
+        public bool IsSelected { get => isSelected; set => isSelected = value; }
 
         public Shape(int posX, int posY)
         {
@@ -23,9 +26,11 @@ namespace _5_ShapeDrawer
             g.DrawString("base", drawFont, drawBrush, posX, posY);
         }
 
-        public virtual bool CheckCoords(int x, int y) 
+        public virtual bool CheckCoords(int x, int y)
         {
-            return false; // implement function and mby add pen for drawing
+            return false;
         }
+
+        // TODO: add a pen for drawing?
     }
 }

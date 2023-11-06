@@ -9,17 +9,17 @@ namespace _5_ShapeDrawer
     internal class Circle : Shape
     {
         protected int radius;
-        protected Color text_color;
+        protected Color shape_color;
 
-        public Circle(int posX, int posY, int radius, Color text_color) : base(posX, posY)
+        public Circle(int posX, int posY, int radius, Color shape_color) : base(posX, posY)
         {
             this.radius = radius;
-            this.text_color = text_color;
+            this.shape_color = shape_color;
         }
 
         public override void Draw(Graphics g)
         {
-            g.DrawEllipse(new Pen(text_color), posX, posY, radius, radius);
+            g.DrawEllipse(new Pen(shape_color), posX, posY, radius, radius);
         }
     }
 }

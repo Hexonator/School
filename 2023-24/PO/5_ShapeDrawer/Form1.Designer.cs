@@ -37,8 +37,9 @@
             ButtonDeleteSelected = new Button();
             ButtonClearAll = new Button();
             label1 = new Label();
-            ColorComboBox = new ComboBox();
             RadioButtonSelect = new RadioButton();
+            colorSelectButton = new Button();
+            ColorLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)UpDownSize).BeginInit();
             SuspendLayout();
             // 
@@ -75,6 +76,7 @@
             UpDownSize.Size = new Size(61, 23);
             UpDownSize.TabIndex = 3;
             UpDownSize.Value = new decimal(new int[] { 100, 0, 0, 0 });
+            UpDownSize.ValueChanged += UpDownSize_ValueChanged;
             // 
             // RadioButtonText
             // 
@@ -102,6 +104,7 @@
             TextInputBox.Name = "TextInputBox";
             TextInputBox.Size = new Size(104, 23);
             TextInputBox.TabIndex = 6;
+            TextInputBox.TextChanged += TextInputBox_TextChanged;
             // 
             // ButtonDeleteSelected
             // 
@@ -111,6 +114,7 @@
             ButtonDeleteSelected.TabIndex = 7;
             ButtonDeleteSelected.Text = "Delete selected";
             ButtonDeleteSelected.UseVisualStyleBackColor = true;
+            ButtonDeleteSelected.Click += ButtonDeleteSelected_Click;
             // 
             // ButtonClearAll
             // 
@@ -131,15 +135,6 @@
             label1.TabIndex = 9;
             label1.Text = "Size";
             // 
-            // ColorComboBox
-            // 
-            ColorComboBox.FormattingEnabled = true;
-            ColorComboBox.Items.AddRange(new object[] { "Green", "Red", "Blue", "Black", "White" });
-            ColorComboBox.Location = new Point(12, 211);
-            ColorComboBox.Name = "ColorComboBox";
-            ColorComboBox.Size = new Size(104, 23);
-            ColorComboBox.TabIndex = 10;
-            // 
             // RadioButtonSelect
             // 
             RadioButtonSelect.AutoSize = true;
@@ -149,14 +144,36 @@
             RadioButtonSelect.TabIndex = 11;
             RadioButtonSelect.Text = "Select";
             RadioButtonSelect.UseVisualStyleBackColor = true;
+            RadioButtonSelect.CheckedChanged += RadioButtonSelect_CheckedChanged;
+            // 
+            // colorSelectButton
+            // 
+            colorSelectButton.BackColor = SystemColors.ActiveCaptionText;
+            colorSelectButton.ForeColor = SystemColors.ActiveCaptionText;
+            colorSelectButton.Location = new Point(91, 209);
+            colorSelectButton.Name = "colorSelectButton";
+            colorSelectButton.Size = new Size(25, 25);
+            colorSelectButton.TabIndex = 12;
+            colorSelectButton.UseVisualStyleBackColor = false;
+            colorSelectButton.Click += colorSelectButton_Click;
+            // 
+            // ColorLabel
+            // 
+            ColorLabel.AutoSize = true;
+            ColorLabel.Location = new Point(13, 214);
+            ColorLabel.Name = "ColorLabel";
+            ColorLabel.Size = new Size(72, 15);
+            ColorLabel.TabIndex = 13;
+            ColorLabel.Text = "Color select:";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(969, 515);
+            Controls.Add(ColorLabel);
+            Controls.Add(colorSelectButton);
             Controls.Add(RadioButtonSelect);
-            Controls.Add(ColorComboBox);
             Controls.Add(label1);
             Controls.Add(ButtonClearAll);
             Controls.Add(ButtonDeleteSelected);
@@ -186,7 +203,8 @@
         private Button ButtonDeleteSelected;
         private Button ButtonClearAll;
         private Label label1;
-        private ComboBox ColorComboBox;
         private RadioButton RadioButtonSelect;
+        private Button colorSelectButton;
+        private Label ColorLabel;
     }
 }

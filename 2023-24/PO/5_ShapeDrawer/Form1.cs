@@ -1,3 +1,5 @@
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+
 namespace _5_ShapeDrawer
 {
     public partial class Form1 : Form
@@ -9,14 +11,14 @@ namespace _5_ShapeDrawer
             InitializeComponent();
         }
 
-        //-------- My functions---------
+        //-------- My functions ---------
 
         private int ObjectIsOnCoords(int x, int y)
         {
             for (int i = 0; i < shapes_list.Count; i++)
             {
                 Shape shape = shapes_list[i];
-                if (shape.CheckCoords(x, y)) // TODO: implement returning index of object
+                if (shape.CheckCoords(x, y))
                 {
                     return i;
                 }
@@ -24,7 +26,31 @@ namespace _5_ShapeDrawer
             return -1;
         }
 
-        //-------- My functions end-----
+        private bool isShapeSelected()
+        {
+            if (lastSelectedIndex != -1 && shapes_list[lastSelectedIndex].IsSelected == true)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private void changeShapeSize(int index, int size)
+        {
+            shapes_list[index].ChangeSize(size);
+            Refresh();
+        }
+
+        private void uncheckAll()
+        {
+            if (isShapeSelected())
+            {
+                shapes_list[lastSelectedIndex].IsSelected = false;
+                Refresh();
+            }
+        }
+
+        //-------- My functions end -----
 
         private void PaintInWindow(object sender, PaintEventArgs e)
         {
@@ -41,42 +67,39 @@ namespace _5_ShapeDrawer
         {
             if (RadioButtonSelect.Checked)
             {
+                // finds if object is on coords
                 int foundObjectIndex = ObjectIsOnCoords(e.X, e.Y);
+                // found = index; not found = -1
                 if (foundObjectIndex != -1)
                 {
-                    shapes_list[foundObjectIndex].IsSelected = true;
-                    if (lastSelectedIndex != foundObjectIndex && lastSelectedIndex != -1)
+                    if (lastSelectedIndex != foundObjectIndex && lastSelectedIndex != -1 && lastSelectedIndex < shapes_list.Count)
                     {
                         shapes_list[lastSelectedIndex].IsSelected = false;
+                    }
+                    shapes_list[foundObjectIndex].IsSelected = true;
+                    UpDownSize.Value = shapes_list[foundObjectIndex].Size;
+                    if (shapes_list[foundObjectIndex].GetType().Name == "Text")
+                    {
+                        TextInputBox.Text = shapes_list[foundObjectIndex].GetString();
                     }
                     lastSelectedIndex = foundObjectIndex;
                 }
                 else
                 {
-                    shapes_list[lastSelectedIndex].IsSelected = false;
+                    if (lastSelectedIndex != -1)
+                    {
+                        shapes_list[lastSelectedIndex].IsSelected = false;
+                    }
                 }
             }
             else
             {
                 int size = (int)UpDownSize.Value;
+                // x and y is set so the shape appears with the cursor in the middle and not the corner
                 int x = e.X - size / 2;
                 int y = e.Y - size / 2;
-                Color shape_color;
-                switch (ColorComboBox.Text)
-                {
-                    case "Green":
-                        shape_color = Color.Green; break;
-                    case "Red":
-                        shape_color = Color.Red; break;
-                    case "Blue":
-                        shape_color = Color.Blue; break;
-                    case "Black":
-                        shape_color = Color.Black; break;
-                    case "White":
-                        shape_color = Color.White; break;
-                    default:
-                        shape_color = Color.Black; break;
-                }
+                Color shape_color = colorSelectButton.BackColor;
+
                 if (RadioButtonSquare.Checked)
                 {
                     shapes_list.Add(new Square(x, y, size, shape_color));
@@ -87,32 +110,92 @@ namespace _5_ShapeDrawer
                 }
                 else if (RadioButtonText.Checked)
                 {
-                    shapes_list.Add(new Text(x, y, size, TextInputBox.Text, shape_color));
+                    if (TextInputBox.Text.Length > 0)
+                    {
+                        shapes_list.Add(new Text(x, y, size, TextInputBox.Text, shape_color));
+                        // TODO: make it so editing selected text changes it
+                    }
                 }
             }
 
             Refresh();
         }
 
+        private void colorSelectButton_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorSelect = new();
+            colorSelect.Color = colorSelectButton.BackColor;
+
+            if (colorSelect.ShowDialog() == DialogResult.OK)
+                colorSelectButton.BackColor = colorSelect.Color;
+        }
+
+        private void ButtonDeleteSelected_Click(object sender, EventArgs e)
+        {
+            if (isShapeSelected())
+            {
+                shapes_list.RemoveAt(lastSelectedIndex);
+                Refresh();
+            }
+        }
+
+        private void UpDownSize_ValueChanged(object sender, EventArgs e)
+        {
+            if (isShapeSelected())
+            {
+                changeShapeSize(lastSelectedIndex, (int)UpDownSize.Value);
+            }
+        }
+
         private void ButtonClearAll_Click(object sender, EventArgs e)
         {
+            if (isShapeSelected())
+            {
+                shapes_list[lastSelectedIndex].IsSelected = false;
+            }
             shapes_list.Clear();
             Refresh();
         }
 
+
         private void RadioButtonSquare_CheckedChanged(object sender, EventArgs e)
         {
+            uncheckAll();
             UpDownSize.Value = 100;
+            TextInputBox.Text = "";
         }
 
         private void RadioButtonCircle_CheckedChanged(object sender, EventArgs e)
         {
+            uncheckAll();
             UpDownSize.Value = 100;
+            TextInputBox.Text = "";
         }
 
         private void RadioButtonText_CheckedChanged(object sender, EventArgs e)
         {
+            uncheckAll();
             UpDownSize.Value = 30;
+        }
+
+        private void TextInputBox_TextChanged(object sender, EventArgs e)
+        {
+            if (isShapeSelected())
+            {
+                if (shapes_list[lastSelectedIndex].GetType().Name == "Text")
+                {
+                    shapes_list[lastSelectedIndex].ChangeString(TextInputBox.Text);
+                }
+                Refresh();
+            }
+        }
+
+        private void RadioButtonSelect_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RadioButtonSelect.Checked)
+            {
+                TextInputBox.Text = "";
+            }
         }
     }
 }

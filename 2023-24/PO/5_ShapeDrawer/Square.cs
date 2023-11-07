@@ -11,7 +11,7 @@ namespace _5_ShapeDrawer
         protected int size;
         protected Color shape_color;
 
-        public Square(int posX, int posY, int size, Color shape_color) : base(posX, posY)
+        public Square(int posX, int posY, int size, Color shape_color) : base(posX, posY, size)
         {
             this.size = size;
             this.shape_color = shape_color;
@@ -36,6 +36,12 @@ namespace _5_ShapeDrawer
                 return true;
             }
             return false;
+        }
+
+        public override void ChangeSize(int new_size)
+        {
+            this.size = new_size;
+            this.Size = new_size;
         }
     }
 }

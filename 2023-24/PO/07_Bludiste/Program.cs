@@ -1,12 +1,15 @@
 ﻿using System.ComponentModel;
 using System.Diagnostics;
+using System.Dynamic;
+using System.Threading;
+using System.Text;
 
 namespace _07_Bludiste;
 
 class Program
 {
-    static dynamic ConvertData(string filename,
-                               List<List<string>> maze){
+    static dynamic ConvertData(string filename){
+        List<List<string>> maze = new();
         int width = -1;
         int height = -1;
         int startX = -1;
@@ -20,7 +23,7 @@ class Program
             height = int.Parse(parts[0]);
             width = int.Parse(parts[1]);
 
-            string data =  sr.ReadToEnd();
+            string data = sr.ReadToEnd();
             int y = 0;
             int x = 0;
             maze.Add(new List<string> {});
@@ -49,65 +52,82 @@ class Program
                 }
             }
         }
-        dynamic expando = new ExpandoObject();  // TODO: make it work!
-        start_coords = new int[2] {startX, startY};
-        end_coords = new int[2] {endX, endY};
-        width_height = new int[2] {width, height};
-        return maze;
+        dynamic exp = new ExpandoObject();
+            exp.maze = maze;
+            exp.startX = startX;
+            exp.startY = startY;
+            exp.endX = endX;
+            exp.endY = endY;
+            exp.width = width;
+            exp.height = height;
+
+        return exp;
     }
-    static void SolveMazeRecursively(string filename, int debugLevel = 0){
-
-        List<List<string>> maze = new();
-
-        int[] start_coords = new int[2];
-        int[] end_coords = new int[2];
-        int[] width_height = new int[2];
-        ConvertData(filename, maze, start_coords, end_coords, width_height);
-        int startX = start_coords[0];
-        int startY = start_coords[1];
-        int endX = end_coords[0];
-        int endY = end_coords[1];
-        int width = width_height[0];
-        int height = width_height[1];
+    
+    static dynamic GetMaze(string filename){
+        dynamic exp = ConvertData(filename);
+        int startX = exp.startX;
+        int startY = exp.startY;
+        int endX = exp.endX;
+        int endY = exp.endY;
+        int width = exp.width;
+        int height = exp.height;
 
         if (width == -1 || height == -1)
         {
             Console.WriteLine("No height or width found");
-            return;
+            exp.success = false;
+            return exp;
         }
         else if (startX == -1 || startY == -1)
         {
             Console.WriteLine("No start found");
-            return;
+            exp.success = false;
+            return exp;
         }
         else if (endX == -1 || endY == -1)
         {
             Console.WriteLine("No end found");
-            return;
+            exp.success = false;
+            return exp;
         }
 
-        string divider = "";
-        for (int i = 0; i < width*2+10; i++)
-        {
-            divider += "-";
-        }
+        exp.success = true;
+        return exp;
+    }
 
-        Console.WriteLine(divider);
+    static void SolveMazeRecursively(string filename, int debugLevel = 0){
 
-        DrawMaze(maze, width, height);
+        dynamic exp = GetMaze(filename);
+        List<List<string>> maze = exp.maze;
+        int startX = exp.startX;
+        int startY = exp.startY;
+        int width = exp.width;
+        int height = exp.height;
+
+        // Draw initial maze
+        DrawMaze(maze, width, height, true);
+
         List<int[]> solution_path = new();
-        List<List<string>> maze_copy = CopyMaze(maze);
-        Solve(maze_copy, startX, startY, width, height, solution_path, debugLevel);
+
+        //Create stopwatch to time results
+        Stopwatch solve_time = new();
+        solve_time.Start();
+        Solve(maze, startX, startY, width, height, solution_path, debugLevel);
+        solve_time.Stop();
+        string precise_miliseconds = solve_time.Elapsed.TotalMilliseconds + "ms";
         if (solution_path.Count > 0){
-            FillMazeSolution(maze, solution_path);
             DrawMaze(maze, width, height);
+            FillMazeSolution(maze, solution_path);
+            Console.WriteLine($"Time elapsed: " + precise_miliseconds);
+            Console.ReadKey();
         }
         else{
             Console.WriteLine("No solution found");
+            Console.WriteLine($"Time elapsed: " + precise_miliseconds);
+            Console.ReadKey();
         }
-        Console.WriteLine(divider);
     }
-
 
     static bool Solve(List<List<string>> maze,
                       int x, int y,
@@ -120,10 +140,13 @@ class Program
         }
         maze[y][x] = "X";
 
-        if (debugLevel > 0)
+        if (debugLevel == 1)
         {
             DrawMaze(maze, width, height);
-            Console.ReadKey();
+        }
+        else if (debugLevel > 1)
+        {
+            DrawMaze(maze, width, height, true);
         }
         
         // Right
@@ -212,22 +235,35 @@ class Program
             y = coord[1];
             maze[y][x] = "X";
         }
+        Console.WriteLine($"Maze succesfully solved with path length {solution_path.Count}");
     }
 
-    static void DrawMaze(List<List<string>> maze, int width, int height, int longest_string = 1){
-        Console.WriteLine();
+    static void DrawMaze(List<List<string>> maze, int width, int height, bool stopAfter = false, int longest_string = 1){
+        StringBuilder buffer = new StringBuilder();
+
         for (int y = 0; y < height; y++)
         {
             foreach (string block in maze[y])
             {
-                Console.Write(block + " ");
+                buffer.Append(block + " ");
             }
-            Console.WriteLine();
+            buffer.AppendLine();
         }
-        Console.WriteLine();
+
+        Console.Clear();
+        Console.Write(buffer.ToString());
+
+        if (stopAfter)
+        {
+            Console.ReadKey();
+        }
+        else{
+            Thread.Sleep(10);
+        }
     }
 
     static void SolveMazeBreadthFirst(string filename, int debugLevel = 0){
+        List<int[]> queue = new();
 
     }
 
@@ -235,13 +271,13 @@ class Program
     {
         for (int i = 1; i <= 6; i++)
         {
-            SolveMazeRecursively("Zadani/bludiste"+ i +".txt");
+            SolveMazeRecursively("Zadani/bludiste"+ i +".txt", 1);
         }
 
-        // for (int i = 1; i <= 6; i++)
-        // {
-        //     SolveMazeRecursively("Zadani/bludiste"+ i +".txt");
-        // }
+        for (int i = 1; i <= 6; i++)
+        {
+            SolveMazeBreadthFirst("Zadani/bludiste"+ i +".txt");
+        }
         Console.ReadKey();
     }
 }

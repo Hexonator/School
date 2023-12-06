@@ -5,7 +5,7 @@ namespace _08_Sorting_algorythms;
 
 class Program
 {
-    static int array_length = 10000;
+    static int array_length = 20000;
     static bool runSelectionSort = true;
     static bool runBubbleSort = true;
     static bool printResults = false;
@@ -19,6 +19,17 @@ class Program
             random_array[i] = rand.Next(100);
         }
         return random_array;
+    }
+
+    static int[] DeepCopy(int[] array){
+        int[] new_array = new int[array.Length];
+        int index = 0;
+        foreach (int num in array)
+        {
+            new_array[index] = num;
+            index++;
+        }
+        return new_array;
     }
 
     static bool IsSorted(int[] array, int array_length){
@@ -84,7 +95,8 @@ class Program
     }
     static void Main(string[] args)
     {
-        int[] array = GenerateRandomArray(array_length);
+        int[] original_array = GenerateRandomArray(array_length);
+        int[] array = DeepCopy(original_array);
         int[] sorted_array = new int[array_length];
         if (runSelectionSort)
         {
@@ -103,6 +115,7 @@ class Program
             else{
                 Console.WriteLine("Something isn't working");
             }
+            array = DeepCopy(original_array);
             Console.WriteLine();
         }
         if (runBubbleSort)

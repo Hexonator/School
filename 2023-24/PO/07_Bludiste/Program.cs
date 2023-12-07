@@ -150,7 +150,7 @@ class Program
         }
         
         // Right
-        if (CheckXY(maze, x+1, y, width, height))
+        if (CheckAvailability(maze, x+1, y, width, height))
         {
             if (Solve(maze, x+1, y, width, height, solution_path, debugLevel))
             {
@@ -162,7 +162,7 @@ class Program
             }
         }
         // Bottom
-        if (CheckXY(maze, x, y+1, width, height))
+        if (CheckAvailability(maze, x, y+1, width, height))
         {
             if (Solve(maze, x, y+1, width, height, solution_path, debugLevel))
             {
@@ -174,7 +174,7 @@ class Program
             }
         }
         // Left
-        if (CheckXY(maze, x-1, y, width, height))
+        if (CheckAvailability(maze, x-1, y, width, height))
         {
             if (Solve(maze, x-1, y, width, height, solution_path, debugLevel))
             {
@@ -186,7 +186,7 @@ class Program
             }
         }
         // Top
-        if (CheckXY(maze, x, y-1, width, height))
+        if (CheckAvailability(maze, x, y-1, width, height))
         {
             if (Solve(maze, x, y-1, width, height, solution_path, debugLevel))
             {
@@ -201,7 +201,7 @@ class Program
         return false;
     }
 
-    static bool CheckXY(List<List<string>> maze,
+    static bool CheckAvailability(List<List<string>> maze,
                         int x, int y,
                         int width, int height){
 
@@ -261,10 +261,56 @@ class Program
             Thread.Sleep(10);
         }
     }
-
+    
     static void SolveMazeBreadthFirst(string filename, int debugLevel = 0){
         List<int[]> queue = new();
+        dynamic exp = GetMaze(filename);
+        List<List<string>> maze = exp.maze;
+        int startX = exp.startX;
+        int startY = exp.startY;
+        int endX = exp.endX;
+        int endY = exp.endY;
+        int width = exp.width;
+        int height = exp.height;
+        // TODO: add check for end
+        // TODO: add algorythm lol
 
+        if (debugLevel == 1)
+        {
+            DrawMaze(maze, width, height);
+        }
+        else if (debugLevel > 1)
+        {
+            DrawMaze(maze, width, height, true);
+        }
+    }
+
+    static List<int[]> GetDirections(List<List<string>> maze, 
+                                     int x, int y,
+                                     int width, int height){
+        
+        List<int[]> dirs = new(4); // TODO: check if this means it has a size of 4
+        // Right
+        if (CheckAvailability(maze, x+1, y, width, height))
+        {
+            dirs.Add(new int[2] {x+1, y});
+        }
+        // Bottom
+        if (CheckAvailability(maze, x, y+1, width, height))
+        {
+            dirs.Add(new int[2] {x, y+1});
+        }
+        // Left
+        if (CheckAvailability(maze, x-1, y, width, height))
+        {
+            dirs.Add(new int[2] {x-1, y});
+        }
+        // Top
+        if (CheckAvailability(maze, x, y-1, width, height))
+        {
+            dirs.Add(new int[2] {x, y-1});
+        }
+        return dirs;
     }
 
     static void Main(string[] args)

@@ -207,7 +207,7 @@ class Program
 
         if (x >= 0 && x < width && y >= 0 && y < height)
         {
-            if (maze[y][x] == "." || maze[y][x] == "C" || maze[y][x] == " ")
+            if (maze[y][x] == "." || maze[y][x] == "C")
             {
                 return true;
             }
@@ -238,13 +238,18 @@ class Program
         Console.WriteLine($"Maze succesfully solved with path length {solution_path.Count}");
     }
 
-    static void DrawMaze(List<List<string>> maze, bool stopAfter = false, int longest_str = 1){
+    static void DrawMaze(List<List<string>> maze, bool stopAfter = false){
         StringBuilder buffer = new StringBuilder();
         foreach (List<string> line in maze)
         {
             foreach (string item in line)
             {
-                buffer.Append(item + new string(' ', longest_str - item.Length));
+                if (int.TryParse(item, out _)){
+                    buffer.Append("+ ");
+                }
+                else{
+                    buffer.Append(item + " ");
+                }
             }
             buffer.AppendLine();
         }
@@ -277,15 +282,10 @@ class Program
         int y = startY;
         bool is_solvable;
         int[] coord;
-        queue.Enqueue(new int[2] {x, y});
         while (true)
         {
             if (x == endX && y == endY){
                 is_solvable = true;
-                break;
-            }
-            else if (queue.Count == 0){
-                is_solvable = false;
                 break;
             }
 
@@ -294,24 +294,28 @@ class Program
                 queue.Enqueue(direction_coord);
             }
 
-            depth++;
+            if (queue.Count == 0 && x != startX && y != startY){
+                is_solvable = false;
+                break;
+            }
+
             coord = queue.Dequeue();
             x = coord[0];
             y = coord[1];
             maze[y][x] = depth.ToString();
-            
-            int longest_str = depth.ToString().Length; 
+            depth++;
+
             if (debugLevel == 1)
             {
-                DrawMaze(maze, longest_str: longest_str);
+                DrawMaze(maze);
             }
             else if (debugLevel > 1)
             {
-                DrawMaze(maze, true, longest_str);
+                DrawMaze(maze, true);
             }
         }
         if (is_solvable){
-            // TODO: implement finding the end
+            
         }
     }
 
@@ -343,6 +347,12 @@ class Program
         return dirs;
     }
 
+    static void BacktrackToStart(List<List<string>> maze, int endX, int endY){
+        int depth = int.Parse(maze[endY][endX]);
+        maze[endY][endX] = "C";
+
+    }
+
     static void Main(string[] args)
     {
         bool solveRecursion = false;
@@ -357,7 +367,7 @@ class Program
         if (solveBreadthFirst){
             for (int i = 1; i <= 6; i++)
             {
-                SolveMazeBreadthFirst("Zadani/bludiste"+ i +".txt", 2);
+                SolveMazeBreadthFirst("Zadani/bludiste"+ i +".txt", 1);
             }
         }
         Console.ReadKey();

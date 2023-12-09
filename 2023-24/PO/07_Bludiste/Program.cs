@@ -111,7 +111,6 @@ class Program
 
         List<int[]> solution_path = new();
 
-        //Create stopwatch to time results
         Stopwatch solve_time = new();
         solve_time.Start();
         Solve(maze, startX, startY, width, height, solution_path, debugLevel);
@@ -120,6 +119,7 @@ class Program
         if (solution_path.Count > 0){
             DrawMaze(maze);
             FillMazeSolution(maze, solution_path);
+            Console.WriteLine("Maze solution found");
             Console.WriteLine($"Time elapsed: " + precise_miliseconds);
             Console.ReadKey();
         }
@@ -203,13 +203,22 @@ class Program
 
     static bool CheckAvailability(List<List<string>> maze,
                         int x, int y,
-                        int width, int height){
+                        int width, int height,
+                        bool lastBreadthFirstCheck = false){
 
         if (x >= 0 && x < width && y >= 0 && y < height)
         {
-            if (maze[y][x] == "." || maze[y][x] == "C")
-            {
-                return true;
+            if (lastBreadthFirstCheck){
+                if (int.TryParse(maze[y][x], out _) || maze[y][x] == "S")
+                {
+                    return true;
+                }
+            }
+            else{
+                if (maze[y][x] == "." || maze[y][x] == "C")
+                {
+                    return true;
+                }
             }
         }
         return false;
@@ -239,6 +248,7 @@ class Program
     }
 
     static void DrawMaze(List<List<string>> maze, bool stopAfter = false){
+        // TODO: make fction just move the cursor and change what is necessary instead of reloading the whole maze
         StringBuilder buffer = new StringBuilder();
         foreach (List<string> line in maze)
         {
@@ -267,17 +277,18 @@ class Program
     }
     
     static void SolveMazeBreadthFirst(string filename, int debugLevel = 0){
+        Stopwatch solve_time = new();
         Queue<int[]> queue = new();
         dynamic exp = GetMaze(filename);
         List<List<string>> maze = exp.maze;
         DrawMaze(maze, true);
+        solve_time.Start();
         int startX = exp.startX;
         int startY = exp.startY;
         int endX = exp.endX;
         int endY = exp.endY;
         int width = exp.width;
         int height = exp.height;
-        int depth = 0;
         int x = startX;
         int y = startY;
         bool is_solvable;
@@ -302,8 +313,7 @@ class Program
             coord = queue.Dequeue();
             x = coord[0];
             y = coord[1];
-            maze[y][x] = depth.ToString();
-            depth++;
+            maze[y][x] = coord[2].ToString();
 
             if (debugLevel == 1)
             {
@@ -314,8 +324,21 @@ class Program
                 DrawMaze(maze, true);
             }
         }
+        solve_time.Stop();
+        string precise_miliseconds = solve_time.Elapsed.TotalMilliseconds + "ms";
+        string path_length = maze[endY][endX];
         if (is_solvable){
-            
+            BacktrackToStart(maze, endX, endY, startX, startY, width, height, debugLevel);   
+            DrawMaze(maze);
+            Console.WriteLine("Maze solution found with path length " + path_length);
+            Console.WriteLine($"Time elapsed: " + precise_miliseconds);
+            Console.ReadKey();
+        }
+        else{
+            DrawMaze(maze);
+            Console.WriteLine("No solution found");
+            Console.WriteLine($"Time elapsed: " + precise_miliseconds);
+            Console.ReadKey();
         }
     }
 
@@ -324,33 +347,115 @@ class Program
                                      int width, int height){
         
         List<int[]> dirs = new(4);
+        string origin = maze[y][x];
+        int depth = 0;
+        if (origin != "S"){
+            depth = int.Parse(origin);
+        }
         // Right
         if (CheckAvailability(maze, x+1, y, width, height))
         {
-            dirs.Add(new int[2] {x+1, y});
+            dirs.Add(new int[3] {x+1, y, depth+1});
         }
         // Bottom
         if (CheckAvailability(maze, x, y+1, width, height))
         {
-            dirs.Add(new int[2] {x, y+1});
+            dirs.Add(new int[3] {x, y+1, depth+1});
         }
         // Left
         if (CheckAvailability(maze, x-1, y, width, height))
         {
-            dirs.Add(new int[2] {x-1, y});
+            dirs.Add(new int[3] {x-1, y, depth+1});
         }
         // Top
         if (CheckAvailability(maze, x, y-1, width, height))
         {
-            dirs.Add(new int[2] {x, y-1});
+            dirs.Add(new int[3] {x, y-1, depth+1});
         }
         return dirs;
     }
 
-    static void BacktrackToStart(List<List<string>> maze, int endX, int endY){
+    static void BacktrackToStart(List<List<string>> maze, int endX, int endY,
+                                 int startX, int startY,
+                                 int width, int height,
+                                 int debugLevel){
         int depth = int.Parse(maze[endY][endX]);
-        maze[endY][endX] = "C";
+        int x = endX;
+        int y = endY;
+        int[] coord = new int[2] {x, y};
+        int[] bad_coord = new int[2] {-1, -1};
 
+        while (depth > 0)
+        {
+            x = coord[0];
+            y = coord[1];
+            maze[y][x] = "X";
+            if (debugLevel == 1){
+                DrawMaze(maze);
+            }
+            else if (debugLevel > 1){
+                DrawMaze(maze, true);
+            }
+            coord = GetLowestDepthCoords(maze, depth, x, y, width, height);
+            depth--;
+            if (coord == bad_coord)
+            {
+                throw new Exception("Something went really wrong");
+            }
+        }
+        maze[endY][endX] = "C";
+        maze[startY][startX] = "S";
+    }
+
+    static int[] GetLowestDepthCoords(List<List<string>> maze, int depth,
+                                      int x, int y,
+                                      int width, int height){
+
+        // Top
+        if (CheckAvailability(maze, x, y-1, width, height, true))
+        {
+            if (maze[y-1][x] == "S"){
+                return new int[2] {x, y-1};
+            }
+            else if (int.Parse(maze[y-1][x]) == depth-1){
+                return new int[2] {x, y-1};
+            }
+        }
+        // Left
+        if (CheckAvailability(maze, x-1, y, width, height, true))
+        {   
+            if (maze[y][x-1] == "S"){
+                return new int[2] {x-1, y};
+            }
+            else if (int.Parse(maze[y][x-1]) == depth-1){
+                return new int[2] {x-1, y};
+            }
+        }
+        // Bottom
+        if (CheckAvailability(maze, x, y+1, width, height, true))
+        {   
+            if (maze[y+1][x] == "S"){
+                return new int[2] {x, y+1};
+            }
+            else if (int.Parse(maze[y+1][x]) == depth-1){
+                return new int[2] {x, y+1};
+            }
+        }
+        // Right
+        if (CheckAvailability(maze, x+1, y, width, height, true))
+        {   
+            if (maze[y][x+1] == "S"){
+                return new int[2] {x+1, y};
+            }
+            else if (int.Parse(maze[y][x+1]) == depth-1){
+                return new int[2] {x+1, y};
+            }
+        }
+        // shouldn't happen
+        DrawMaze(maze);
+        Console.WriteLine("Something went wrong");
+        Console.ReadKey();
+        return new int[2] {-1, -1};
     }
 
     static void Main(string[] args)
@@ -365,9 +470,9 @@ class Program
         }
 
         if (solveBreadthFirst){
-            for (int i = 1; i <= 6; i++)
+            for (int i = 3; i <= 6; i++)
             {
-                SolveMazeBreadthFirst("Zadani/bludiste"+ i +".txt", 1);
+                SolveMazeBreadthFirst("Zadani/bludiste"+ i +".txt", 0);
             }
         }
         Console.ReadKey();

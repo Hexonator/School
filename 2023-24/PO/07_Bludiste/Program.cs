@@ -4,6 +4,7 @@ using System.Dynamic;
 using System.Threading;
 using System.Text;
 using System.Collections;
+using System.Xml;
 
 namespace _07_Bludiste;
 
@@ -248,31 +249,82 @@ class Program
     }
 
     static void DrawMaze(List<List<string>> maze, bool stopAfter = false){
-        // TODO: make fction just move the cursor and change what is necessary instead of reloading the whole maze
+        (int width, int height) = (maze[0].Count, maze.Count);
+        int x = 0;
+        int y = 0;
+        bool doUpdate = false; // lets func know wheteher to print everything new
+        (int orX, int orY) = Console.GetCursorPosition();
+        if (orY < height){
+            doUpdate = true;
+        }
         StringBuilder buffer = new StringBuilder();
-        foreach (List<string> line in maze)
+        using (StreamReader sw = new("output.txt"))
         {
-            foreach (string item in line)
+            string[] data = sw.ReadToEnd().Split('\n');
+            string[] dimensions = data[^2].Split(' ');
+            int data_width = int.Parse(dimensions[0]);
+            int data_height = int.Parse(dimensions[1]);
+            if (data[0] == "" || (data_height != height && data_width != width))
             {
-                if (int.TryParse(item, out _)){
-                    buffer.Append("+ ");
-                }
-                else{
-                    buffer.Append(item + " ");
-                }
+                doUpdate = true;
             }
-            buffer.AppendLine();
+            foreach (List<string> line in maze)
+            {
+                foreach (string item in line)
+                {
+                    // Draws the maze fresh into the txt and into console
+                    if (doUpdate){
+                        if (char.IsDigit(item[0])){
+                            buffer.Append('+');
+                        }
+                        else{
+                            buffer.Append(item);
+                        }
+                    // Changes specific characters in the console to make it faster
+                    } else {
+                        if (char.IsDigit(item[0]) && data[y][x] != '+'){
+                            Console.SetCursorPosition(x+1, y);
+                            Console.Write('\b');
+                            Console.Write('+');
+                            buffer.Append('+');
+                        }
+                        else if (char.IsDigit(item[0]) && data[y][x] == '+'){
+                            buffer.Append('+');
+                        }
+                        else if (item != data[y][x].ToString()){
+                            Console.SetCursorPosition(x+1, y);
+                            Console.Write('\b');
+                            Console.Write(item);
+                            buffer.Append(item);
+                        }
+                        else {
+                            buffer.Append(item);
+                        }
+                    }
+                    x++;
+                }
+                buffer.AppendLine();
+                y++;
+                x = 0;
+            }
         }
 
-        Console.Clear();
-        Console.Write(buffer.ToString());
+        using (StreamWriter sw = new("output.txt", false))
+        {
+            sw.Write(buffer.ToString());
+            sw.WriteLine(width + " " + height);
+        }
+        if (doUpdate){
+            Console.Clear();
+            Console.WriteLine(buffer.ToString());
+        }
+        else {
+            Console.SetCursorPosition(0, y+1);
+        }
 
         if (stopAfter)
         {
             Console.ReadKey();
-        }
-        else{
-            Thread.Sleep(10);
         }
     }
     
@@ -470,9 +522,9 @@ class Program
         }
 
         if (solveBreadthFirst){
-            for (int i = 3; i <= 6; i++)
+            for (int i = 1; i <= 6; i++)
             {
-                SolveMazeBreadthFirst("Zadani/bludiste"+ i +".txt", 0);
+                SolveMazeBreadthFirst("Zadani/bludiste"+ i +".txt", 1);
             }
         }
         Console.ReadKey();

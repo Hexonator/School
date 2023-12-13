@@ -5,11 +5,14 @@ using System.Threading;
 using System.Text;
 using System.Collections;
 using System.Xml;
+using System.Data;
 
 namespace _07_Bludiste;
 
 class Program
 {
+    static List<List<string>> maze_data = new();
+
     static dynamic ConvertData(string filename){
         List<List<string>> maze = new();
         int width = -1;
@@ -108,19 +111,19 @@ class Program
         int height = exp.height;
 
         // Draw initial maze
-        DrawMaze(maze, true);
+        DrawMaze(maze, true, true);
 
         List<int[]> solution_path = new();
 
         Stopwatch solve_time = new();
         solve_time.Start();
         Solve(maze, startX, startY, width, height, solution_path, debugLevel);
+        maze[startY][startX] = "S";
         solve_time.Stop();
         string precise_miliseconds = solve_time.Elapsed.TotalMilliseconds + "ms";
         if (solution_path.Count > 0){
-            DrawMaze(maze);
             FillMazeSolution(maze, solution_path);
-            Console.WriteLine("Maze solution found");
+            DrawMaze(maze);
             Console.WriteLine($"Time elapsed: " + precise_miliseconds);
             Console.ReadKey();
         }
@@ -140,14 +143,17 @@ class Program
         {
             return true;
         }
-        maze[y][x] = "X";
+        maze[y][x] = "+";
 
-        if (debugLevel == 1)
-        {
+        if (debugLevel == 0){
+        }
+        else if (debugLevel == 1){
             DrawMaze(maze);
         }
-        else if (debugLevel > 1)
-        {
+        else if (debugLevel == 2){
+            DrawMaze(maze, waitMsAfter: 10);
+        }
+        else{
             DrawMaze(maze, true);
         }
         
@@ -248,78 +254,89 @@ class Program
         Console.WriteLine($"Maze succesfully solved with path length {solution_path.Count}");
     }
 
-    static void DrawMaze(List<List<string>> maze, bool stopAfter = false){
+    static void DrawMaze(List<List<string>> maze,
+                         bool stopAfter = false,
+                         bool deleteAfter = true,
+                         int waitMsAfter = 0){
+
         (int width, int height) = (maze[0].Count, maze.Count);
+        bool doUpdate = false; // lets func know wheteher to print everything new
+        if (maze_data.Count == 0){
+            doUpdate = true;
+        }
+        else{
+            (int data_width, int data_height) = (maze_data[0].Count, maze_data.Count);
+            if (data_height != height && data_width != width)
+            {
+                doUpdate = true;
+            }
+        }
         int x = 0;
         int y = 0;
-        bool doUpdate = false; // lets func know wheteher to print everything new
-        (int orX, int orY) = Console.GetCursorPosition();
+        (int _, int orY) = Console.GetCursorPosition();
         if (orY < height){
             doUpdate = true;
         }
         StringBuilder buffer = new StringBuilder();
-        using (StreamReader sw = new("output.txt"))
+        foreach (List<string> line in maze)
         {
-            string[] data = sw.ReadToEnd().Split('\n');
-            string[] dimensions = data[^2].Split(' ');
-            int data_width = int.Parse(dimensions[0]);
-            int data_height = int.Parse(dimensions[1]);
-            if (data[0] == "" || (data_height != height && data_width != width))
+            foreach (string item in line)
             {
-                doUpdate = true;
-            }
-            foreach (List<string> line in maze)
-            {
-                foreach (string item in line)
-                {
-                    // Draws the maze fresh into the txt and into console
-                    if (doUpdate){
-                        if (char.IsDigit(item[0])){
-                            buffer.Append('+');
-                        }
-                        else{
-                            buffer.Append(item);
-                        }
-                    // Changes specific characters in the console to make it faster
-                    } else {
-                        if (char.IsDigit(item[0]) && data[y][x] != '+'){
-                            Console.SetCursorPosition(x+1, y);
-                            Console.Write('\b');
-                            Console.Write('+');
-                            buffer.Append('+');
-                        }
-                        else if (char.IsDigit(item[0]) && data[y][x] == '+'){
-                            buffer.Append('+');
-                        }
-                        else if (item != data[y][x].ToString()){
-                            Console.SetCursorPosition(x+1, y);
-                            Console.Write('\b');
-                            Console.Write(item);
-                            buffer.Append(item);
-                        }
-                        else {
-                            buffer.Append(item);
-                        }
+                // Draws the maze fresh into the txt and into console
+                if (doUpdate){
+                    if (char.IsDigit(item[0])){
+                        buffer.Append('+');
                     }
-                    x++;
+                    else{
+                        buffer.Append(item);
+                    }
+                // Changes specific characters in the console to make it faster
+                } else {
+                    bool itemIsNumber = char.IsDigit(item[0]);
+                    if (itemIsNumber && item != maze_data[y][x]){
+                        Console.SetCursorPosition(x+1, y);
+                        Console.Write('\b');
+                        Console.Write('+');
+                        if(doUpdate)
+                            buffer.Append('+');
+                    }
+                    else if (itemIsNumber && item == maze_data[y][x]){
+                        if(doUpdate)
+                            buffer.Append('+');
+                    }
+                    else if (item != maze_data[y][x]){
+                        Console.SetCursorPosition(x+1, y);
+                        Console.Write('\b');
+                        Console.Write(item);
+                        if(doUpdate)
+                            buffer.Append(item);
+                    }
+                    else {
+                        if(doUpdate)
+                            buffer.Append(item);
+                    }
                 }
-                buffer.AppendLine();
-                y++;
-                x = 0;
+                x++;
             }
+            buffer.AppendLine();
+            y++;
+            x = 0;
         }
 
-        using (StreamWriter sw = new("output.txt", false))
-        {
-            sw.Write(buffer.ToString());
-            sw.WriteLine(width + " " + height);
-        }
         if (doUpdate){
-            Console.Clear();
+            if(deleteAfter){
+                Console.Clear();
+            }
             Console.WriteLine(buffer.ToString());
         }
         else {
             Console.SetCursorPosition(0, y+1);
+        }
+
+        maze_data = CopyMaze(maze);
+
+        if (waitMsAfter > 0){
+            Thread.Sleep(waitMsAfter);
         }
 
         if (stopAfter)
@@ -333,7 +350,7 @@ class Program
         Queue<int[]> queue = new();
         dynamic exp = GetMaze(filename);
         List<List<string>> maze = exp.maze;
-        DrawMaze(maze, true);
+        DrawMaze(maze, true, true);
         solve_time.Start();
         int startX = exp.startX;
         int startY = exp.startY;
@@ -354,6 +371,17 @@ class Program
 
             foreach (int[] direction_coord in GetDirections(maze, x, y, width, height))
             {
+                bool hasReturned = false;
+                foreach (int[] item in queue)
+                {
+                    if (item[0] == direction_coord[0] && item[1] == direction_coord[1]){
+                        hasReturned = true;
+                        break;
+                    }
+                }
+                if(hasReturned){
+                    continue;
+                }
                 queue.Enqueue(direction_coord);
             }
 
@@ -367,12 +395,15 @@ class Program
             y = coord[1];
             maze[y][x] = coord[2].ToString();
 
-            if (debugLevel == 1)
-            {
+            if (debugLevel == 0){
+            }
+            else if (debugLevel == 1){
                 DrawMaze(maze);
             }
-            else if (debugLevel > 1)
-            {
+            else if (debugLevel == 2){
+                DrawMaze(maze, waitMsAfter: 10);
+            }
+            else{
                 DrawMaze(maze, true);
             }
         }
@@ -442,10 +473,16 @@ class Program
             x = coord[0];
             y = coord[1];
             maze[y][x] = "X";
-            if (debugLevel == 1){
+
+            if (debugLevel == 0){
+            }
+            else if (debugLevel == 1){
                 DrawMaze(maze);
             }
-            else if (debugLevel > 1){
+            else if (debugLevel == 2){
+                DrawMaze(maze, waitMsAfter: 10);
+            }
+            else{
                 DrawMaze(maze, true);
             }
             coord = GetLowestDepthCoords(maze, depth, x, y, width, height);
@@ -512,19 +549,25 @@ class Program
 
     static void Main(string[] args)
     {
-        bool solveRecursion = false;
+        bool solveRecursion = true;
         bool solveBreadthFirst = true;
+        // debugLevel guide:
+        //  0: fastest solution possible, prints only empty maze and solution
+        //  1: draws every state without waiting, usually not much slower than 0
+        //  2: draws every state and waits 10ms to make it more apparent what the function is doing
+        //  2+: waits after every print to console
+        int debugLevel = 2;
         if (solveRecursion){
             for (int i = 1; i <= 6; i++)
             {
-                SolveMazeRecursively("Zadani/bludiste"+ i +".txt", 1);
+                SolveMazeRecursively("Zadani/bludiste"+ i +".txt", debugLevel);
             }
         }
 
         if (solveBreadthFirst){
             for (int i = 1; i <= 6; i++)
             {
-                SolveMazeBreadthFirst("Zadani/bludiste"+ i +".txt", 1);
+                SolveMazeBreadthFirst("Zadani/bludiste"+ i +".txt", debugLevel);
             }
         }
         Console.ReadKey();

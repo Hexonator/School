@@ -34,8 +34,11 @@
             Height_UpDown = new NumericUpDown();
             GameField = new Panel();
             StartButton = new Button();
+            Increment_UpDown = new NumericUpDown();
+            Increment_label = new Label();
             ((System.ComponentModel.ISupportInitialize)Width_UpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Height_UpDown).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Increment_UpDown).BeginInit();
             SuspendLayout();
             // 
             // Width_label
@@ -80,7 +83,7 @@
             // 
             GameField.Location = new Point(163, 12);
             GameField.Name = "GameField";
-            GameField.Size = new Size(754, 468);
+            GameField.Size = new Size(871, 508);
             GameField.TabIndex = 4;
             GameField.Paint += DrawInPanel;
             // 
@@ -94,11 +97,33 @@
             StartButton.UseVisualStyleBackColor = true;
             StartButton.Click += StartClick;
             // 
+            // Increment_UpDown
+            // 
+            Increment_UpDown.Location = new Point(83, 113);
+            Increment_UpDown.Maximum = new decimal(new int[] { 50, 0, 0, 0 });
+            Increment_UpDown.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            Increment_UpDown.Name = "Increment_UpDown";
+            Increment_UpDown.Size = new Size(61, 23);
+            Increment_UpDown.TabIndex = 6;
+            Increment_UpDown.Value = new decimal(new int[] { 7, 0, 0, 0 });
+            Increment_UpDown.ValueChanged += IncrementValueChange;
+            // 
+            // Increment_label
+            // 
+            Increment_label.AutoSize = true;
+            Increment_label.Location = new Point(11, 116);
+            Increment_label.Name = "Increment_label";
+            Increment_label.Size = new Size(65, 15);
+            Increment_label.TabIndex = 7;
+            Increment_label.Text = "Square size";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(929, 492);
+            ClientSize = new Size(1046, 532);
+            Controls.Add(Increment_label);
+            Controls.Add(Increment_UpDown);
             Controls.Add(StartButton);
             Controls.Add(GameField);
             Controls.Add(Height_UpDown);
@@ -106,9 +131,10 @@
             Controls.Add(Height_label);
             Controls.Add(Width_label);
             Name = "Form1";
-            Text = "Game Of Live";
+            Text = "Game Of Life";
             ((System.ComponentModel.ISupportInitialize)Width_UpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)Height_UpDown).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Increment_UpDown).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -121,5 +147,7 @@
         private NumericUpDown Height_UpDown;
         private Panel GameField;
         private Button StartButton;
+        private NumericUpDown Increment_UpDown;
+        private Label Increment_label;
     }
 }

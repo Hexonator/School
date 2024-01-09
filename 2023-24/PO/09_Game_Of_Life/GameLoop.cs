@@ -9,25 +9,28 @@ namespace _09_Game_Of_Life
 {
     internal class GameLoop
     {
-        public GameLoop(bool[,] GameState, int increment) {
-            this.GameState = GameState;
+        public bool HasLaunched = false;
+        public int width, height, increment;
+        public bool[,] gamestate;
+        public Graphics g;
+
+        public GameLoop(Graphics g, int increment, int width, int height, bool gridVisible = false) {
             this.increment = increment;
+            this.width = width;
+            this.height = height;
+            this.gamestate = new bool[width, height];
+            this.g = g;
+            if (gridVisible){
+                DrawGrid(g);
+            }
         }
 
-        public bool[,] GameState { get; }
-        public int increment { get; }
-
-        public void GetGraphics(Graphics g)
+        private void DrawGrid(Graphics g)
         {
-
-        }
-
-        public void DrawGrid(Graphics g)
-        {
-            int width = GameState.GetLength(0) * increment;
-            int height = GameState.GetLength(1) * increment;
+            int width = this.width * increment;
+            int height = this.height * increment;
             Pen pen = new(Color.Black, 1);
-            
+            pen.DashPattern = new float[]{3, 3};
             // Vertical lines
             for (int x = 0; x <= width; x += increment)
             {
@@ -43,6 +46,25 @@ namespace _09_Game_Of_Life
                 Point p2 = new(width, y);
                 g.DrawLine(pen, p1, p2);
             }
+            g.Dispose();
+            pen.Dispose();
+        }
+
+        public void UpdateSquares(int x, int y)
+        {
+            Graphics g = this.g;
+            Pen pen = new(Color.Black, 1);
+            // TODO: keeps throwing errors
+            g.DrawRectangle(pen, x, y, increment, increment);
+            g.Dispose();
+        }
+
+        public Tuple<int, int> SendClick(Point coords)
+        {
+            int x = coords.X;
+            int y = coords.Y;
+            UpdateSquares(x, y);
+            return new Tuple<int, int>(x, y);
         }
     }
 }

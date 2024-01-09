@@ -36,6 +36,7 @@
             StartButton = new Button();
             Increment_UpDown = new NumericUpDown();
             Increment_label = new Label();
+            DebugTextBox = new TextBox();
             ((System.ComponentModel.ISupportInitialize)Width_UpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Height_UpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Increment_UpDown).BeginInit();
@@ -63,7 +64,7 @@
             // 
             Width_UpDown.Location = new Point(61, 12);
             Width_UpDown.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            Width_UpDown.Minimum = new decimal(new int[] { 20, 0, 0, 0 });
+            Width_UpDown.Minimum = new decimal(new int[] { 10, 0, 0, 0 });
             Width_UpDown.Name = "Width_UpDown";
             Width_UpDown.Size = new Size(83, 23);
             Width_UpDown.TabIndex = 2;
@@ -73,7 +74,7 @@
             // 
             Height_UpDown.Location = new Point(61, 44);
             Height_UpDown.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            Height_UpDown.Minimum = new decimal(new int[] { 20, 0, 0, 0 });
+            Height_UpDown.Minimum = new decimal(new int[] { 10, 0, 0, 0 });
             Height_UpDown.Name = "Height_UpDown";
             Height_UpDown.Size = new Size(83, 23);
             Height_UpDown.TabIndex = 3;
@@ -81,10 +82,13 @@
             // 
             // GameField
             // 
+            GameField.AutoScroll = true;
+            GameField.Cursor = Cursors.Cross;
             GameField.Location = new Point(163, 12);
             GameField.Name = "GameField";
             GameField.Size = new Size(871, 508);
             GameField.TabIndex = 4;
+            GameField.Click += GameField_Click;
             GameField.Paint += DrawInPanel;
             // 
             // StartButton
@@ -117,11 +121,24 @@
             Increment_label.TabIndex = 7;
             Increment_label.Text = "Square size";
             // 
+            // DebugTextBox
+            // 
+            DebugTextBox.AcceptsReturn = true;
+            DebugTextBox.BorderStyle = BorderStyle.None;
+            DebugTextBox.Location = new Point(11, 363);
+            DebugTextBox.Multiline = true;
+            DebugTextBox.Name = "DebugTextBox";
+            DebugTextBox.ScrollBars = ScrollBars.Vertical;
+            DebugTextBox.Size = new Size(146, 157);
+            DebugTextBox.TabIndex = 8;
+            DebugTextBox.Text = "Debug info will appear here";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1046, 532);
+            Controls.Add(DebugTextBox);
             Controls.Add(Increment_label);
             Controls.Add(Increment_UpDown);
             Controls.Add(StartButton);
@@ -149,5 +166,6 @@
         private Button StartButton;
         private NumericUpDown Increment_UpDown;
         private Label Increment_label;
+        private TextBox DebugTextBox;
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Repos\\School\\2023-24\\ST\\12_graphDrawer\\12_graphDrawer.csproj": {}
+    "c:\\Repos\\School\\2023-24\\ST\\12_graphDrawer\\12_graphDrawer.csproj": {}
   },
   "projects": {
-    "C:\\Repos\\School\\2023-24\\ST\\12_graphDrawer\\12_graphDrawer.csproj": {
+    "c:\\Repos\\School\\2023-24\\ST\\12_graphDrawer\\12_graphDrawer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repos\\School\\2023-24\\ST\\12_graphDrawer\\12_graphDrawer.csproj",
+        "projectUniqueName": "c:\\Repos\\School\\2023-24\\ST\\12_graphDrawer\\12_graphDrawer.csproj",
         "projectName": "12_graphDrawer",
-        "projectPath": "C:\\Repos\\School\\2023-24\\ST\\12_graphDrawer\\12_graphDrawer.csproj",
+        "projectPath": "c:\\Repos\\School\\2023-24\\ST\\12_graphDrawer\\12_graphDrawer.csproj",
         "packagesPath": "C:\\Users\\Standa\\.nuget\\packages\\",
-        "outputPath": "C:\\Repos\\School\\2023-24\\ST\\12_graphDrawer\\obj\\",
+        "outputPath": "c:\\Repos\\School\\2023-24\\ST\\12_graphDrawer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

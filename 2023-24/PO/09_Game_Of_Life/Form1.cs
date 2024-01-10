@@ -7,6 +7,8 @@ namespace _09_Game_Of_Life
         private GameLoop gl;
         private int fieldWidth, fieldHeight;
         private int increment = 15;
+        private Graphics g;
+        private int clicX, clYck;
 
         public Form1()
         {
@@ -25,7 +27,8 @@ namespace _09_Game_Of_Life
 
         private void DrawInPanel(object sender, PaintEventArgs e)
         {
-            Graphics g = e.Graphics;
+            Graphics new_g = e.Graphics;
+            g = new_g;
             int width = (int)Width_UpDown.Value;
             int height = (int)Height_UpDown.Value;
             GameLoop gl = new(g, increment, width, height, true);
@@ -47,9 +50,8 @@ namespace _09_Game_Of_Life
         private void GameField_Click(object sender, EventArgs e)
         {
             Point point = GameField.PointToClient(Cursor.Position);
-            int x, y;
-            (x, y) = this.gl.SendClick(point);
-            DebugTextBox.AppendText($"\r\n ({x}, {y})");
+            (clicX, clYck) = this.gl.SendClick(point);
+            DebugTextBox.AppendText($"\r\n ({clicX}, {clYck})");
         }
     }
 }

@@ -12,14 +12,12 @@ namespace _09_Game_Of_Life
         public bool HasLaunched = false;
         public int width, height, increment;
         public bool[,] gamestate;
-        public Graphics g;
 
         public GameLoop(Graphics g, int increment, int width, int height, bool gridVisible = false) {
             this.increment = increment;
             this.width = width;
             this.height = height;
             this.gamestate = new bool[width, height];
-            this.g = g;
             if (gridVisible){
                 DrawGrid(g);
             }
@@ -46,24 +44,12 @@ namespace _09_Game_Of_Life
                 Point p2 = new(width, y);
                 g.DrawLine(pen, p1, p2);
             }
-            g.Dispose();
-            pen.Dispose();
-        }
-
-        public void UpdateSquares(int x, int y)
-        {
-            Graphics g = this.g;
-            Pen pen = new(Color.Black, 1);
-            // TODO: keeps throwing errors
-            g.DrawRectangle(pen, x, y, increment, increment);
-            g.Dispose();
         }
 
         public Tuple<int, int> SendClick(Point coords)
         {
-            int x = coords.X;
-            int y = coords.Y;
-            UpdateSquares(x, y);
+            int x = coords.X / increment;
+            int y = coords.Y / increment;
             return new Tuple<int, int>(x, y);
         }
     }

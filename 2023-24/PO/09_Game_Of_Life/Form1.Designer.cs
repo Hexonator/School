@@ -86,7 +86,7 @@
             GameField.Cursor = Cursors.Cross;
             GameField.Location = new Point(163, 12);
             GameField.Name = "GameField";
-            GameField.Size = new Size(871, 508);
+            GameField.Size = new Size(609, 607);
             GameField.TabIndex = 4;
             GameField.Click += GameField_Click;
             GameField.Paint += DrawInPanel;
@@ -125,7 +125,7 @@
             // 
             DebugTextBox.AcceptsReturn = true;
             DebugTextBox.BorderStyle = BorderStyle.None;
-            DebugTextBox.Location = new Point(11, 363);
+            DebugTextBox.Location = new Point(11, 355);
             DebugTextBox.Multiline = true;
             DebugTextBox.Name = "DebugTextBox";
             DebugTextBox.ScrollBars = ScrollBars.Vertical;
@@ -137,7 +137,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1046, 532);
+            ClientSize = new Size(784, 631);
             Controls.Add(DebugTextBox);
             Controls.Add(Increment_label);
             Controls.Add(Increment_UpDown);

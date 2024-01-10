@@ -38,7 +38,7 @@ namespace _09_Game_Of_Life
         {
             List<(int, int)> changes = new(); // list of changes that occur in a single gen
 
-            for (int y = 0; y < width; y++)
+            for (int y = 0; y < height; y++)
             {
                 for (int x = 0; x < width; x++)
                 {

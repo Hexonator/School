@@ -175,7 +175,7 @@
             EndButton.Name = "EndButton";
             EndButton.Size = new Size(130, 23);
             EndButton.TabIndex = 12;
-            EndButton.Text = "End Simulation";
+            EndButton.Text = "Stop Simulation";
             EndButton.UseVisualStyleBackColor = true;
             EndButton.Click += EndButton_Click;
             // 

@@ -80,7 +80,7 @@ namespace _09_Game_Of_Life
             }
             else
             {
-                g.DrawRectangle(pen, 0, 0, width*increment, height*increment);
+                g.DrawRectangle(pen, 0, 0, width * increment, height * increment);
             }
         }
 

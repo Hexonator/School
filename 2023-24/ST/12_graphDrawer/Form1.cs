@@ -21,14 +21,14 @@ namespace _12_graphDrawer
             int width = graphField.Width;
             int height = graphField.Height;
 
-            for (int x = -width / 2; x < width / 2; x += step)
+            for (double x = -width / 2; x < width / 2; x += step)
             {
                 double y = EvaluateExpression.EvaluatePrefixNotation(input, x);
-                if (y > height || y < -height)
-                {
-                    continue;
-                }
-                graph_points.Add(new Point(x, (int)y));
+                //if (y > height || y < -height)
+                //{
+                //    continue;
+                //}
+                graph_points.Add(new Point((int)x, (int)y));
             }
             graph_points_to_draw = G_CoordsToF_Coords(graph_points.ToArray());
             if (graph_points_to_draw.Length == 0)
@@ -108,12 +108,13 @@ namespace _12_graphDrawer
                 {
                     point1 = graph_points_to_draw[i-1];
                     point2 = graph_points_to_draw[i];
-                    deltaX = point1.X - point1.X;
-                    deltaY = point2.Y - point1.Y;
+                    deltaX = Math.Abs(point2.X - point1.X);
+                    deltaY = Math.Abs(point2.Y - point1.Y);
                     int y1 = point1.Y;
                     int y2 = point2.Y;
                     
                     double distance = Math.Sqrt(deltaX * deltaX + deltaY * deltaY);
+                    // TODO: needs debugging on trigonometric fctions and changes in view multipliers
                     if (distance < graphField.Height + 200 && y1<10000 && y1>-10000 && y2<10000 && y2>-10000)
                     {
                         g.DrawLine(G_pen, point1, point2);

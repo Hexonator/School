@@ -561,3 +561,10 @@ FodyWeavers.xsd
 
 
 .vsidx
+*.pdb
+*.dll
+*.json
+*.cache
+*.cache
+*.v2
+*.editorconfig

@@ -27,13 +27,13 @@ namespace _12_graphDrawer
                     switch (expression[0])
                     {
                         case 's':
-                            return Math.Sin(EvaluatePrefixNotation(expression[2..], x / 50)) * multiplier;
+                            return Math.Sin(EvaluatePrefixNotation(expression[2..], x));
                         case 'c':
-                            return Math.Cos(EvaluatePrefixNotation(expression[2..], x / 50)) * multiplier;
+                            return Math.Cos(EvaluatePrefixNotation(expression[2..], x));
                         case 't':
-                            return Math.Tan(EvaluatePrefixNotation(expression[2..], x / 50)) * multiplier;
+                            return Math.Tan(EvaluatePrefixNotation(expression[2..], x));
                         case 'g':
-                            return 1 / Math.Tan(EvaluatePrefixNotation(expression[2..], x / 50)) * multiplier;
+                            return 1 / Math.Tan(EvaluatePrefixNotation(expression[2..], x));
                         case '|':
                             return Math.Abs(EvaluatePrefixNotation(expression[2..], x));
                         default:
@@ -68,10 +68,6 @@ namespace _12_graphDrawer
                 }
                 else
                 {
-                    if (expression.Length > 1 && double.TryParse(expression[..^1], out double toMultiply))
-                    {
-                        return toMultiply * x;
-                    }
                     return x;
                 }
             }
@@ -103,8 +99,8 @@ namespace _12_graphDrawer
                 }
                 if (open_expression_counter <= 0)
                 {
-                    expr1 = expression[2..iteration];
-                    expr2 = expression[(iteration + 1)..];
+                    expr1 = expression[2..(iteration-1)];
+                    expr2 = expression[(iteration + 1)..^1];
                     break;
                 }
             }
@@ -113,11 +109,20 @@ namespace _12_graphDrawer
 
         private static bool HasOperators(string expression)
         {
+            bool operatorFound = false;
             foreach (var character in expression)
             {
                 if (dual_opearators.Contains(character) || unar_operators.Contains(character))
                 {
+                    operatorFound = true;
+                }
+                else if (operatorFound && character == '(')
+                {
                     return true;
+                }
+                else
+                {
+                    operatorFound = false;
                 }
             }
             return false;

@@ -8,10 +8,12 @@ namespace _09_Game_Of_Life
         private GameLoop gl;
         private int fieldWidth, fieldHeight;
         private int increment = 15;
+        private int timeLoopSpeed;
         private int clicX = -1; private int clYck = -1;
         private List<(int, int)> AliveCells = new();
         private int width, height;
         private bool endPressed = false;
+        private bool timeLoopRunning = false;
 
         public Form1()
         {
@@ -26,6 +28,8 @@ namespace _09_Game_Of_Life
             fieldWidth = GameField.Width;
             fieldHeight = GameField.Height;
             GameField.Refresh();
+
+            timeLoopSpeed = Speed_Slider.Value * 100;
         }
 
         private void DrawInPanel(object sender, PaintEventArgs e)
@@ -87,11 +91,20 @@ namespace _09_Game_Of_Life
         private void EndButton_Click(object sender, EventArgs e)
         {
             endPressed = true;
+            DebugTextBox.AppendText("Terminating time loop");
         }
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-            Task.Run(() => TimeLoop());
+            if (!timeLoopRunning)
+            {
+                timeLoopRunning = true;
+                Task.Run(() => TimeLoop());
+            }
+            else
+            {
+                DebugTextBox.AppendText("Time loop already running\n");
+            }
         }
 
         private void TimeLoop()
@@ -99,10 +112,11 @@ namespace _09_Game_Of_Life
             while (true)
             {
                 gl.NextGeneration();
-                Thread.Sleep((int)TimeStep_UpDown.Value);
+                Thread.Sleep(timeLoopSpeed);
                 if (endPressed)
                 {
                     endPressed = false;
+                    timeLoopRunning = false;
                     break;
                 }
                 UpdateUIOnUIThread();
@@ -148,7 +162,7 @@ namespace _09_Game_Of_Life
             this.clicX = point.X - (point.X % increment);
             this.clYck = point.Y - (point.Y % increment);
             this.gl.UpdateGameState(clicX, clYck);
-            DebugTextBox.AppendText($"\r\n ({clicX / increment}, {clYck / increment})");
+            DebugTextBox.AppendText($"\r\n ({clicX / increment}, {clYck / increment})\n");
             this.AliveCells.Add((clicX, clYck));
             GameField.Refresh();
         }
@@ -163,6 +177,17 @@ namespace _09_Game_Of_Life
         {
             this.gl = null;
             GameField.Refresh();
+        }
+
+        private void GridCheckChanged(object sender, EventArgs e)
+        {
+            GameField.Refresh();
+        }
+
+        private void Speed_Slider_ValueChanged(object sender, EventArgs e)
+        {
+            timeLoopSpeed = Speed_Slider.Value * 100;
+            DebugTextBox.AppendText($"Speed changed to {timeLoopSpeed}ms\n");
         }
     }
 }

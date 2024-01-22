@@ -34,19 +34,20 @@
             Height_UpDown = new NumericUpDown();
             GameField = new Panel();
             StepButton = new Button();
-            Increment_UpDown = new NumericUpDown();
             Increment_label = new Label();
             StartButton = new Button();
             EndButton = new Button();
             Grid_CheckBox = new CheckBox();
             DebugTextBox = new TextBox();
             panel1 = new Panel();
+            Increment_Slider = new TrackBar();
+            RefreshButton = new Button();
             SpeedLabel = new Label();
             Speed_Slider = new TrackBar();
             ((System.ComponentModel.ISupportInitialize)Width_UpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Height_UpDown).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Increment_UpDown).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Increment_Slider).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Speed_Slider).BeginInit();
             SuspendLayout();
             // 
@@ -94,11 +95,12 @@
             // 
             GameField.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             GameField.AutoScroll = true;
+            GameField.BackColor = SystemColors.ActiveCaptionText;
             GameField.BorderStyle = BorderStyle.FixedSingle;
             GameField.Cursor = Cursors.Cross;
-            GameField.Location = new Point(188, 0);
+            GameField.Location = new Point(189, 0);
             GameField.Name = "GameField";
-            GameField.Size = new Size(596, 631);
+            GameField.Size = new Size(751, 631);
             GameField.TabIndex = 4;
             GameField.Click += GameField_Click;
             GameField.Paint += DrawInPanel;
@@ -113,29 +115,18 @@
             StepButton.UseVisualStyleBackColor = true;
             StepButton.Click += StepClick;
             // 
-            // Increment_UpDown
-            // 
-            Increment_UpDown.Location = new Point(14, 249);
-            Increment_UpDown.Maximum = new decimal(new int[] { 50, 0, 0, 0 });
-            Increment_UpDown.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            Increment_UpDown.Name = "Increment_UpDown";
-            Increment_UpDown.Size = new Size(73, 23);
-            Increment_UpDown.TabIndex = 6;
-            Increment_UpDown.Value = new decimal(new int[] { 7, 0, 0, 0 });
-            Increment_UpDown.ValueChanged += IncrementValueChange;
-            // 
             // Increment_label
             // 
             Increment_label.AutoSize = true;
-            Increment_label.Location = new Point(14, 231);
+            Increment_label.Location = new Point(14, 255);
             Increment_label.Name = "Increment_label";
-            Increment_label.Size = new Size(65, 15);
+            Increment_label.Size = new Size(39, 15);
             Increment_label.TabIndex = 7;
-            Increment_label.Text = "Square size";
+            Increment_label.Text = "Zoom";
             // 
             // StartButton
             // 
-            StartButton.Location = new Point(14, 110);
+            StartButton.Location = new Point(14, 137);
             StartButton.Name = "StartButton";
             StartButton.Size = new Size(130, 23);
             StartButton.TabIndex = 11;
@@ -145,7 +136,7 @@
             // 
             // EndButton
             // 
-            EndButton.Location = new Point(14, 139);
+            EndButton.Location = new Point(14, 166);
             EndButton.Name = "EndButton";
             EndButton.Size = new Size(130, 23);
             EndButton.TabIndex = 12;
@@ -156,7 +147,7 @@
             // Grid_CheckBox
             // 
             Grid_CheckBox.AutoSize = true;
-            Grid_CheckBox.Location = new Point(14, 278);
+            Grid_CheckBox.Location = new Point(14, 324);
             Grid_CheckBox.Name = "Grid_CheckBox";
             Grid_CheckBox.Size = new Size(79, 19);
             Grid_CheckBox.TabIndex = 13;
@@ -178,10 +169,11 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(Increment_Slider);
+            panel1.Controls.Add(RefreshButton);
             panel1.Controls.Add(SpeedLabel);
             panel1.Controls.Add(Speed_Slider);
             panel1.Controls.Add(Grid_CheckBox);
-            panel1.Controls.Add(Increment_UpDown);
             panel1.Controls.Add(Increment_label);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
@@ -189,10 +181,30 @@
             panel1.Size = new Size(170, 631);
             panel1.TabIndex = 0;
             // 
+            // Increment_Slider
+            // 
+            Increment_Slider.Location = new Point(14, 273);
+            Increment_Slider.Maximum = 20;
+            Increment_Slider.Name = "Increment_Slider";
+            Increment_Slider.Size = new Size(139, 45);
+            Increment_Slider.TabIndex = 20;
+            Increment_Slider.Value = 1;
+            Increment_Slider.ValueChanged += IncrementSliderValChange;
+            // 
+            // RefreshButton
+            // 
+            RefreshButton.Location = new Point(12, 108);
+            RefreshButton.Name = "RefreshButton";
+            RefreshButton.Size = new Size(132, 23);
+            RefreshButton.TabIndex = 22;
+            RefreshButton.Text = "Refresh";
+            RefreshButton.UseVisualStyleBackColor = true;
+            RefreshButton.Click += RefreshButton_Click;
+            // 
             // SpeedLabel
             // 
             SpeedLabel.AutoSize = true;
-            SpeedLabel.Location = new Point(17, 165);
+            SpeedLabel.Location = new Point(17, 194);
             SpeedLabel.Name = "SpeedLabel";
             SpeedLabel.Size = new Size(39, 15);
             SpeedLabel.TabIndex = 21;
@@ -200,7 +212,7 @@
             // 
             // Speed_Slider
             // 
-            Speed_Slider.Location = new Point(11, 184);
+            Speed_Slider.Location = new Point(11, 213);
             Speed_Slider.Maximum = 20;
             Speed_Slider.Name = "Speed_Slider";
             Speed_Slider.Size = new Size(145, 45);
@@ -212,7 +224,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(784, 631);
+            ClientSize = new Size(938, 631);
             Controls.Add(EndButton);
             Controls.Add(StartButton);
             Controls.Add(DebugTextBox);
@@ -223,14 +235,18 @@
             Controls.Add(Height_label);
             Controls.Add(Width_label);
             Controls.Add(panel1);
+            DoubleBuffered = true;
+            HelpButton = true;
             KeyPreview = true;
+            MaximizeBox = false;
             Name = "Form1";
             Text = "Game Of Life";
+            HelpRequested += Form1_HelpRequested;
             ((System.ComponentModel.ISupportInitialize)Width_UpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)Height_UpDown).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Increment_UpDown).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)Increment_Slider).EndInit();
             ((System.ComponentModel.ISupportInitialize)Speed_Slider).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -244,7 +260,6 @@
         private NumericUpDown Height_UpDown;
         private Panel GameField;
         private Button StepButton;
-        private NumericUpDown Increment_UpDown;
         private Label Increment_label;
         private Button StartButton;
         private Button EndButton;
@@ -253,5 +268,7 @@
         private Panel panel1;
         private TrackBar Speed_Slider;
         private Label SpeedLabel;
+        private Button RefreshButton;
+        private TrackBar Increment_Slider;
     }
 }

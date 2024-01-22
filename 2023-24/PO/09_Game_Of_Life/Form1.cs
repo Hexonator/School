@@ -1,13 +1,14 @@
 using System.Windows.Forms;
 using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Security.Policy;
 
 namespace _09_Game_Of_Life
 {
     public partial class Form1 : Form
     {
         private GameLoop gl;
-        private int fieldWidth, fieldHeight;
-        private int increment = 15;
+        private int increment = 13;
         private int timeLoopSpeed;
         private int clicX = -1; private int clYck = -1;
         private List<(int, int)> AliveCells = new();
@@ -18,15 +19,13 @@ namespace _09_Game_Of_Life
         public Form1()
         {
             InitializeComponent();
-            int width = 30;
+            int width = 40;
             int height = 30;
 
             Width_UpDown.Value = width;
             Height_UpDown.Value = height;
 
-            Increment_UpDown.Value = increment;
-            fieldWidth = GameField.Width;
-            fieldHeight = GameField.Height;
+            Increment_Slider.Value = increment;
             GameField.Refresh();
 
             timeLoopSpeed = Speed_Slider.Value * 100;
@@ -52,15 +51,14 @@ namespace _09_Game_Of_Life
                 {
                     bool isAlive = gamestate[x, y];
                     SolidBrush whiteBrush = new(Color.White);
-                    SolidBrush blackBrush = new(Color.Black);
                     if (isAlive)
                     {
-                        g.FillRectangle(blackBrush, x * increment, y * increment, increment, increment);
+                        g.FillRectangle(whiteBrush, x * increment, y * increment, increment, increment);
                     }
                 }
             }
 
-            Pen pen = new(Color.Black, 1);
+            Pen pen = new(Color.White, 1);
             if (Grid_CheckBox.Checked)
             {
                 int width = this.width * increment;
@@ -146,16 +144,6 @@ namespace _09_Game_Of_Life
             GameField.Refresh();
         }
 
-        private void IncrementValueChange(object sender, EventArgs e)
-        {
-            this.increment = (int)Increment_UpDown.Value;
-            if (gl != null)
-            {
-                gl.increment = (int)Increment_UpDown.Value;
-            }
-            GameField.Refresh();
-        }
-
         private void GameField_Click(object sender, EventArgs e)
         {
             Point point = GameField.PointToClient(Cursor.Position);
@@ -188,6 +176,27 @@ namespace _09_Game_Of_Life
         {
             timeLoopSpeed = Speed_Slider.Value * 100;
             DebugTextBox.AppendText($"Speed changed to {timeLoopSpeed}ms\n");
+        }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            this.gl = null;
+            GameField.Refresh();
+        }
+
+        private void IncrementSliderValChange(object sender, EventArgs e)
+        {
+            this.increment = Increment_Slider.Value + 5;
+            if (gl != null)
+            {
+                gl.increment = Increment_Slider.Value + 5;
+            }
+            GameField.Refresh();
+        }
+
+        private void Form1_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Process.Start(new ProcessStartInfo("cmd", $"/c start {"https://www.youtube.com/watch?v=dQw4w9WgXcQ"}"));
         }
     }
 }

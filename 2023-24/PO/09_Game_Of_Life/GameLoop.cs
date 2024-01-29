@@ -105,11 +105,8 @@ namespace _09_Game_Of_Life
             }
             return false;
         }
-    
-        //private bool[,] readFile(string path)
-        //{
-        //    StreamReader sr = new(path, Encoding.UTF8);
-        //}
+
         
+
     }
 }

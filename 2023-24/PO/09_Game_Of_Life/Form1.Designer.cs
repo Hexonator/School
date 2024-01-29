@@ -44,6 +44,10 @@
             RefreshButton = new Button();
             SpeedLabel = new Label();
             Speed_Slider = new TrackBar();
+            openFileDialog = new OpenFileDialog();
+            saveFileDialog = new SaveFileDialog();
+            LoadFileButton = new Button();
+            SaveFileButton = new Button();
             ((System.ComponentModel.ISupportInitialize)Width_UpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Height_UpDown).BeginInit();
             panel1.SuspendLayout();
@@ -159,7 +163,7 @@
             // 
             DebugTextBox.AcceptsReturn = true;
             DebugTextBox.BorderStyle = BorderStyle.None;
-            DebugTextBox.Location = new Point(11, 355);
+            DebugTextBox.Location = new Point(12, 405);
             DebugTextBox.Multiline = true;
             DebugTextBox.Name = "DebugTextBox";
             DebugTextBox.ScrollBars = ScrollBars.Vertical;
@@ -169,8 +173,11 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(SaveFileButton);
+            panel1.Controls.Add(LoadFileButton);
             panel1.Controls.Add(Increment_Slider);
             panel1.Controls.Add(RefreshButton);
+            panel1.Controls.Add(DebugTextBox);
             panel1.Controls.Add(SpeedLabel);
             panel1.Controls.Add(Speed_Slider);
             panel1.Controls.Add(Grid_CheckBox);
@@ -220,6 +227,36 @@
             Speed_Slider.Value = 1;
             Speed_Slider.ValueChanged += Speed_Slider_ValueChanged;
             // 
+            // openFileDialog
+            // 
+            openFileDialog.DefaultExt = "txt";
+            openFileDialog.FileName = "openFileDialog";
+            openFileDialog.Title = "Load Gamestate";
+            // 
+            // saveFileDialog
+            // 
+            saveFileDialog.DefaultExt = "txt";
+            saveFileDialog.Title = "Save Gamestate";
+            // 
+            // LoadFileButton
+            // 
+            LoadFileButton.Location = new Point(11, 359);
+            LoadFileButton.Name = "LoadFileButton";
+            LoadFileButton.Size = new Size(70, 23);
+            LoadFileButton.TabIndex = 23;
+            LoadFileButton.Text = "Load file";
+            LoadFileButton.UseVisualStyleBackColor = true;
+            LoadFileButton.Click += LoadFile;
+            // 
+            // SaveFileButton
+            // 
+            SaveFileButton.Location = new Point(87, 359);
+            SaveFileButton.Name = "SaveFileButton";
+            SaveFileButton.Size = new Size(66, 23);
+            SaveFileButton.TabIndex = 24;
+            SaveFileButton.Text = "Save file";
+            SaveFileButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -227,7 +264,6 @@
             ClientSize = new Size(938, 631);
             Controls.Add(EndButton);
             Controls.Add(StartButton);
-            Controls.Add(DebugTextBox);
             Controls.Add(StepButton);
             Controls.Add(GameField);
             Controls.Add(Height_UpDown);
@@ -270,5 +306,9 @@
         private Label SpeedLabel;
         private Button RefreshButton;
         private TrackBar Increment_Slider;
+        private OpenFileDialog openFileDialog;
+        private SaveFileDialog saveFileDialog;
+        private Button SaveFileButton;
+        private Button LoadFileButton;
     }
 }

@@ -2,6 +2,7 @@ using System.Windows.Forms;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Security.Policy;
+using System.Text;
 
 namespace _09_Game_Of_Life
 {
@@ -194,9 +195,56 @@ namespace _09_Game_Of_Life
             GameField.Refresh();
         }
 
+        private bool[,] readFile(string path)
+        {
+            int width = -1, height = -1;
+            StreamReader sr = new(path, Encoding.UTF8);
+
+            // Reading witdh and height
+            string size = sr.ReadLine();
+            if (size == null)
+            {
+                return null;
+            }
+            else
+            {
+                int widthIndex = 0;
+                int heightIndex = 0;
+                for (int i = 0; i < size.Length; i++)
+                {
+                    char character = size[i];
+                    bool isNum = int.TryParse(character.ToString(), out _);
+                    if (!isNum)
+                    {
+                        widthIndex = i;
+                        heightIndex = i + 1;
+                        break;
+                    }
+                }
+                width = int.Parse(size.Substring(0, widthIndex - 1));
+                height = int.Parse(size.Substring(heightIndex));
+
+                if (width == -1 || height == -1)
+                {
+                    return null;
+                }
+            }
+
+            // Reading the gamestate
+
+
+            sr.Close();
+            return null;
+        }
+
         private void Form1_HelpRequested(object sender, HelpEventArgs hlpevent)
         {
             Process.Start(new ProcessStartInfo("cmd", $"/c start {"https://www.youtube.com/watch?v=dQw4w9WgXcQ"}"));
+        }
+
+        private void LoadFile(object sender, EventArgs e)
+        {
+            string filename = openFileDialog.FileName;
         }
     }
 }

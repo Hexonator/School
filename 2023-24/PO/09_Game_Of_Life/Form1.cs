@@ -242,9 +242,10 @@ namespace _09_Game_Of_Life
             Process.Start(new ProcessStartInfo("cmd", $"/c start {"https://www.youtube.com/watch?v=dQw4w9WgXcQ"}"));
         }
 
-        private void LoadFile(object sender, EventArgs e)
+        private async void LoadFile(object sender, EventArgs e)
         {
-            string filename = openFileDialog.FileName;
+            
+            string filename = await openFileDialog.FileName;
         }
     }
 }

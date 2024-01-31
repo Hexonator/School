@@ -42,7 +42,7 @@
             // 
             // BrowseFiles
             // 
-            BrowseFiles.Location = new Point(285, 8);
+            BrowseFiles.Location = new Point(562, 7);
             BrowseFiles.Name = "BrowseFiles";
             BrowseFiles.Size = new Size(66, 30);
             BrowseFiles.TabIndex = 0;
@@ -54,14 +54,15 @@
             // 
             filenameTextBox.Location = new Point(12, 12);
             filenameTextBox.Name = "filenameTextBox";
-            filenameTextBox.Size = new Size(267, 23);
+            filenameTextBox.Size = new Size(544, 23);
             filenameTextBox.TabIndex = 1;
+            filenameTextBox.TextChanged += filenameTextBox_TextChanged;
             // 
             // getBinButton
             // 
             getBinButton.Location = new Point(12, 41);
             getBinButton.Name = "getBinButton";
-            getBinButton.Size = new Size(339, 23);
+            getBinButton.Size = new Size(616, 23);
             getBinButton.TabIndex = 2;
             getBinButton.Text = "GET BINARY VALUES";
             getBinButton.UseVisualStyleBackColor = true;
@@ -77,7 +78,7 @@
             binDisplayTextBox.PlaceholderText = "Binary information will be displayed here";
             binDisplayTextBox.ReadOnly = true;
             binDisplayTextBox.ScrollBars = ScrollBars.Vertical;
-            binDisplayTextBox.Size = new Size(339, 316);
+            binDisplayTextBox.Size = new Size(616, 373);
             binDisplayTextBox.TabIndex = 3;
             binDisplayTextBox.WordWrap = false;
             // 
@@ -85,7 +86,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(363, 398);
+            ClientSize = new Size(640, 455);
             Controls.Add(binDisplayTextBox);
             Controls.Add(getBinButton);
             Controls.Add(filenameTextBox);

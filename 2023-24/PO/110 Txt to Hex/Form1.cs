@@ -18,9 +18,11 @@ namespace _110_Txt_to_Hex
         {
             binFile.Clear();
             bitIndex = 0;
+            binDisplayTextBox.Text = "Processing...";
 
-            using (StreamReader reader = new StreamReader(filename))
+            try
             {
+                StreamReader sr = new StreamReader(filename);
                 bool fileEnd = false;
                 while (!fileEnd)
                 {
@@ -28,32 +30,64 @@ namespace _110_Txt_to_Hex
                     binFile[hexIndex] = new string[16];
                     for (int i = 0; i < 16; i++)
                     {
-                        if (reader.Peek() == -1)
+                        if (sr.Peek() == -1)
                         {
                             fileEnd = true;
                             break;
                         }
-                        string hexValue = reader.Read().ToString("x2");
+                        string hexValue = sr.Read().ToString("x2");
                         binFile[hexIndex][i] = hexValue;
                         bitIndex++;
                     }
                 }
+                sr.Close();
             }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show(
+                "Invalid file path",
+                "You useless dumbass",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error
+                );
+                return;
+            }
+
         }
 
         public string getHexToString()
         {
             string return_string = "";
+            StreamReader sr = new StreamReader(filename);
+            string tempString = "";
 
             foreach (var key in binFile.Keys)
             {
                 return_string += key + " ";
                 foreach (var bit in binFile[key])
                 {
+                    if (bit == null)
+                    {
+                        return_string += "   ";
+                        tempString += "_";
+                        continue;
+                    }
                     return_string += bit + " ";
+                    char fileChar = (char)sr.Read();
+                    if (fileChar.ToString() == System.Environment.NewLine || fileChar == '\n')
+                    {
+                        tempString += "..";
+                    }
+                    else
+                    {
+                        tempString += fileChar;
+                    }
                 }
+                return_string += $"|{tempString}|";
+                tempString = "";
                 return_string += System.Environment.NewLine;
             }
+            sr.Close();
             return return_string;
         }
 
@@ -105,6 +139,11 @@ namespace _110_Txt_to_Hex
                 convertTxtToHex(filename);
                 binDisplayTextBox.Text = getHexToString();
             }
+        }
+
+        private void filenameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            filename = filenameTextBox.Text;
         }
     }
 }

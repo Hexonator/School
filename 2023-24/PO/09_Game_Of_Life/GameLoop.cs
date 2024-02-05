@@ -107,6 +107,11 @@ namespace _09_Game_Of_Life
         }
 
         
-
+        public void ChangeGameState(bool[,] new_gamestate, int width, int height)
+        {
+            this.width = width;
+            this.height = height;
+            gamestate = new_gamestate;
+        }
     }
 }

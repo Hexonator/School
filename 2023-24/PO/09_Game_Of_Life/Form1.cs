@@ -9,13 +9,14 @@ namespace _09_Game_Of_Life
     public partial class Form1 : Form
     {
         private GameLoop gl;
-        private int increment = 13;
+        private int zoom = 13;
         private int timeLoopSpeed;
         private int clicX = -1; private int clYck = -1;
         private List<(int, int)> AliveCells = new();
         private int width, height;
         private bool endRequested = false;
         private bool timeLoopRunning = false;
+        private int genCount = 0;
 
         public Form1()
         {
@@ -26,7 +27,7 @@ namespace _09_Game_Of_Life
             Width_UpDown.Value = width;
             Height_UpDown.Value = height;
 
-            Increment_Slider.Value = increment;
+            Increment_Slider.Value = zoom;
             GameField.Refresh();
 
             timeLoopSpeed = Speed_Slider.Value * 100;
@@ -41,7 +42,7 @@ namespace _09_Game_Of_Life
             {
                 this.width = (int)Width_UpDown.Value;
                 this.height = (int)Height_UpDown.Value;
-                GameLoop gl = new(increment, width, height, true);
+                GameLoop gl = new(zoom, width, height, true);
                 this.gl = gl;
             }
 
@@ -54,7 +55,7 @@ namespace _09_Game_Of_Life
                     SolidBrush whiteBrush = new(Color.White);
                     if (isAlive)
                     {
-                        g.FillRectangle(whiteBrush, x * increment, y * increment, increment, increment);
+                        g.FillRectangle(whiteBrush, x * zoom, y * zoom, zoom, zoom);
                     }
                 }
             }
@@ -62,11 +63,11 @@ namespace _09_Game_Of_Life
             Pen pen = new(Color.White, 1);
             if (Grid_CheckBox.Checked)
             {
-                int width = this.width * increment;
-                int height = this.height * increment;
+                int width = this.width * zoom;
+                int height = this.height * zoom;
                 pen.DashPattern = new float[] { 3, 3 };
                 // Vertical lines
-                for (int x = 0; x <= width; x += increment)
+                for (int x = 0; x <= width; x += zoom)
                 {
                     Point p1 = new(x, 0);
                     Point p2 = new(x, height);
@@ -74,7 +75,7 @@ namespace _09_Game_Of_Life
                 }
 
                 // Horizontal lines
-                for (int y = 0; y <= height; y += increment)
+                for (int y = 0; y <= height; y += zoom)
                 {
                     Point p1 = new(0, y);
                     Point p2 = new(width, y);
@@ -83,7 +84,7 @@ namespace _09_Game_Of_Life
             }
             else
             {
-                g.DrawRectangle(pen, 0, 0, width * increment, height * increment);
+                g.DrawRectangle(pen, 0, 0, width * zoom, height * zoom);
             }
         }
 
@@ -114,8 +115,10 @@ namespace _09_Game_Of_Life
                 {
                     endRequested = false;
                     timeLoopRunning = false;
+                    genCount = 0;
                     break;
                 }
+                genCount++;
                 UpdateUIOnUIThread();
             }
         }
@@ -135,19 +138,60 @@ namespace _09_Game_Of_Life
             {
                 GameField.Refresh();
             }
+            if (PercentAlive_Label.InvokeRequired)
+            {
+                PercentAlive_Label.Invoke(new MethodInvoker(delegate
+                {
+                    if (gl.percent_alive.ToString().Length > 3)
+                        PercentAlive_Label.Text = gl.percent_alive.ToString().Substring(0, 4) + "%";
+                    else
+                        PercentAlive_Label.Text = gl.percent_alive.ToString() + ".0%";
+                }));
+            }
+            else
+            {
+                if (gl.percent_alive.ToString().Length > 3)
+                    PercentAlive_Label.Text = gl.percent_alive.ToString().Substring(0, 4) + "%";
+                else
+                    PercentAlive_Label.Text = gl.percent_alive.ToString() + ".0%";
+            }
+            if (NumOfGenerations_Label.InvokeRequired)
+            {
+                NumOfGenerations_Label.Invoke(new MethodInvoker(delegate
+                {
+                    NumOfGenerations_Label.Text = genCount.ToString();
+                }));
+            }
+            else
+            {
+                NumOfGenerations_Label.Text = genCount.ToString();
+            }
+            bool isStable = gl.older_perc == gl.percent_alive;
+            if (IsStable_Label.InvokeRequired)
+            {
+                IsStable_Label.Invoke(new MethodInvoker(delegate
+                {
+                    IsStable_Label.Text = isStable ? "Stable" : "Unstable";
+                }));
+            }
+            else
+            {
+                IsStable_Label.Text = isStable ? "Stable" : "Unstable";
+            }
         }
 
         private void StepClick(object sender, EventArgs e)
         {
+            endRequested = true;
             gl.NextGeneration();
-            GameField.Refresh();
+            UpdateUIOnUIThread();
         }
 
         private void GameField_Click(object sender, EventArgs e)
         {
             Point point = GameField.PointToClient(Cursor.Position);
-            this.clicX = point.X - (point.X % increment);
-            this.clYck = point.Y - (point.Y % increment);
+            this.clicX = point.X - (point.X % zoom);
+            this.clYck = point.Y - (point.Y % zoom);
             this.gl.UpdateGameState(clicX, clYck);
             this.AliveCells.Add((clicX, clYck));
             GameField.Refresh();
@@ -155,13 +199,17 @@ namespace _09_Game_Of_Life
 
         private void Width_ValueChange(object sender, EventArgs e)
         {
+            endRequested = true;
             this.gl = null;
+            genCount = 0;
             GameField.Refresh();
         }
 
         private void Height_ValueChanged(object sender, EventArgs e)
         {
+            endRequested = true;
             this.gl = null;
+            genCount = 0;
             GameField.Refresh();
         }
 
@@ -185,13 +233,15 @@ namespace _09_Game_Of_Life
 
         private void RefreshButton_Click(object sender, EventArgs e)
         {
+            endRequested = true;
             this.gl = null;
+            genCount = 0;
             GameField.Refresh();
         }
 
         private void IncrementSliderValChange(object sender, EventArgs e)
         {
-            this.increment = Increment_Slider.Value + 5;
+            this.zoom = Increment_Slider.Value + 5;
             if (gl != null)
             {
                 gl.increment = Increment_Slider.Value + 5;
@@ -283,19 +333,33 @@ namespace _09_Game_Of_Life
                 (new_gamestate, width, height) = readFile(filename);
                 if (new_gamestate != null)
                 {
-                    this.gl.ChangeGameState(new_gamestate, width, height);
+                    this.gl.ReplaceGameState(new_gamestate, width, height);
                     this.width = width;
                     this.height = height;
                     GameField.Refresh();
                 }
             }
-
         }
 
         private void RandomFill_Button_Click(object sender, EventArgs e)
         {
             int percentage = RandomFill_Slider.Value;
+            bool[,] new_gamestate = new bool[width, height];
+            Random rand = new Random();
+            for (int y = 0; y < height; y++)
+            {
+                for (int x = 0; x < width; x++)
+                {
+                    new_gamestate[x, y] = percentage >= rand.Next(100) ? true : false;
+                }
+            }
+            this.gl.ReplaceGameState(new_gamestate, width, height);
+            GameField.Refresh();
+        }
 
+        private void RandomFill_Slider_ValueChanged(object sender, EventArgs e)
+        {
+            RandomFill_Label.Text = "Random fill: " + RandomFill_Slider.Value.ToString() + "%";
         }
     }
 }

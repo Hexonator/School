@@ -9,9 +9,11 @@ namespace _09_Game_Of_Life
 {
     internal class GameLoop
     {
-        public bool HasLaunched = false;
         public int width, height, increment;
         public bool[,] gamestate;
+        public double percent_alive;
+        public double old_perc, older_perc; // For stability evaluation
+        public int num_of_cells;
 
         public GameLoop(int increment, int width, int height, bool gridVisible = false) {
             this.increment = increment;
@@ -27,6 +29,7 @@ namespace _09_Game_Of_Life
             if (x < width && y < height)
             {
                 gamestate[x, y] = !gamestate[x, y];
+                num_of_cells = width * height;
             }
             else
             {
@@ -37,7 +40,7 @@ namespace _09_Game_Of_Life
         public void NextGeneration()
         {
             List<(int, int)> changes = new(); // list of changes that occur in a single gen
-
+            num_of_cells = width * height;
             for (int y = 0; y < height; y++)
             {
                 for (int x = 0; x < width; x++)
@@ -55,6 +58,18 @@ namespace _09_Game_Of_Life
                 int y = change.Item2;
                 gamestate[x, y] = !gamestate[x, y];
             }
+
+            int num_of_alive_cells = 0;
+            foreach (var cell in gamestate)
+            {
+                if (cell)
+                {
+                    num_of_alive_cells++;
+                }
+            }
+            older_perc = old_perc;
+            old_perc = percent_alive;
+            percent_alive = (double)num_of_alive_cells / num_of_cells * 100;
         }
 
         // Detects if a cell will change states or not
@@ -106,8 +121,7 @@ namespace _09_Game_Of_Life
             return false;
         }
 
-        
-        public void ChangeGameState(bool[,] new_gamestate, int width, int height)
+        public void ReplaceGameState(bool[,] new_gamestate, int width, int height)
         {
             this.width = width;
             this.height = height;
